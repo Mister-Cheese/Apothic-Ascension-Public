@@ -1,0 +1,10 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [" G ", "GBG", " G "],
+  "key": {
+    "G": {"item": "minecraft:gold_nugget"},
+    "B": {"item": "minecraft:book"}
+  },
+  "result": {"id": "apothic_ascension:ascension_codex", "count": 1}
+}

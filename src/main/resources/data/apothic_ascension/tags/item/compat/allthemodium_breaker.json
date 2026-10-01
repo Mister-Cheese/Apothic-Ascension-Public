@@ -1,0 +1,14 @@
+{
+  "replace": false,
+  "values": [
+    { "id": "allthemodium:allthemodium_pickaxe", "required": false },
+    { "id": "allthemodium:vibranium_pickaxe", "required": false },
+    { "id": "allthemodium:unobtainium_pickaxe", "required": false },
+    { "id": "allthemodium:allthemodium_shovel", "required": false },
+    { "id": "allthemodium:vibranium_shovel", "required": false },
+    { "id": "allthemodium:unobtainium_shovel", "required": false },
+    { "id": "allthemodium:alloy_pick", "required": false },
+    { "id": "allthemodium:alloy_shovel", "required": false },
+    { "id": "allthemodium:alloy_paxel", "required": false }
+  ]
+}

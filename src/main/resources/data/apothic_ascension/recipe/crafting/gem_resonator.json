@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": ["AMA", "MEM", "AMA"],
+  "key": {
+    "A": {"item": "minecraft:amethyst_block"},
+    "M": {"item": "apothic_ascension:legendary_material"},
+    "E": {"item": "minecraft:enchanting_table"}
+  },
+  "result": {"id": "apothic_ascension:gem_resonator", "count": 1}
+}

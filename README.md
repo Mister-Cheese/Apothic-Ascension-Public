@@ -1,25 +1,53 @@
-# Apothic Ascension — Public Source
+# Apothic Ascension
 
-This repository is the public, release-aligned source export and issue tracker for **Apothic Ascension**.
+This repository is the **public, release-aligned source export** for Apothic Ascension.
 
-It is intentionally **not** the development repository. Public history is constructed from release source snapshots and does not inherit private development history. Internal research, release engineering, CI/CD, qualification infrastructure, operator notes, and other non-distributed tooling are maintained separately and are not part of this repository.
+Current exported version: **1.14.1-Beta**
+Minecraft: **1.21.1**
+NeoForge: **21.1.249**
 
-## Source availability
+## What is published here
 
-Source snapshots are published here for releases that declare **Mozilla Public License 2.0 (MPL-2.0)**. Each public snapshot is produced from an explicit source allowlist and checked against the corresponding distributed JAR so that shipped first-party classes are not silently omitted from the source export.
+This repository contains the production Java source, runtime resources, mod metadata,
+and a minimal public build definition sufficient to inspect, modify, and build the mod.
 
-Releases published before the MPL transition retain the license declared by those releases; the presence of an MPL license in this repository does not retroactively rewrite their release metadata.
+It intentionally does **not** mirror the private development repository or its history.
+Internal CI/CD, qualification harnesses, release engineering, research notes, audit
+evidence, local tooling, and development-only documentation are maintained separately.
+
+## Build
+
+Requirements:
+
+- Java 21
+- Gradle 8.14.3
+
+From the repository root:
+
+```text
+gradle clean build
+```
+
+The resulting JAR is written under `build/libs/`.
 
 ## Issues
 
-Use the issue tracker for reproducible bugs and compatibility problems. Include the exact Apothic Ascension, Minecraft, NeoForge, Apotheosis, and relevant third-party mod versions when applicable.
+Use this repository's issue tracker for bugs, compatibility reports, and feature requests.
+Please include the exact Apothic Ascension version and relevant mod versions.
 
-Do not post credentials, private server information, access tokens, or other secrets in an issue.
-
-## Contributions
-
-This repository is an export target rather than the authoritative development workspace. Issues are the preferred public contribution path. Source changes accepted for a future release are incorporated into the authoritative development tree and re-exported with that release.
+For security vulnerabilities, use GitHub's private vulnerability reporting instead of a
+public issue.
 
 ## License
 
-Unless a file or bundled third-party notice states otherwise, first-party source published for MPL releases is made available under the **Mozilla Public License 2.0**. Third-party license notices remain controlling for their respective material.
+Source in this repository is licensed under the **Mozilla Public License 2.0**.
+See [LICENSE](LICENSE).
+
+Earlier copies of Apothic Ascension that were distributed under different license terms
+retain those grants; publishing this source under MPL-2.0 does not revoke them.
+
+## Repository boundary
+
+Public commits are generated source snapshots and are not a sanitized copy of private Git
+history. This separation is intentional: only release-facing source is exported across the
+repository boundary.

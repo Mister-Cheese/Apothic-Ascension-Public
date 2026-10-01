@@ -1,0 +1,95 @@
+{
+  "type": "apotheosis:attribute",
+  "attribute": "minecraft:generic.armor",
+  "categories": [
+    "apotheosis:chestplate",
+    "apotheosis:leggings"
+  ],
+  "definition": {
+    "affix_type": "stat",
+    "exclusive_set": [],
+    "weights": {
+      "quality": 0.1,
+      "weight": 25
+    }
+  },
+  "operation": "add_multiplied_base",
+  "values": {
+    "apotheosis:rare": {
+      "min": 0.15,
+      "max": 0.3
+    },
+    "apotheosis:epic": {
+      "min": 0.15,
+      "max": 0.3
+    },
+    "apotheosis:mythic": {
+      "min": 0.25,
+      "max": 0.4
+    },
+    "apothic_ascension:legendary": {
+      "min": 0.330418,
+      "max": 0.659814,
+      "step": 0.00998169743
+    },
+    "apothic_ascension:ancient": {
+      "min": 0.406594,
+      "max": 0.905918,
+      "step": 0.00998647977
+    },
+    "apothic_ascension:forgotten": {
+      "min": 0.478394,
+      "max": 1.137888,
+      "step": 0.0099923322
+    },
+    "apothic_ascension:primal": {
+      "min": 0.545671,
+      "max": 1.355244,
+      "step": 0.00999472942
+    },
+    "apothic_ascension:stellar": {
+      "min": 0.608254,
+      "max": 1.557435,
+      "step": 0.00999137945
+    },
+    "apothic_ascension:divine": {
+      "min": 0.665945,
+      "max": 1.743821,
+      "step": 0.00998033397
+    },
+    "apothic_ascension:esoteric": {
+      "min": 0.718508,
+      "max": 1.913643,
+      "step": 0.00995945837
+    },
+    "apothic_ascension:cataclysmic": {
+      "min": 0.765659,
+      "max": 2.065976,
+      "step": 0.010002438
+    },
+    "apothic_ascension:abyssal": {
+      "min": 0.807038,
+      "max": 2.199661,
+      "step": 0.0100188702
+    },
+    "apothic_ascension:empyrean": {
+      "min": 0.84217,
+      "max": 2.313163,
+      "step": 0.0100067556
+    },
+    "apothic_ascension:paracausal": {
+      "min": 0.870379,
+      "max": 2.4043,
+      "step": 0.0100256279
+    },
+    "apothic_ascension:transcendent": {
+      "min": 0.890561,
+      "max": 2.469506,
+      "step": 0.00999332312
+    },
+    "apothic_ascension:apotheotic": {
+      "min": 0.9,
+      "max": 2.5
+    }
+  }
+}

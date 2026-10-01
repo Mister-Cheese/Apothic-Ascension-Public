@@ -1,0 +1,15 @@
+{
+  "values": {
+    "#apothic_ascension:compat/spartan_melee": "apotheosis:melee_weapon",
+    "#apothic_ascension:compat/spartan_ranged": "apotheosis:bow",
+    "#apothic_ascension:compat/common_melee": "apotheosis:melee_weapon",
+    "#apothic_ascension:compat/common_breaker": "apotheosis:breaker",
+    "#apothic_ascension:compat/common_bow": "apotheosis:bow",
+    "#apothic_ascension:compat/common_crossbow": "apotheosis:bow",
+    "#apothic_ascension:compat/common_shield": "apotheosis:shield",
+    "#apothic_ascension:compat/common_shears": "apotheosis:shears",
+    "#apothic_ascension:compat/allthemodium_melee": "apotheosis:melee_weapon",
+    "#apothic_ascension:compat/allthemodium_breaker": "apotheosis:breaker",
+    "#apothic_ascension:compat/allthemodium_trident": "apotheosis:trident"
+  }
+}

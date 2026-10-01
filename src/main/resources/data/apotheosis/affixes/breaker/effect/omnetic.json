@@ -1,0 +1,416 @@
+{
+  "type": "apotheosis:omnetic",
+  "categories": [
+    "apotheosis:breaker"
+  ],
+  "definition": {
+    "affix_type": "basic_effect",
+    "exclusive_set": [],
+    "weights": {
+      "quality": 5.0,
+      "weight": 25
+    }
+  },
+  "values": {
+    "apotheosis:rare": {
+      "items": [
+        {
+          "count": 1,
+          "id": "minecraft:iron_axe"
+        },
+        {
+          "count": 1,
+          "id": "minecraft:iron_shovel"
+        },
+        {
+          "count": 1,
+          "id": "minecraft:iron_pickaxe"
+        },
+        {
+          "count": 1,
+          "id": "minecraft:iron_sword"
+        },
+        {
+          "count": 1,
+          "id": "minecraft:iron_hoe"
+        }
+      ],
+      "name": "iron"
+    },
+    "apotheosis:epic": {
+      "items": [
+        {
+          "count": 1,
+          "id": "minecraft:diamond_axe"
+        },
+        {
+          "count": 1,
+          "id": "minecraft:diamond_shovel"
+        },
+        {
+          "count": 1,
+          "id": "minecraft:diamond_pickaxe"
+        },
+        {
+          "count": 1,
+          "id": "minecraft:diamond_sword"
+        },
+        {
+          "count": 1,
+          "id": "minecraft:diamond_hoe"
+        }
+      ],
+      "name": "diamond"
+    },
+    "apotheosis:mythic": {
+      "items": [
+        {
+          "count": 1,
+          "id": "minecraft:netherite_axe"
+        },
+        {
+          "count": 1,
+          "id": "minecraft:netherite_shovel"
+        },
+        {
+          "count": 1,
+          "id": "minecraft:netherite_pickaxe"
+        },
+        {
+          "count": 1,
+          "id": "minecraft:netherite_sword"
+        },
+        {
+          "count": 1,
+          "id": "minecraft:netherite_hoe"
+        }
+      ],
+      "name": "netherite"
+    },
+    "apothic_ascension:legendary": {
+      "items": [
+        {
+          "count": 1,
+          "id": "minecraft:netherite_axe"
+        },
+        {
+          "count": 1,
+          "id": "minecraft:netherite_shovel"
+        },
+        {
+          "count": 1,
+          "id": "minecraft:netherite_pickaxe"
+        },
+        {
+          "count": 1,
+          "id": "minecraft:netherite_sword"
+        },
+        {
+          "count": 1,
+          "id": "minecraft:netherite_hoe"
+        }
+      ],
+      "name": "netherite"
+    },
+    "apothic_ascension:ancient": {
+      "items": [
+        {
+          "count": 1,
+          "id": "minecraft:netherite_axe"
+        },
+        {
+          "count": 1,
+          "id": "minecraft:netherite_shovel"
+        },
+        {
+          "count": 1,
+          "id": "minecraft:netherite_pickaxe"
+        },
+        {
+          "count": 1,
+          "id": "minecraft:netherite_sword"
+        },
+        {
+          "count": 1,
+          "id": "minecraft:netherite_hoe"
+        }
+      ],
+      "name": "netherite"
+    },
+    "apothic_ascension:forgotten": {
+      "items": [
+        {
+          "count": 2,
+          "id": "minecraft:netherite_axe"
+        },
+        {
+          "count": 2,
+          "id": "minecraft:netherite_shovel"
+        },
+        {
+          "count": 2,
+          "id": "minecraft:netherite_pickaxe"
+        },
+        {
+          "count": 2,
+          "id": "minecraft:netherite_sword"
+        },
+        {
+          "count": 2,
+          "id": "minecraft:netherite_hoe"
+        }
+      ],
+      "name": "netherite"
+    },
+    "apothic_ascension:primal": {
+      "items": [
+        {
+          "count": 2,
+          "id": "minecraft:netherite_axe"
+        },
+        {
+          "count": 2,
+          "id": "minecraft:netherite_shovel"
+        },
+        {
+          "count": 2,
+          "id": "minecraft:netherite_pickaxe"
+        },
+        {
+          "count": 2,
+          "id": "minecraft:netherite_sword"
+        },
+        {
+          "count": 2,
+          "id": "minecraft:netherite_hoe"
+        }
+      ],
+      "name": "netherite"
+    },
+    "apothic_ascension:stellar": {
+      "items": [
+        {
+          "count": 3,
+          "id": "minecraft:netherite_axe"
+        },
+        {
+          "count": 3,
+          "id": "minecraft:netherite_shovel"
+        },
+        {
+          "count": 3,
+          "id": "minecraft:netherite_pickaxe"
+        },
+        {
+          "count": 3,
+          "id": "minecraft:netherite_sword"
+        },
+        {
+          "count": 3,
+          "id": "minecraft:netherite_hoe"
+        }
+      ],
+      "name": "netherite"
+    },
+    "apothic_ascension:divine": {
+      "items": [
+        {
+          "count": 3,
+          "id": "minecraft:netherite_axe"
+        },
+        {
+          "count": 3,
+          "id": "minecraft:netherite_shovel"
+        },
+        {
+          "count": 3,
+          "id": "minecraft:netherite_pickaxe"
+        },
+        {
+          "count": 3,
+          "id": "minecraft:netherite_sword"
+        },
+        {
+          "count": 3,
+          "id": "minecraft:netherite_hoe"
+        }
+      ],
+      "name": "netherite"
+    },
+    "apothic_ascension:esoteric": {
+      "items": [
+        {
+          "count": 4,
+          "id": "minecraft:netherite_axe"
+        },
+        {
+          "count": 4,
+          "id": "minecraft:netherite_shovel"
+        },
+        {
+          "count": 4,
+          "id": "minecraft:netherite_pickaxe"
+        },
+        {
+          "count": 4,
+          "id": "minecraft:netherite_sword"
+        },
+        {
+          "count": 4,
+          "id": "minecraft:netherite_hoe"
+        }
+      ],
+      "name": "netherite"
+    },
+    "apothic_ascension:cataclysmic": {
+      "items": [
+        {
+          "count": 6,
+          "id": "minecraft:netherite_axe"
+        },
+        {
+          "count": 6,
+          "id": "minecraft:netherite_shovel"
+        },
+        {
+          "count": 6,
+          "id": "minecraft:netherite_pickaxe"
+        },
+        {
+          "count": 6,
+          "id": "minecraft:netherite_sword"
+        },
+        {
+          "count": 6,
+          "id": "minecraft:netherite_hoe"
+        }
+      ],
+      "name": "netherite"
+    },
+    "apothic_ascension:abyssal": {
+      "items": [
+        {
+          "count": 8,
+          "id": "minecraft:netherite_axe"
+        },
+        {
+          "count": 8,
+          "id": "minecraft:netherite_shovel"
+        },
+        {
+          "count": 8,
+          "id": "minecraft:netherite_pickaxe"
+        },
+        {
+          "count": 8,
+          "id": "minecraft:netherite_sword"
+        },
+        {
+          "count": 8,
+          "id": "minecraft:netherite_hoe"
+        }
+      ],
+      "name": "netherite"
+    },
+    "apothic_ascension:empyrean": {
+      "items": [
+        {
+          "count": 12,
+          "id": "minecraft:netherite_axe"
+        },
+        {
+          "count": 12,
+          "id": "minecraft:netherite_shovel"
+        },
+        {
+          "count": 12,
+          "id": "minecraft:netherite_pickaxe"
+        },
+        {
+          "count": 12,
+          "id": "minecraft:netherite_sword"
+        },
+        {
+          "count": 12,
+          "id": "minecraft:netherite_hoe"
+        }
+      ],
+      "name": "netherite"
+    },
+    "apothic_ascension:paracausal": {
+      "items": [
+        {
+          "count": 18,
+          "id": "minecraft:netherite_axe"
+        },
+        {
+          "count": 18,
+          "id": "minecraft:netherite_shovel"
+        },
+        {
+          "count": 18,
+          "id": "minecraft:netherite_pickaxe"
+        },
+        {
+          "count": 18,
+          "id": "minecraft:netherite_sword"
+        },
+        {
+          "count": 18,
+          "id": "minecraft:netherite_hoe"
+        }
+      ],
+      "name": "netherite"
+    },
+    "apothic_ascension:transcendent": {
+      "items": [
+        {
+          "count": 28,
+          "id": "minecraft:netherite_axe"
+        },
+        {
+          "count": 28,
+          "id": "minecraft:netherite_shovel"
+        },
+        {
+          "count": 28,
+          "id": "minecraft:netherite_pickaxe"
+        },
+        {
+          "count": 28,
+          "id": "minecraft:netherite_sword"
+        },
+        {
+          "count": 28,
+          "id": "minecraft:netherite_hoe"
+        }
+      ],
+      "name": "netherite"
+    },
+    "apothic_ascension:apotheotic": {
+      "items": [
+        {
+          "count": 42,
+          "id": "minecraft:netherite_axe"
+        },
+        {
+          "count": 42,
+          "id": "minecraft:netherite_shovel"
+        },
+        {
+          "count": 42,
+          "id": "minecraft:netherite_pickaxe"
+        },
+        {
+          "count": 42,
+          "id": "minecraft:netherite_sword"
+        },
+        {
+          "count": 42,
+          "id": "minecraft:netherite_hoe"
+        }
+      ],
+      "name": "netherite"
+    }
+  }
+}

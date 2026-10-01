@@ -1,0 +1,35 @@
+{
+  "parent": "apothic_ascension:progression/ascendant",
+  "criteria": {
+    "material": {
+      "conditions": {
+        "items": [
+          {
+            "items": "apothic_ascension:primal_material"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "display": {
+    "background": "apotheosis:textures/advancements/bg/apoth.png",
+    "description": {
+      "translate": "advancements.apothic_ascension.progression.celestial.desc"
+    },
+    "frame": "goal",
+    "icon": {
+      "count": 1,
+      "id": "apothic_ascension:primal_material"
+    },
+    "title": {
+      "translate": "advancements.apothic_ascension.progression.celestial.title"
+    }
+  },
+  "requirements": [
+    [
+      "material"
+    ]
+  ],
+  "sends_telemetry_event": false
+}

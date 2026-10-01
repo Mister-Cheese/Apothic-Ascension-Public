@@ -1,0 +1,85 @@
+{
+  "type": "apotheosis:spectral",
+  "definition": {
+    "affix_type": "ability",
+    "exclusive_set": [],
+    "weights": {
+      "quality": 0.1,
+      "weight": 25
+    }
+  },
+  "values": {
+    "apotheosis:epic": {
+      "min": 0.2,
+      "max": 0.5
+    },
+    "apotheosis:mythic": {
+      "min": 0.3,
+      "max": 0.7
+    },
+    "apothic_ascension:legendary": {
+      "min": 0.326923,
+      "max": 0.719231,
+      "step": 0.0100591797
+    },
+    "apothic_ascension:ancient": {
+      "min": 0.353846,
+      "max": 0.738462,
+      "step": 0.0101214722
+    },
+    "apothic_ascension:forgotten": {
+      "min": 0.380769,
+      "max": 0.757692,
+      "step": 0.009919025
+    },
+    "apothic_ascension:primal": {
+      "min": 0.407692,
+      "max": 0.776923,
+      "step": 0.00997921638
+    },
+    "apothic_ascension:stellar": {
+      "min": 0.434615,
+      "max": 0.796154,
+      "step": 0.0100427512
+    },
+    "apothic_ascension:divine": {
+      "min": 0.461538,
+      "max": 0.815385,
+      "step": 0.0101099145
+    },
+    "apothic_ascension:esoteric": {
+      "min": 0.488462,
+      "max": 0.834615,
+      "step": 0.00989008509
+    },
+    "apothic_ascension:cataclysmic": {
+      "min": 0.515385,
+      "max": 0.853846,
+      "step": 0.00995473657
+    },
+    "apothic_ascension:abyssal": {
+      "min": 0.542308,
+      "max": 0.873077,
+      "step": 0.0100233033
+    },
+    "apothic_ascension:empyrean": {
+      "min": 0.569231,
+      "max": 0.892308,
+      "step": 0.010096157
+    },
+    "apothic_ascension:paracausal": {
+      "min": 0.596154,
+      "max": 0.911538,
+      "step": 0.00985575095
+    },
+    "apothic_ascension:transcendent": {
+      "min": 0.623077,
+      "max": 0.930769,
+      "step": 0.00992554985
+    },
+    "apothic_ascension:apotheotic": {
+      "min": 0.65,
+      "max": 0.95
+    }
+  }
+}

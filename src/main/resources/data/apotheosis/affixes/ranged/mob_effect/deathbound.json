@@ -1,0 +1,151 @@
+{
+  "type": "apotheosis:mob_effect",
+  "definition": {
+    "affix_type": "basic_effect",
+    "exclusive_set": [
+      "apotheosis:ranged/mob_effect/blighted"
+    ],
+    "weights": {
+      "pinnacle": {
+        "quality": 0.75,
+        "weight": 20
+      }
+    }
+  },
+  "mob_effect": "minecraft:wither",
+  "stack_on_reapply": true,
+  "stacking_limit": 4,
+  "target": "arrow_target",
+  "types": [
+    "apotheosis:bow",
+    "apotheosis:trident"
+  ],
+  "values": {
+    "apotheosis:mythic": {
+      "duration": {
+        "min": 100.0,
+        "max": 200.0,
+        "step": 20.0
+      },
+      "amplifier": 1.0,
+      "cooldown": 40
+    },
+    "apothic_ascension:legendary": {
+      "duration": {
+        "min": 110.45361017187261,
+        "max": 220.90722034374522,
+        "step": 18.4089355
+      },
+      "amplifier": 1.0,
+      "cooldown": 34
+    },
+    "apothic_ascension:ancient": {
+      "duration": {
+        "min": 120.0,
+        "max": 240.0,
+        "step": 20.0
+      },
+      "amplifier": 1.0,
+      "cooldown": 31
+    },
+    "apothic_ascension:forgotten": {
+      "duration": {
+        "min": 131.14877048604,
+        "max": 262.29754097208,
+        "step": 18.7355385
+      },
+      "amplifier": 1.0,
+      "cooldown": 28
+    },
+    "apothic_ascension:primal": {
+      "duration": {
+        "min": 144.22205101855957,
+        "max": 288.44410203711914,
+        "step": 20.6031494
+      },
+      "amplifier": 1.0,
+      "cooldown": 24
+    },
+    "apothic_ascension:stellar": {
+      "duration": {
+        "min": 160.6237840420901,
+        "max": 321.2475680841802,
+        "step": 20.0779724
+      },
+      "amplifier": 1.0,
+      "cooldown": 21
+    },
+    "apothic_ascension:divine": {
+      "duration": {
+        "min": 181.6590212458495,
+        "max": 363.318042491699,
+        "step": 20.1843357
+      },
+      "amplifier": 2.0,
+      "cooldown": 18
+    },
+    "apothic_ascension:esoteric": {
+      "duration": {
+        "min": 208.56653614614208,
+        "max": 417.13307229228417,
+        "step": 23.1740608
+      },
+      "amplifier": 2.0,
+      "cooldown": 15
+    },
+    "apothic_ascension:cataclysmic": {
+      "duration": {
+        "min": 242.89915602982236,
+        "max": 485.79831205964473,
+        "step": 20.2415962
+      },
+      "amplifier": 2.0,
+      "cooldown": 13
+    },
+    "apothic_ascension:abyssal": {
+      "duration": {
+        "min": 287.22813232690146,
+        "max": 574.4562646538029,
+        "step": 20.5162945
+      },
+      "amplifier": 2.0,
+      "cooldown": 10
+    },
+    "apothic_ascension:empyrean": {
+      "duration": {
+        "min": 344.9637662132068,
+        "max": 689.9275324264136,
+        "step": 20.2919865
+      },
+      "amplifier": 3.0,
+      "cooldown": 8
+    },
+    "apothic_ascension:paracausal": {
+      "duration": {
+        "min": 421.9004621945797,
+        "max": 843.8009243891594,
+        "step": 20.090498
+      },
+      "amplifier": 3.0,
+      "cooldown": 6
+    },
+    "apothic_ascension:transcendent": {
+      "duration": {
+        "min": 524.4044240850758,
+        "max": 1048.8088481701516,
+        "step": 20.1694012
+      },
+      "amplifier": 4.0,
+      "cooldown": 4
+    },
+    "apothic_ascension:apotheotic": {
+      "duration": {
+        "min": 648.074069840786,
+        "max": 1296.148139681572,
+        "step": 20.2523155
+      },
+      "amplifier": 4.0,
+      "cooldown": 3
+    }
+  }
+}

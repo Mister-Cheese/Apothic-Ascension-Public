@@ -1,0 +1,105 @@
+{
+  "type": "apotheosis:attribute",
+  "attribute": "apothic_attributes:life_steal",
+  "categories": [
+    "apotheosis:melee_weapon",
+    "apotheosis:trident"
+  ],
+  "definition": {
+    "affix_type": "stat",
+    "exclusive_set": [
+      "apotheosis:melee/attribute/berserking"
+    ],
+    "weights": {
+      "quality": 0.1,
+      "weight": 25
+    }
+  },
+  "operation": "add_value",
+  "values": {
+    "apotheosis:common": {
+      "min": 0.05,
+      "max": 0.08
+    },
+    "apotheosis:uncommon": {
+      "min": 0.05,
+      "max": 0.08
+    },
+    "apotheosis:rare": {
+      "min": 0.05,
+      "max": 0.1
+    },
+    "apotheosis:epic": {
+      "min": 0.08,
+      "max": 0.13
+    },
+    "apotheosis:mythic": {
+      "min": 0.1,
+      "max": 0.15
+    },
+    "apothic_ascension:legendary": {
+      "min": 0.118558,
+      "max": 0.187116,
+      "step": 0.0097939996
+    },
+    "apothic_ascension:ancient": {
+      "min": 0.136137,
+      "max": 0.222274,
+      "step": 0.00957077928
+    },
+    "apothic_ascension:forgotten": {
+      "min": 0.152706,
+      "max": 0.255413,
+      "step": 0.0102706999
+    },
+    "apothic_ascension:primal": {
+      "min": 0.168232,
+      "max": 0.286463,
+      "step": 0.00985258352
+    },
+    "apothic_ascension:stellar": {
+      "min": 0.182674,
+      "max": 0.315348,
+      "step": 0.0102056917
+    },
+    "apothic_ascension:divine": {
+      "min": 0.195987,
+      "max": 0.341974,
+      "step": 0.00973246619
+    },
+    "apothic_ascension:esoteric": {
+      "min": 0.208117,
+      "max": 0.366235,
+      "step": 0.00988237467
+    },
+    "apothic_ascension:cataclysmic": {
+      "min": 0.218998,
+      "max": 0.387997,
+      "step": 0.00994111784
+    },
+    "apothic_ascension:abyssal": {
+      "min": 0.228547,
+      "max": 0.407094,
+      "step": 0.00991927739
+    },
+    "apothic_ascension:empyrean": {
+      "min": 0.236655,
+      "max": 0.423309,
+      "step": 0.00982389506
+    },
+    "apothic_ascension:paracausal": {
+      "min": 0.243164,
+      "max": 0.436329,
+      "step": 0.0101665789
+    },
+    "apothic_ascension:transcendent": {
+      "min": 0.247822,
+      "max": 0.445644,
+      "step": 0.0098910993
+    },
+    "apothic_ascension:apotheotic": {
+      "min": 0.25,
+      "max": 0.45
+    }
+  }
+}

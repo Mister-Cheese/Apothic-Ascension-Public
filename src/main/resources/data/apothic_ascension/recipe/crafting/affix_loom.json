@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": ["TMT", "MLM", "TMT"],
+  "key": {
+    "T": {"item": "apothic_ascension:stability_thread"},
+    "M": {"item": "apothic_ascension:legendary_material"},
+    "L": {"item": "minecraft:loom"}
+  },
+  "result": {"id": "apothic_ascension:affix_loom", "count": 1}
+}

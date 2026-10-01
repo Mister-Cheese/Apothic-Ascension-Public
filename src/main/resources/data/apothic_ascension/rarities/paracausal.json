@@ -1,0 +1,100 @@
+{
+  "type": "apotheosis:rarity",
+  "color": "#66FFCC",
+  "material": "apothic_ascension:paracausal_material",
+  "render_data": {
+    "beam_height": 8.7,
+    "beam_radius": 0.07,
+    "beam_texture": "apotheosis:textures/rarity/beam.png",
+    "glow_radius": 0.15,
+    "glow_texture": "apotheosis:textures/rarity/glow.png",
+    "particle": {
+      "enabled": true
+    }
+  },
+  "rules": [
+    {
+      "type": "apotheosis:affix",
+      "affix_type": "stat"
+    },
+    {
+      "type": "apotheosis:affix",
+      "affix_type": "stat"
+    },
+    {
+      "type": "apotheosis:affix",
+      "affix_type": "stat"
+    },
+    {
+      "type": "apotheosis:affix",
+      "affix_type": "stat"
+    },
+    {
+      "type": "apotheosis:affix",
+      "affix_type": "stat"
+    },
+    {
+      "type": "apotheosis:affix",
+      "affix_type": "stat"
+    },
+    {
+      "type": "apotheosis:affix",
+      "affix_type": "basic_effect"
+    },
+    {
+      "type": "apotheosis:affix",
+      "affix_type": "basic_effect"
+    },
+    {
+      "type": "apotheosis:affix",
+      "affix_type": "basic_effect"
+    },
+    {
+      "type": "apotheosis:affix",
+      "affix_type": "ability"
+    },
+    {
+      "type": "apotheosis:affix",
+      "affix_type": "ability"
+    },
+    {
+      "type": "apotheosis:socket",
+      "min": 7,
+      "max": 9
+    },
+    {
+      "type": "apotheosis:select",
+      "chance": 0.56,
+      "if_false": {
+        "type": "apotheosis:component",
+        "components": {
+          "!apotheosis:durability_bonus": {},
+          "minecraft:unbreakable": {}
+        }
+      },
+      "if_true": {
+        "type": "apotheosis:durability",
+        "min": 0.85,
+        "max": 1.0
+      }
+    }
+  ],
+  "sort_index": 1800,
+  "weights": {
+    "haven": {
+      "weight": 0
+    },
+    "frontier": {
+      "weight": 0
+    },
+    "ascent": {
+      "weight": 0
+    },
+    "summit": {
+      "weight": 0
+    },
+    "pinnacle": {
+      "weight": 0
+    }
+  }
+}

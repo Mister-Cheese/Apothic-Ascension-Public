@@ -1,0 +1,8 @@
+{
+  "type": "apotheosis:reforging",
+  "level_cost": 140,
+  "material_cost": 13,
+  "rarity": "apothic_ascension:primal",
+  "sigil_cost": 15,
+  "tables": "apotheosis:reforging_table"
+}

@@ -1,0 +1,54 @@
+name: Public Source Guard
+
+on:
+  push:
+    branches:
+      - Public-Preview
+      - main
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: public-source-guard-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  validate:
+    name: Validate public source boundary
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - name: Checkout candidate
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          persist-credentials: false
+
+      - name: Set up Java 21
+        uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: "21"
+
+      - name: Set up Gradle 8.14.3
+        uses: gradle/actions/setup-gradle@v4
+        with:
+          gradle-version: "8.14.3"
+
+      - name: Audit source boundary
+        env:
+          AA_REQUIRE_ISOLATED_PREVIEW_HISTORY: ${{ github.ref_name == 'Public-Preview' }}
+        run: python .github/public_source_guard.py
+
+      - name: Clean public build
+        run: gradle --no-daemon --no-configuration-cache clean build
+
+      - name: Audit built runtime JAR
+        shell: bash
+        run: |
+          jar="$(find build/libs -maxdepth 1 -type f -name '*.jar' ! -name '*-sources.jar' -print -quit)"
+          test -n "$jar"
+          python .github/public_source_guard.py --jar "$jar"

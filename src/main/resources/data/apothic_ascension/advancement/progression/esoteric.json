@@ -1,0 +1,35 @@
+{
+  "parent": "apothic_ascension:progression/celestial",
+  "criteria": {
+    "material": {
+      "conditions": {
+        "items": [
+          {
+            "items": "apothic_ascension:cataclysmic_material"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "display": {
+    "background": "apotheosis:textures/advancements/bg/apoth.png",
+    "description": {
+      "translate": "advancements.apothic_ascension.progression.esoteric.desc"
+    },
+    "frame": "challenge",
+    "icon": {
+      "count": 1,
+      "id": "apothic_ascension:cataclysmic_material"
+    },
+    "title": {
+      "translate": "advancements.apothic_ascension.progression.esoteric.title"
+    }
+  },
+  "requirements": [
+    [
+      "material"
+    ]
+  ],
+  "sends_telemetry_event": false
+}

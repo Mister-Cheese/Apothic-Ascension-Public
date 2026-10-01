@@ -1,0 +1,193 @@
+{
+  "type": "apotheosis:cleaving",
+  "definition": {
+    "affix_type": "ability",
+    "exclusive_set": [],
+    "weights": {
+      "quality": 0.1,
+      "weight": 25
+    }
+  },
+  "values": {
+    "apotheosis:epic": {
+      "chance": {
+        "min": 0.3,
+        "max": 0.5,
+        "step": 0.05
+      },
+      "targets": {
+        "min": 2.0,
+        "max": 5.0,
+        "step": 1.0
+      }
+    },
+    "apotheosis:mythic": {
+      "chance": {
+        "min": 0.4,
+        "max": 0.6,
+        "step": 0.05
+      },
+      "targets": {
+        "min": 3.0,
+        "max": 6.0,
+        "step": 1.0
+      }
+    },
+    "apothic_ascension:legendary": {
+      "chance": {
+        "min": 0.45270878694677275,
+        "max": 0.6608195673907684,
+        "step": 0.0520277023
+      },
+      "targets": {
+        "min": 3.0,
+        "max": 7,
+        "step": 1.0
+      }
+    },
+    "apothic_ascension:ancient": {
+      "chance": {
+        "min": 0.48524967973354305,
+        "max": 0.6961368828270504,
+        "step": 0.0527218059
+      },
+      "targets": {
+        "min": 3.0,
+        "max": 7,
+        "step": 1.0
+      }
+    },
+    "apothic_ascension:forgotten": {
+      "chance": {
+        "min": 0.5232185906558773,
+        "max": 0.7351579216048667,
+        "step": 0.0529848337
+      },
+      "targets": {
+        "min": 4,
+        "max": 7,
+        "step": 1.0
+      }
+    },
+    "apothic_ascension:primal": {
+      "chance": {
+        "min": 0.5695233858896345,
+        "max": 0.7795048781771534,
+        "step": 0.0524953753
+      },
+      "targets": {
+        "min": 4,
+        "max": 8,
+        "step": 1.0
+      }
+    },
+    "apothic_ascension:stellar": {
+      "chance": {
+        "min": 0.6211324795063868,
+        "max": 0.8246466837783653,
+        "step": 0.0508785546
+      },
+      "targets": {
+        "min": 4,
+        "max": 8,
+        "step": 1.0
+      }
+    },
+    "apothic_ascension:divine": {
+      "chance": {
+        "min": 0.6749630374789237,
+        "max": 0.8667914868157003,
+        "step": 0.0479571074
+      },
+      "targets": {
+        "min": 4,
+        "max": 9,
+        "step": 1.0
+      }
+    },
+    "apothic_ascension:esoteric": {
+      "chance": {
+        "min": 0.73503210778558,
+        "max": 0.9076672060219383,
+        "step": 0.0575450473
+      },
+      "targets": {
+        "min": 5,
+        "max": 10,
+        "step": 1.0
+      }
+    },
+    "apothic_ascension:cataclysmic": {
+      "chance": {
+        "min": 0.7999325491142557,
+        "max": 0.9442186561666805,
+        "step": 0.0480953641
+      },
+      "targets": {
+        "min": 5,
+        "max": 11,
+        "step": 1.0
+      }
+    },
+    "apothic_ascension:abyssal": {
+      "chance": {
+        "min": 0.8670472150116817,
+        "max": 0.95,
+        "step": 0.0414763987
+      },
+      "targets": {
+        "min": 6,
+        "max": 12,
+        "step": 1.0
+      }
+    },
+    "apothic_ascension:empyrean": {
+      "chance": {
+        "min": 0.9261124311645186,
+        "max": 0.95,
+        "step": 0.0238875747
+      },
+      "targets": {
+        "min": 7,
+        "max": 14,
+        "step": 1.0
+      }
+    },
+    "apothic_ascension:paracausal": {
+      "chance": {
+        "min": 0.95,
+        "max": 0.95,
+        "step": 0.05
+      },
+      "targets": {
+        "min": 8,
+        "max": 16,
+        "step": 1.0
+      }
+    },
+    "apothic_ascension:transcendent": {
+      "chance": {
+        "min": 0.95,
+        "max": 0.95,
+        "step": 0.05
+      },
+      "targets": {
+        "min": 9,
+        "max": 19,
+        "step": 1.0
+      }
+    },
+    "apothic_ascension:apotheotic": {
+      "chance": {
+        "min": 0.95,
+        "max": 0.95,
+        "step": 0.05
+      },
+      "targets": {
+        "min": 11,
+        "max": 22,
+        "step": 1.0
+      }
+    }
+  }
+}

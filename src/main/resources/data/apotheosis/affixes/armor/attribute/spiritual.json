@@ -1,0 +1,95 @@
+{
+  "type": "apotheosis:attribute",
+  "attribute": "apothic_attributes:healing_received",
+  "categories": [
+    "apotheosis:chestplate",
+    "apotheosis:leggings"
+  ],
+  "definition": {
+    "affix_type": "stat",
+    "exclusive_set": [],
+    "weights": {
+      "quality": 0.1,
+      "weight": 25
+    }
+  },
+  "operation": "add_multiplied_base",
+  "values": {
+    "apotheosis:rare": {
+      "min": 0.1,
+      "max": 0.25
+    },
+    "apotheosis:epic": {
+      "min": 0.15,
+      "max": 0.3
+    },
+    "apotheosis:mythic": {
+      "min": 0.2,
+      "max": 0.4
+    },
+    "apothic_ascension:legendary": {
+      "min": 0.268046,
+      "max": 0.536093,
+      "step": 0.00992766675
+    },
+    "apothic_ascension:ancient": {
+      "min": 0.332502,
+      "max": 0.665005,
+      "step": 0.0100758495
+    },
+    "apothic_ascension:forgotten": {
+      "min": 0.393256,
+      "max": 0.786513,
+      "step": 0.0100835115
+    },
+    "apothic_ascension:primal": {
+      "min": 0.450183,
+      "max": 0.900366,
+      "step": 0.0100040669
+    },
+    "apothic_ascension:stellar": {
+      "min": 0.503138,
+      "max": 1.006276,
+      "step": 0.0100627597
+    },
+    "apothic_ascension:divine": {
+      "min": 0.551953,
+      "max": 1.103906,
+      "step": 0.0100355092
+    },
+    "apothic_ascension:esoteric": {
+      "min": 0.59643,
+      "max": 1.19286,
+      "step": 0.00994050037
+    },
+    "apothic_ascension:cataclysmic": {
+      "min": 0.636327,
+      "max": 1.272654,
+      "step": 0.00994260982
+    },
+    "apothic_ascension:abyssal": {
+      "min": 0.67134,
+      "max": 1.34268,
+      "step": 0.0100199999
+    },
+    "apothic_ascension:empyrean": {
+      "min": 0.701067,
+      "max": 1.402133,
+      "step": 0.0100152288
+    },
+    "apothic_ascension:paracausal": {
+      "min": 0.724936,
+      "max": 1.449871,
+      "step": 0.0100685405
+    },
+    "apothic_ascension:transcendent": {
+      "min": 0.742014,
+      "max": 1.484027,
+      "step": 0.0100272028
+    },
+    "apothic_ascension:apotheotic": {
+      "min": 0.75,
+      "max": 1.5
+    }
+  }
+}

@@ -1,0 +1,33 @@
+{
+  "required": true,
+  "minVersion": "0.8",
+  "package": "dev.mistercheese.apothicascension.mixin",
+  "compatibilityLevel": "JAVA_21",
+  "mixins": [
+    "GemItemMixin",
+    "AttributeBonusScalingMixin",
+    "DamageReductionBonusScalingMixin",
+    "DurabilityBonusScalingMixin",
+    "EnchantmentBonusScalingMixin",
+    "MobEffectBonusScalingMixin",
+    "MultiAttrBonusScalingMixin",
+    "AllStatsBonusScalingMixin",
+    "BloodyArrowBonusScalingMixin",
+    "DropTransformBonusScalingMixin",
+    "FrozenDropsBonusScalingMixin",
+    "LeechBlockBonusScalingMixin",
+    "MageSlayerBonusScalingMixin",
+    "RadialBonusScalingMixin",
+    "NaturalGemLootModifierMixin",
+    "NaturalGemLootPoolEntryMixin",
+    "NaturalAffixLootModifierMixin",
+    "NaturalAffixLootPoolEntryMixin",
+    "InvaderRarityCompatMixin"
+  ],
+  "client": [
+    "JeiGemSubtypeMixin"
+  ],
+  "injectors": {
+    "defaultRequire": 1
+  }
+}

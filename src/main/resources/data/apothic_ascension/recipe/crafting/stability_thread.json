@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": ["GFG", "FSF", "GFG"],
+  "key": {
+    "G": {"item": "apotheosis:gem_dust"},
+    "F": {"item": "apothic_ascension:forgotten_material"},
+    "S": {"item": "minecraft:string"}
+  },
+  "result": {"id": "apothic_ascension:stability_thread", "count": 4}
+}

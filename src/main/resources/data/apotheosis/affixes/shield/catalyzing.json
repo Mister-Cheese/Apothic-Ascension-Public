@@ -1,0 +1,88 @@
+{
+  "type": "apotheosis:catalyzing",
+  "definition": {
+    "affix_type": "ability",
+    "exclusive_set": [],
+    "weights": {
+      "quality": 0.1,
+      "weight": 25
+    }
+  },
+  "values": {
+    "apotheosis:epic": {
+      "min": 200.0,
+      "max": 400.0,
+      "step": 20.0
+    },
+    "apotheosis:mythic": {
+      "min": 300.0,
+      "max": 600.0,
+      "step": 20.0
+    },
+    "apothic_ascension:legendary": {
+      "min": 366.0,
+      "max": 732.0,
+      "step": 20.333334
+    },
+    "apothic_ascension:ancient": {
+      "min": 432.0,
+      "max": 864.0,
+      "step": 19.636364
+    },
+    "apothic_ascension:forgotten": {
+      "min": 516.0,
+      "max": 1032.0,
+      "step": 19.8461533
+    },
+    "apothic_ascension:primal": {
+      "min": 624.0,
+      "max": 1248.0,
+      "step": 20.1290321
+    },
+    "apothic_ascension:stellar": {
+      "min": 774.0,
+      "max": 1548.0,
+      "step": 19.8461533
+    },
+    "apothic_ascension:divine": {
+      "min": 990.0,
+      "max": 1980.0,
+      "step": 19.7999992
+    },
+    "apothic_ascension:esoteric": {
+      "min": 1305.0,
+      "max": 2610.0,
+      "step": 20.0769234
+    },
+    "apothic_ascension:cataclysmic": {
+      "min": 1770.0,
+      "max": 3540.0,
+      "step": 19.88764
+    },
+    "apothic_ascension:abyssal": {
+      "min": 2475.0,
+      "max": 4950.0,
+      "step": 19.9596767
+    },
+    "apothic_ascension:empyrean": {
+      "min": 3570.0,
+      "max": 7140.0,
+      "step": 19.9441338
+    },
+    "apothic_ascension:paracausal": {
+      "min": 5340.0,
+      "max": 10680.0,
+      "step": 20.0
+    },
+    "apothic_ascension:transcendent": {
+      "min": 8250.0,
+      "max": 16500.0,
+      "step": 19.9757862
+    },
+    "apothic_ascension:apotheotic": {
+      "min": 12600.0,
+      "max": 25200.0,
+      "step": 20.0
+    }
+  }
+}

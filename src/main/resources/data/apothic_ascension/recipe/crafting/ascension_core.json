@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": ["LNL", "NEN", "LNL"],
+  "key": {
+    "L": {"item": "apothic_ascension:legendary_material"},
+    "N": {"item": "minecraft:nether_star"},
+    "E": {"item": "minecraft:ender_eye"}
+  },
+  "result": {"id": "apothic_ascension:ascension_core", "count": 1}
+}

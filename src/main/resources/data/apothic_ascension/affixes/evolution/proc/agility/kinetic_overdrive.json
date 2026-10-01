@@ -1,0 +1,164 @@
+{
+  "type": "apotheosis:mob_effect",
+  "mob_effect": "minecraft:speed",
+  "target": "attack_self",
+  "types": [
+    "apotheosis:melee_weapon",
+    "apotheosis:trident"
+  ],
+  "definition": {
+    "affix_type": "basic_effect",
+    "exclusive_set": [
+      "apothic_ascension:evolution/compound/attack/war_engine",
+      "apothic_ascension:evolution/compound/defense/citadel_core",
+      "apothic_ascension:evolution/compound/sustain/vital_engine",
+      "apothic_ascension:evolution/compound/utility/prospector_core",
+      "apothic_ascension:evolution/keystone/attack/glass_cannon",
+      "apothic_ascension:evolution/keystone/defense/immovable_citadel",
+      "apothic_ascension:evolution/keystone/sustain/blood_pact",
+      "apothic_ascension:evolution/keystone/utility/singularity_tool",
+      "apothic_ascension:evolution/proc/attack/fury_cascade",
+      "apothic_ascension:evolution/proc/attack/ruin_cascade",
+      "apothic_ascension:evolution/proc/defense/absorption_engine",
+      "apothic_ascension:evolution/proc/defense/reactive_fortress",
+      "apothic_ascension:evolution/proc/sustain/blood_recovery",
+      "apothic_ascension:evolution/proc/sustain/regeneration_engine",
+      "apothic_ascension:evolution/proc/utility/adaptation_engine",
+      "apothic_ascension:evolution/proc/utility/knowledge_engine",
+      "apothic_ascension:focus/agility/tempo",
+      "apothic_ascension:focus/attack/arrow_sunder",
+      "apothic_ascension:focus/attack/blood_frenzy",
+      "apothic_ascension:focus/attack/devastating",
+      "apothic_ascension:focus/attack/executioner",
+      "apothic_ascension:focus/attack/overpowering",
+      "apothic_ascension:focus/attack/penetrating",
+      "apothic_ascension:focus/attack/precision",
+      "apothic_ascension:focus/attack/rending",
+      "apothic_ascension:focus/attack/retaliatory_fury",
+      "apothic_ascension:focus/attack/stormchain",
+      "apothic_ascension:focus/attack/sunderstorm",
+      "apothic_ascension:focus/attack/warpath",
+      "apothic_ascension:focus/defense/absorptive",
+      "apothic_ascension:focus/defense/anchored",
+      "apothic_ascension:focus/defense/catalytic_wall",
+      "apothic_ascension:focus/defense/fortified",
+      "apothic_ascension:focus/defense/iron_wall",
+      "apothic_ascension:focus/defense/last_bastion",
+      "apothic_ascension:focus/defense/psychic_wall",
+      "apothic_ascension:focus/defense/restorative",
+      "apothic_ascension:focus/defense/unyielding",
+      "apothic_ascension:focus/defense/vital",
+      "apothic_ascension:focus/defense/vital_surge",
+      "apothic_ascension:focus/sustain/blood_mend",
+      "apothic_ascension:focus/sustain/bloodbound",
+      "apothic_ascension:focus/sustain/bloodguard",
+      "apothic_ascension:focus/sustain/emergency_mend",
+      "apothic_ascension:focus/sustain/enduring",
+      "apothic_ascension:focus/sustain/overflowing",
+      "apothic_ascension:focus/sustain/regenerative",
+      "apothic_ascension:focus/sustain/regrowth",
+      "apothic_ascension:focus/sustain/resilient_loop",
+      "apothic_ascension:focus/sustain/steadfast",
+      "apothic_ascension:focus/sustain/vitality_loop",
+      "apothic_ascension:focus/utility/aquatic",
+      "apothic_ascension:focus/utility/enlightened",
+      "apothic_ascension:focus/utility/field_analysis",
+      "apothic_ascension:focus/utility/grand_radial",
+      "apothic_ascension:focus/utility/industrial",
+      "apothic_ascension:focus/utility/insight",
+      "apothic_ascension:focus/utility/longreach",
+      "apothic_ascension:focus/utility/masterwork_omnetic",
+      "apothic_ascension:focus/utility/oxygenated",
+      "apothic_ascension:focus/utility/prosperous",
+      "apothic_ascension:focus/utility/scholar",
+      "apothic_ascension:focus/utility/telepathic"
+    ],
+    "weights": {
+      "quality": 0.97,
+      "weight": 34
+    }
+  },
+  "values": {
+    "apothic_ascension:stellar": {
+      "duration": {
+        "min": 140.0,
+        "max": 280.0,
+        "step": 20.0
+      },
+      "amplifier": 0.0,
+      "cooldown": 82
+    },
+    "apothic_ascension:divine": {
+      "duration": {
+        "min": 160.0,
+        "max": 320.0,
+        "step": 20.0
+      },
+      "amplifier": 0.0,
+      "cooldown": 71
+    },
+    "apothic_ascension:esoteric": {
+      "duration": {
+        "min": 180.0,
+        "max": 360.0,
+        "step": 20.0
+      },
+      "amplifier": 1.0,
+      "cooldown": 61
+    },
+    "apothic_ascension:cataclysmic": {
+      "duration": {
+        "min": 200.0,
+        "max": 400.0,
+        "step": 20.0
+      },
+      "amplifier": 1.0,
+      "cooldown": 53
+    },
+    "apothic_ascension:abyssal": {
+      "duration": {
+        "min": 240.0,
+        "max": 480.0,
+        "step": 20.0
+      },
+      "amplifier": 2.0,
+      "cooldown": 45
+    },
+    "apothic_ascension:empyrean": {
+      "duration": {
+        "min": 260.0,
+        "max": 520.0,
+        "step": 20.0
+      },
+      "amplifier": 2.0,
+      "cooldown": 39
+    },
+    "apothic_ascension:paracausal": {
+      "duration": {
+        "min": 300.0,
+        "max": 600.0,
+        "step": 20.0
+      },
+      "amplifier": 3.0,
+      "cooldown": 34
+    },
+    "apothic_ascension:transcendent": {
+      "duration": {
+        "min": 360.0,
+        "max": 720.0,
+        "step": 20.0
+      },
+      "amplifier": 3.0,
+      "cooldown": 29
+    },
+    "apothic_ascension:apotheotic": {
+      "duration": {
+        "min": 400.0,
+        "max": 800.0,
+        "step": 20.0
+      },
+      "amplifier": 4.0,
+      "cooldown": 25
+    }
+  }
+}

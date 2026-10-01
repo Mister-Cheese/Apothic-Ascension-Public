@@ -1,0 +1,12 @@
+{
+  "replace": false,
+  "values": [
+    { "id": "#spartan_weaponry_unofficial:weapons", "required": false }
+  ],
+  "remove": [
+    { "id": "#spartan_weaponry_unofficial:weapons/longbows", "required": false },
+    { "id": "#spartan_weaponry_unofficial:weapons/heavy_crossbows", "required": false },
+    { "id": "#spartan_weaponry_unofficial:longbow", "required": false },
+    { "id": "#spartan_weaponry_unofficial:heavy_crossbow", "required": false }
+  ]
+}

@@ -1,0 +1,108 @@
+{
+  "type": "apotheosis:rarity",
+  "color": "rainbow",
+  "material": "apothic_ascension:apotheotic_material",
+  "render_data": {
+    "beam_height": 10.0,
+    "beam_radius": 0.08,
+    "beam_texture": "apotheosis:textures/rarity/beam.png",
+    "glow_radius": 0.18,
+    "glow_texture": "apotheosis:textures/rarity/glow.png",
+    "particle": {
+      "enabled": true
+    }
+  },
+  "rules": [
+    {
+      "type": "apotheosis:affix",
+      "affix_type": "stat"
+    },
+    {
+      "type": "apotheosis:affix",
+      "affix_type": "stat"
+    },
+    {
+      "type": "apotheosis:affix",
+      "affix_type": "stat"
+    },
+    {
+      "type": "apotheosis:affix",
+      "affix_type": "stat"
+    },
+    {
+      "type": "apotheosis:affix",
+      "affix_type": "stat"
+    },
+    {
+      "type": "apotheosis:affix",
+      "affix_type": "stat"
+    },
+    {
+      "type": "apotheosis:affix",
+      "affix_type": "stat"
+    },
+    {
+      "type": "apotheosis:affix",
+      "affix_type": "basic_effect"
+    },
+    {
+      "type": "apotheosis:affix",
+      "affix_type": "basic_effect"
+    },
+    {
+      "type": "apotheosis:affix",
+      "affix_type": "basic_effect"
+    },
+    {
+      "type": "apotheosis:affix",
+      "affix_type": "ability"
+    },
+    {
+      "type": "apotheosis:affix",
+      "affix_type": "ability"
+    },
+    {
+      "type": "apotheosis:affix",
+      "affix_type": "ability"
+    },
+    {
+      "type": "apotheosis:socket",
+      "min": 8,
+      "max": 10
+    },
+    {
+      "type": "apotheosis:select",
+      "chance": 0.48,
+      "if_false": {
+        "type": "apotheosis:component",
+        "components": {
+          "!apotheosis:durability_bonus": {},
+          "minecraft:unbreakable": {}
+        }
+      },
+      "if_true": {
+        "type": "apotheosis:durability",
+        "min": 0.9,
+        "max": 1.0
+      }
+    }
+  ],
+  "sort_index": 2000,
+  "weights": {
+    "haven": {
+      "weight": 0
+    },
+    "frontier": {
+      "weight": 0
+    },
+    "ascent": {
+      "weight": 0
+    },
+    "summit": {
+      "weight": 0
+    },
+    "pinnacle": {
+      "weight": 0
+    }
+  }
+}
