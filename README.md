@@ -2,7 +2,7 @@
 
 This repository is the **public, release-aligned source export** for Apothic Ascension.
 
-Current exported version: **1.14.1-Beta**
+Current exported version: **1.14.2-Beta**
 Minecraft: **1.21.1**
 NeoForge: **21.1.249**
 

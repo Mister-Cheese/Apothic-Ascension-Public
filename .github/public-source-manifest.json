@@ -1,6 +1,6 @@
 {
   "schema": 1,
-  "release": "1.14.1-Beta",
+  "release": "1.14.2-Beta",
   "files": [
     {
       "path": ".gitattributes",
@@ -13,8 +13,8 @@
       "path": ".github/FUNDING.yml",
       "kind": "public_metadata",
       "mode": "100644",
-      "size": 935,
-      "sha256": "5be9227513b1b0f69fff5abb91217b6bc7e97b67195ff932f5bb5d9382107dab"
+      "size": 22,
+      "sha256": "6584d7c5eb65a1b686adacf6e0f1d1517f272fb279290e2da41a6da65f3d6f71"
     },
     {
       "path": ".github/ISSUE_TEMPLATE/bug.yml",
@@ -69,8 +69,8 @@
       "path": "CHANGELOG.md",
       "kind": "public_prose",
       "mode": "100644",
-      "size": 1380,
-      "sha256": "d461260deb396e82a21c2ece872d04dc19a66a62d895a944dff09a9ff1eea21a"
+      "size": 1544,
+      "sha256": "90121078166ec2620a8401d7a4c5298847fb5435377fc98b37164db7fb141370"
     },
     {
       "path": "CONTRIBUTING.md",
@@ -83,8 +83,8 @@
       "path": "gradle.properties",
       "kind": "public_build_metadata",
       "mode": "100644",
-      "size": 1198,
-      "sha256": "6ca65b947a5ebf0f2a0552ea47c6db80737fa200869d2e5f4c3c68232c795378"
+      "size": 1200,
+      "sha256": "6a4fa5a20060ce5c1f846edd2aa11e8a30dd44599e23886bd6b5964e8b7994eb"
     },
     {
       "path": "LICENSE",
@@ -105,7 +105,7 @@
       "kind": "public_prose",
       "mode": "100644",
       "size": 1618,
-      "sha256": "4875443b1c9b1475dee5948a14de6d67191dec951322c157db158015abe70812"
+      "sha256": "ade20734b4749233f66d6516127bdc994b0a3be1ba7353857d5218b6873ea081"
     },
     {
       "path": "SECURITY.md",
@@ -126,7 +126,7 @@
       "kind": "java_source",
       "mode": "100644",
       "size": 2270,
-      "sha256": "5b32dc438be461a037622e1d30d4c61e66b05963b563805efa80a50142e842fe"
+      "sha256": "35a07b577e2b2c976ff8333707b528449ecd29dadae2480fdcebb59b18804955"
     },
     {
       "path": "src/main/java/dev/mistercheese/apothicascension/AscensionCombatHandler.java",
@@ -328,8 +328,8 @@
       "path": "src/main/java/dev/mistercheese/apothicascension/compat/CompatibilityRegistry.java",
       "kind": "java_source",
       "mode": "100644",
-      "size": 4917,
-      "sha256": "13582c2f5243ac950c2ea296f23eb97e56ad60d4bf3d4c6479ce78e3d47a20e2"
+      "size": 4919,
+      "sha256": "4eb8602564404c05ba10bcae38a6339996408b0b6a824f038ebb43f4ba70ca0c"
     },
     {
       "path": "src/main/java/dev/mistercheese/apothicascension/compat/CompatibilityResolver.java",
@@ -4619,15 +4619,15 @@
       "path": "src/main/resources/META-INF/apothic_ascension-compatibility.json",
       "kind": "text_resource",
       "mode": "100644",
-      "size": 8847,
-      "sha256": "183b5eb3a213f2e0e9ced5bbbcb02467333e183513202ba69ea491e1625a8ed9"
+      "size": 8849,
+      "sha256": "13d07badd4c32a3a23bf6335e9f115780c0acf4fe892ad095384e91144440e75"
     },
     {
       "path": "src/main/resources/META-INF/apothic_ascension-dependencies.json",
       "kind": "text_resource",
       "mode": "100644",
-      "size": 5790,
-      "sha256": "b615739188b76d6fc82869a33e85a097fa20075580f6704825fa8bac51fcfdb9"
+      "size": 5792,
+      "sha256": "768cb175dbc61155b551a649b03a42873442a1afcb65efa07c15646140d20742"
     },
     {
       "path": "src/main/resources/META-INF/licenses/apotheosis.txt",

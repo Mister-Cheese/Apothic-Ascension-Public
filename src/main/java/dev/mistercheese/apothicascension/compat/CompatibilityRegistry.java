@@ -48,7 +48,7 @@ public final class CompatibilityRegistry {
         target("simplyswords", "Simply Swords", "1.70.2-1.21.1", "1.71", Map.of(
             CompatibilityDomain.ITEM_STATE,
                 CompatibilityDomainPolicy.nativeOwnedBy("simplyswords"))),
-        target("silentgear", "Silent Gear", "4.1.5", "4.2", Map.of(
+        target("silentgear", "Silent Gear", "4.1.5", "4.2.2", Map.of(
             CompatibilityDomain.ITEM_STATE,
                 CompatibilityDomainPolicy.nativeOwnedBy("silentgear"))),
         target("jei", "Just Enough Items", "19.27.0.343", "20", Map.of(
