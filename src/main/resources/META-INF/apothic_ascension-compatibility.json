@@ -1,6 +1,6 @@
 {
   "schema": 2,
-  "build": "1.14.1-Beta",
+  "build": "1.14.2-Beta",
   "policy_revision": "compat-provider-v3",
   "provider_states": [
     "native",
@@ -166,7 +166,7 @@
     {
       "mod_id": "silentgear",
       "display_name": "Silent Gear",
-      "audited_version_range": "[4.1.5,4.2)",
+      "audited_version_range": "[4.1.5,4.2.2)",
       "audit_basis": "Beta 14 exact Silent Gear 4.1.5 NeoForge artifact metadata plus generic foreign-component preservation boundary",
       "domains": {
         "item_state": {

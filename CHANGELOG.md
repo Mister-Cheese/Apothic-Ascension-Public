@@ -1,10 +1,15 @@
 # Changelog
 
+## 1.14.2-Beta
+
+- Expanded the Silent Gear compatibility range through 4.2.1.1 after qualifying 4.2.1.1 with Silent Lib 10.6.0.
+- No gameplay balance or content changed in this patch.
+
 ## 1.14.1-Beta
 
 - Moved development-only validation code out of the distributed mod JAR. Gameplay is unchanged.
 - Added MPL-2.0 source publication metadata and a public source repository.
-- Kept the Beta 14 gameplay and equipment compatibility behavior unchanged.
+- Kept Beta 14 gameplay balance and content unchanged.
 
 ## 1.14.0-Beta
 

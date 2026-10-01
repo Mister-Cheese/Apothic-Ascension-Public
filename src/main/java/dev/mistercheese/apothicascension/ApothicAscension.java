@@ -23,7 +23,7 @@ import net.neoforged.fml.loading.FMLLoader;
 @Mod(ApothicAscension.MODID)
 public final class ApothicAscension {
     public static final String MODID = "apothic_ascension";
-    public static final String BUILD_ID = "1.14.1-Beta";
+    public static final String BUILD_ID = "1.14.2-Beta";
 
     public ApothicAscension(IEventBus modBus, ModContainer modContainer) {
         CompatibilityManager.initialize();
