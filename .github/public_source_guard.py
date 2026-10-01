@@ -189,6 +189,13 @@ def sha256(data: bytes) -> str:
     return hashlib.sha256(data).hexdigest()
 
 
+def canonical_manifest_bytes(rel: str, data: bytes) -> bytes:
+    kind = classify_path(rel)
+    if kind == "png_resource":
+        return data
+    return data.replace(b"\r\n", b"\n")
+
+
 def parse_properties(path: Path) -> dict[str, str]:
     values: dict[str, str] = {}
     for raw in path.read_text(encoding="utf-8").splitlines():
@@ -307,9 +314,10 @@ def verify_manifest() -> tuple[dict[str, str], dict[str, object]]:
             raise GuardError(f"manifest file class mismatch for {rel}")
         if item.get("mode") != modes[rel]:
             raise GuardError(f"manifest Git mode mismatch for {rel}")
-        if item.get("size") != len(data):
+        canonical = canonical_manifest_bytes(rel, data)
+        if item.get("size") != len(canonical):
             raise GuardError(f"manifest size mismatch for {rel}")
-        if item.get("sha256") != sha256(data):
+        if item.get("sha256") != sha256(canonical):
             raise GuardError(f"manifest SHA-256 mismatch for {rel}")
 
     return modes, manifest

@@ -41,8 +41,8 @@
       "path": ".github/public_source_guard.py",
       "kind": "public_guard",
       "mode": "100644",
-      "size": 29658,
-      "sha256": "76496571f575f278801ef754065bd746cc36fcd19838dddf397bb3a90a63ee87"
+      "size": 29909,
+      "sha256": "a7b705676094b5a3fe6bd89c959ad1471c47232a3a2ed49d7d2637f592544798"
     },
     {
       "path": ".github/workflows/public-source-guard.yml",
