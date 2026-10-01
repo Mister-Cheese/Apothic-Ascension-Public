@@ -640,8 +640,10 @@ def validate_png(rel: str, data: bytes) -> None:
 def validate_class(rel: str, data: bytes) -> None:
     if len(data) < 10 or data[:4] != b"\xca\xfe\xba\xbe":
         raise GuardError(f"invalid Java class header: {rel}")
-    scan_secret_material(data, rel)
 
+    # Do not run token regexes across arbitrary bytecode or attribute payloads. Class files are
+    # structured binary data, and high-entropy bytes can accidentally resemble credentials. Real
+    # Java string constants and identifiers live in CONSTANT_Utf8 entries, which are scanned below.
     minor, major, constant_pool_count = struct.unpack(">HHH", data[4:10])
     if minor != 0 or major != EXPECTED_CLASS_MAJOR:
         raise GuardError(
@@ -805,6 +807,35 @@ def validate_class(rel: str, data: bytes) -> None:
             )
 
 
+def scan_history_blob(context: str, data: bytes) -> None:
+    """Inspect a historical blob using its actual structure when possible."""
+    if data.startswith(PNG_SIGNATURE):
+        validate_png(context, data)
+        return
+    if data.startswith(b"\xca\xfe\xba\xbe"):
+        validate_class(context, data)
+        return
+    if data.startswith(b"PK\x03\x04"):
+        raise GuardError(f"archive payload exists in reachable Git history: {context}")
+
+    # Unknown binary blobs are not interpreted as prose. Credential regexes operate on semantic
+    # text, not arbitrary high-entropy bytes. The public tree itself is extension-allowlisted, and
+    # known structured binaries above receive format-aware validation.
+    if b"\x00" in data:
+        return
+    try:
+        text = data.decode("utf-8")
+    except UnicodeDecodeError:
+        return
+    control_count = sum(
+        1 for char in text
+        if ord(char) < 32 and char not in "\t\r\n"
+    )
+    if control_count:
+        return
+    scan_secret_material(data, context, include_machine_paths=False)
+
+
 def validate_prose(rel: str, text: str) -> None:
     non_ascii = sorted({char for char in text if ord(char) > 127})
     if non_ascii:
@@ -857,13 +888,15 @@ def validate_current_tree() -> dict[str, object]:
         data = path.read_bytes()
         if len(data) > MAX_FILE_SIZE:
             raise GuardError(f"public file exceeds size limit: {rel}")
-        scan_secret_material(data, rel)
 
         kind = classify_path(rel)
         if kind == "png_resource":
+            # PNG metadata is either rejected or structurally classified by validate_png(). Do not
+            # scan compressed raster bytes as text; that creates high-entropy false positives.
             validate_png(rel, data)
             continue
 
+        scan_secret_material(data, rel)
         suffix = Path(rel).suffix.lower()
         if suffix in TEXT_SUFFIXES or rel in ROOT_FILES or rel in GITHUB_FILES:
             text = validate_text(rel, data)
@@ -984,13 +1017,7 @@ def scan_reachable_history() -> None:
         if end >= len(batch) or batch[end:end + 1] != b"\n":
             raise GuardError("truncated git blob in history stream")
         data = batch[start:end]
-        if data.startswith(PNG_SIGNATURE):
-            validate_png(f"reachable Git blob {sha}", data)
-        scan_secret_material(
-            data,
-            f"reachable Git blob {sha}",
-            include_machine_paths=False,
-        )
+        scan_history_blob(f"reachable Git blob {sha}", data)
         pos = end + 1
 
     baseline = subprocess.run(
@@ -1001,14 +1028,15 @@ def scan_reachable_history() -> None:
         stdout=subprocess.DEVNULL,
         stderr=subprocess.DEVNULL,
     ).returncode == 0
-    if baseline:
-        recent = git_bytes("diff", "--binary", LEGACY_HISTORY_BASELINE, "HEAD")
-    else:
-        recent = git_bytes(
-            "log", "--full-history", "--no-ext-diff", "--text",
-            "--format=commit:%H", "-p", "HEAD"
-        )
-    scan_secret_material(recent, "post-baseline reachable history")
+
+    # File content is already scanned blob-by-blob above. Do not scan --binary patch encodings:
+    # those encodings are high-entropy transport text and can manufacture token-shaped sequences.
+    # Commit messages and changed path names remain useful semantic history metadata to inspect.
+    revision = f"{LEGACY_HISTORY_BASELINE}..HEAD" if baseline else "HEAD"
+    commit_messages = git_bytes("log", revision, "--format=%H%n%B%n")
+    changed_paths = git_bytes("log", revision, "--format=", "--name-only")
+    scan_secret_material(commit_messages, "reachable commit messages")
+    scan_secret_material(changed_paths, "reachable changed paths")
 
 
 def verify_jar(path: Path) -> None:

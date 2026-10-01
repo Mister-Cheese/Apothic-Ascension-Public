@@ -48,8 +48,8 @@
       "path": ".github/public_source_guard.py",
       "kind": "public_guard",
       "mode": "100644",
-      "size": 45173,
-      "sha256": "c94c9bb74151b7441d7b072d01fefe689ac8559f2c41551f5830fc7a3743643e"
+      "size": 46832,
+      "sha256": "9fa9c4d03d28c38fddef25286f4631147fc7e2a4493d40d0f38ab7dff1dcca57"
     },
     {
       "path": ".gitignore",
