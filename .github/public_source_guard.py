@@ -15,20 +15,25 @@ import subprocess
 import sys
 import tomllib
 import zipfile
+import zlib
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
 MANIFEST_PATH = ".github/public-source-manifest.json"
 MAX_FILE_SIZE = 16 * 1024 * 1024
 MAX_ARCHIVE_ENTRY_SIZE = 64 * 1024 * 1024
+MAX_ARCHIVE_TOTAL_SIZE = 128 * 1024 * 1024
+MAX_ARCHIVE_ENTRIES = 4096
+MAX_PNG_RASTER_SIZE = 64 * 1024 * 1024
+EXPECTED_CLASS_MAJOR = 65  # Java 21, matching the public build toolchain.
 PNG_SIGNATURE = b"\x89PNG\r\n\x1a\n"
 LEGACY_HISTORY_BASELINE = "a34ca785e007fc66f978a7d498b66a6099c8cec9"
 
 # Boundary note:
-# A public guard necessarily reveals a small amount about the publication policy it enforces.
-# That mapping tradeoff is intentional and minor. This file stays structural and generic rather
-# than naming excluded private implementation details. Older public revisions did expose some
-# names, so those names are treated as already disclosed instead of being repeated here.
+# This guard is public, so every explicit rule reveals a small amount about the boundary it checks.
+# That mapping risk is acknowledged, minor, and intentional. Prefer positive structure and generic
+# integrity checks over named deny rules. Older public revisions exposed a few internal names; those
+# disclosures cannot be undone, so new checks avoid repeating or expanding that map unless needed.
 ROOT_FILES = {
     ".gitattributes",
     ".gitignore",
@@ -43,6 +48,7 @@ ROOT_FILES = {
     "settings.gradle",
 }
 GITHUB_FILES = {
+    ".github/FUNDING.yml",
     ".github/ISSUE_TEMPLATE/bug.yml",
     ".github/ISSUE_TEMPLATE/compatibility.yml",
     ".github/ISSUE_TEMPLATE/config.yml",
@@ -67,6 +73,11 @@ SUSPICIOUS_HISTORY_SUFFIXES = {
     ".7z", ".bak", ".class", ".db", ".dmp", ".dump", ".jar", ".jks", ".key",
     ".keystore", ".old", ".orig", ".p12", ".pem", ".pfx", ".rar", ".sqlite", ".swp",
     ".zip",
+}
+WINDOWS_RESERVED_STEMS = {
+    "CON", "PRN", "AUX", "NUL",
+    *(f"COM{i}" for i in range(1, 10)),
+    *(f"LPT{i}" for i in range(1, 10)),
 }
 PNG_REJECTED_METADATA = {b"tEXt", b"zTXt", b"iTXt", b"eXIf"}
 PNG_ALLOWED_CHUNKS = {
@@ -101,9 +112,25 @@ META_PROSE_PATTERNS = (
 VAGUE_RELEASE_PHRASES = (
     re.compile(r"\bseamless(?:ly)?\b", re.I),
     re.compile(r"\bcomprehensive(?:ly)?\b", re.I),
+    re.compile(r"\brobust(?:ly)?\b", re.I),
+    re.compile(r"\bpowerful\b", re.I),
     re.compile(r"\benterprise[- ]grade\b", re.I),
+    re.compile(r"\bnext[- ]generation\b", re.I),
+    re.compile(r"\bstate[- ]of[- ]the[- ]art\b", re.I),
     re.compile(r"\brevolutionary\b", re.I),
     re.compile(r"\bcutting[- ]edge\b", re.I),
+    re.compile(r"\b(?:greatly|significantly|dramatically) improved\b", re.I),
+    re.compile(r"\bfull support\b", re.I),
+    re.compile(r"\bfully compatible\b", re.I),
+    re.compile(r"\bthis release marks\b", re.I),
+    re.compile(r"\ba new era\b", re.I),
+    re.compile(r"\bwe(?:'re| are) excited\b", re.I),
+    re.compile(r"\bdesigned to\b", re.I),
+    re.compile(r"\baims to\b", re.I),
+    re.compile(r"\bhelps ensure\b", re.I),
+    re.compile(r"\bleverages?\b", re.I),
+    re.compile(r"\bmarks? a significant\b", re.I),
+    re.compile(r"\bprovides? (?:a|an) (?:clean|robust|comprehensive|powerful)\b", re.I),
 )
 
 HIGH_CONFIDENCE_SECRET_PATTERNS = (
@@ -216,7 +243,7 @@ def classify_path(rel: str) -> str:
     if rel in GITHUB_FILES:
         if rel.startswith(".github/ISSUE_TEMPLATE/"):
             return "public_issue_template"
-        if rel.endswith(".yml"):
+        if rel.startswith(".github/workflows/"):
             return "public_workflow"
         if rel.endswith(".py"):
             return "public_guard"
@@ -239,10 +266,45 @@ def classify_path(rel: str) -> str:
     raise GuardError(f"unexpected public source path or file type: {rel}")
 
 
+def validate_public_path(rel: str, seen_casefold: dict[str, str]) -> None:
+    if not rel or rel.startswith("/") or rel.endswith("/") or "\\" in rel:
+        raise GuardError(f"unsafe public path: {rel!r}")
+    if not rel.isascii():
+        raise GuardError(f"non-ASCII public path is not allowed: {rel!r}")
+    if len(rel) > 240:
+        raise GuardError(f"public path exceeds cross-platform length limit: {rel}")
+    if any(ord(char) < 32 or ord(char) == 127 for char in rel):
+        raise GuardError(f"control character found in public path: {rel!r}")
+
+    parts = rel.split("/")
+    for part in parts:
+        if part in {"", ".", ".."}:
+            raise GuardError(f"unsafe public path component in {rel!r}")
+        if len(part) > 120:
+            raise GuardError(f"public path component is too long: {rel!r}")
+        if part.endswith((" ", ".")):
+            raise GuardError(f"public path component ends with dot/space: {rel!r}")
+        stem = part.split(".", 1)[0].upper()
+        if stem in WINDOWS_RESERVED_STEMS:
+            raise GuardError(f"Windows-reserved public path component: {rel!r}")
+        if part.casefold() == ".git":
+            raise GuardError(f"Git metadata path is forbidden: {rel!r}")
+
+    folded = rel.casefold()
+    previous = seen_casefold.get(folded)
+    if previous is not None and previous != rel:
+        raise GuardError(
+            f"case-insensitive public path collision: {previous!r} vs {rel!r}"
+        )
+    seen_casefold[folded] = rel
+
+
 def tracked_modes() -> dict[str, str]:
     result: dict[str, str] = {}
+    seen_casefold: dict[str, str] = {}
     for raw in git_text("ls-files", "-s").splitlines():
         meta, rel = raw.split("\t", 1)
+        validate_public_path(rel, seen_casefold)
         mode, _sha, stage = meta.split()
         if stage != "0":
             raise GuardError(f"non-zero Git index stage for {rel}")
@@ -410,9 +472,29 @@ def validate_toml(rel: str, text: str) -> None:
 def validate_png(rel: str, data: bytes) -> None:
     if not data.startswith(PNG_SIGNATURE):
         raise GuardError(f"invalid PNG signature: {rel}")
+
+    legal_bit_depths = {
+        0: {1, 2, 4, 8, 16},
+        2: {8, 16},
+        3: {1, 2, 4, 8},
+        4: {8, 16},
+        6: {8, 16},
+    }
+    channels = {0: 1, 2: 3, 3: 1, 4: 2, 6: 4}
+
     pos = len(PNG_SIGNATURE)
     chunks: list[bytes] = []
+    idat_payloads: list[bytes] = []
+    width = height = bit_depth = color_type = None
+    palette_entries: int | None = None
+    saw_idat = False
+    idat_closed = False
     saw_iend = False
+    singleton_chunks = {
+        b"PLTE", b"tRNS", b"cHRM", b"gAMA", b"sRGB", b"pHYs", b"bKGD", b"tIME",
+    }
+    seen_singletons: set[bytes] = set()
+
     while pos < len(data):
         if pos + 12 > len(data):
             raise GuardError(f"truncated PNG chunk header: {rel}")
@@ -434,67 +516,293 @@ def validate_png(rel: str, data: bytes) -> None:
             )
         if chunk_type not in PNG_ALLOWED_CHUNKS:
             raise GuardError(f"unclassified PNG chunk {chunk_type!r}: {rel}")
-        chunks.append(chunk_type)
+        if chunk_type in singleton_chunks:
+            if chunk_type in seen_singletons:
+                raise GuardError(f"duplicate singleton PNG chunk {chunk_type!r}: {rel}")
+            seen_singletons.add(chunk_type)
+
+        if not chunks and chunk_type != b"IHDR":
+            raise GuardError(f"PNG does not begin with IHDR: {rel}")
         if chunk_type == b"IHDR":
+            if chunks:
+                raise GuardError(f"duplicate or misplaced IHDR chunk: {rel}")
             if len(payload) != 13:
                 raise GuardError(f"invalid IHDR length: {rel}")
-            width, height = struct.unpack(">II", payload[:8])
+            width, height, bit_depth, color_type, compression, filter_method, interlace = struct.unpack(
+                ">IIBBBBB", payload
+            )
             if width == 0 or height == 0 or width > 16384 or height > 16384:
                 raise GuardError(f"invalid PNG dimensions in {rel}: {width}x{height}")
-        if chunk_type == b"IEND":
+            if color_type not in legal_bit_depths or bit_depth not in legal_bit_depths[color_type]:
+                raise GuardError(
+                    f"invalid PNG bit-depth/color-type pair in {rel}: "
+                    f"bit_depth={bit_depth} color_type={color_type}"
+                )
+            if compression != 0 or filter_method != 0:
+                raise GuardError(f"unsupported PNG compression/filter method in {rel}")
+            if interlace != 0:
+                raise GuardError(f"interlaced PNG is not allowed in public textures: {rel}")
+
+        elif chunk_type == b"PLTE":
+            if saw_idat:
+                raise GuardError(f"PLTE appears after IDAT in {rel}")
+            if palette_entries is not None:
+                raise GuardError(f"duplicate PLTE chunk in {rel}")
+            if length == 0 or length % 3 != 0 or length > 768:
+                raise GuardError(f"invalid PLTE length in {rel}")
+            palette_entries = length // 3
+            if color_type == 3 and palette_entries > (1 << int(bit_depth)):
+                raise GuardError(f"PLTE contains too many entries for indexed PNG: {rel}")
+
+        elif chunk_type == b"IDAT":
+            if idat_closed:
+                raise GuardError(f"non-consecutive IDAT chunks in {rel}")
+            if color_type == 3 and palette_entries is None:
+                raise GuardError(f"indexed PNG is missing PLTE before IDAT: {rel}")
+            saw_idat = True
+            idat_payloads.append(payload)
+
+        elif chunk_type == b"IEND":
+            if not saw_idat:
+                raise GuardError(f"PNG reaches IEND before IDAT: {rel}")
             if length != 0 or end != len(data):
                 raise GuardError(f"invalid IEND/trailing data in {rel}")
             saw_iend = True
-            break
+
+        else:
+            if saw_idat:
+                idat_closed = True
+            if chunk_type == b"tRNS":
+                if saw_idat:
+                    raise GuardError(f"tRNS appears after IDAT in {rel}")
+                if color_type in {4, 6}:
+                    raise GuardError(f"tRNS is invalid for alpha PNG color type in {rel}")
+                if color_type == 3 and (
+                    palette_entries is None or length > palette_entries
+                ):
+                    raise GuardError(f"invalid indexed PNG tRNS length in {rel}")
+                if color_type == 0 and length != 2:
+                    raise GuardError(f"invalid grayscale PNG tRNS length in {rel}")
+                if color_type == 2 and length != 6:
+                    raise GuardError(f"invalid truecolor PNG tRNS length in {rel}")
+
+        chunks.append(chunk_type)
         pos = end
-    if not chunks or chunks[0] != b"IHDR" or b"IDAT" not in chunks or not saw_iend:
+        if saw_iend:
+            break
+
+    if not chunks or chunks[0] != b"IHDR" or not saw_idat or not saw_iend:
         raise GuardError(f"incomplete PNG structure: {rel}")
+    if chunks.count(b"IEND") != 1:
+        raise GuardError(f"invalid IEND count in {rel}")
+    if color_type == 3 and palette_entries is None:
+        raise GuardError(f"indexed PNG is missing PLTE: {rel}")
+
+    assert width is not None
+    assert height is not None
+    assert bit_depth is not None
+    assert color_type is not None
+
+    bits_per_pixel = channels[color_type] * bit_depth
+    row_bytes = (width * bits_per_pixel + 7) // 8
+    expected_raster = height * (1 + row_bytes)
+    if expected_raster > MAX_PNG_RASTER_SIZE:
+        raise GuardError(
+            f"PNG decompressed raster exceeds public limit: {rel} size={expected_raster}"
+        )
+
+    compressed = b"".join(idat_payloads)
+    try:
+        decompressor = zlib.decompressobj()
+        raster = decompressor.decompress(compressed, expected_raster + 1)
+        if len(raster) > expected_raster or decompressor.unconsumed_tail:
+            raise GuardError(f"PNG compressed stream expands beyond expected raster: {rel}")
+        raster += decompressor.flush(max(1, expected_raster + 1 - len(raster)))
+    except zlib.error as exc:
+        raise GuardError(f"invalid PNG zlib stream in {rel}: {exc}") from exc
+    if len(raster) > expected_raster:
+        raise GuardError(f"PNG compressed stream expands beyond expected raster: {rel}")
+    if not decompressor.eof or decompressor.unused_data or decompressor.unconsumed_tail:
+        raise GuardError(f"PNG contains incomplete, trailing, or overlong compressed data: {rel}")
+    if len(raster) != expected_raster:
+        raise GuardError(
+            f"PNG raster length mismatch in {rel}: "
+            f"expected={expected_raster} actual={len(raster)}"
+        )
+
+    stride = 1 + row_bytes
+    for row in range(height):
+        filter_type = raster[row * stride]
+        if filter_type > 4:
+            raise GuardError(f"invalid PNG scanline filter {filter_type} in {rel}")
 
 
 def validate_class(rel: str, data: bytes) -> None:
     if len(data) < 10 or data[:4] != b"\xca\xfe\xba\xbe":
         raise GuardError(f"invalid Java class header: {rel}")
-    constant_pool_count = struct.unpack(">H", data[8:10])[0]
-    if constant_pool_count < 1:
+    scan_secret_material(data, rel)
+
+    minor, major, constant_pool_count = struct.unpack(">HHH", data[4:10])
+    if minor != 0 or major != EXPECTED_CLASS_MAJOR:
+        raise GuardError(
+            f"unexpected Java class version in {rel}: minor={minor} major={major}"
+        )
+    if constant_pool_count < 2:
         raise GuardError(f"invalid Java constant pool count: {rel}")
 
     pos = 10
+    tags: list[int | None] = [None] * constant_pool_count
+    utf8: dict[int, bytes] = {}
+    refs: list[tuple[int, int, tuple[int, ...], str]] = []
+
+    def require(size: int, label: str) -> None:
+        if size < 0 or pos + size > len(data):
+            raise GuardError(f"truncated Java {label}: {rel}")
+
+    def cp_ref(index: int, allowed: tuple[int, ...], label: str) -> None:
+        if index <= 0 or index >= constant_pool_count:
+            raise GuardError(f"invalid Java constant-pool index for {label}: {rel}")
+        if tags[index] not in allowed:
+            raise GuardError(
+                f"invalid Java constant-pool tag for {label} in {rel}: "
+                f"index={index} tag={tags[index]} expected={allowed}"
+            )
+
     index = 1
     while index < constant_pool_count:
-        if pos >= len(data):
-            raise GuardError(f"truncated Java constant pool: {rel}")
+        require(1, "constant pool tag")
         tag = data[pos]
         pos += 1
-        if tag == 1:  # CONSTANT_Utf8
-            if pos + 2 > len(data):
-                raise GuardError(f"truncated Java UTF-8 constant length: {rel}")
+        tags[index] = tag
+
+        if tag == 1:
+            require(2, "UTF-8 constant length")
             length = struct.unpack(">H", data[pos : pos + 2])[0]
             pos += 2
-            end = pos + length
-            if end > len(data):
-                raise GuardError(f"truncated Java UTF-8 constant: {rel}")
-            raw = data[pos:end]
+            require(length, "UTF-8 constant")
+            raw = data[pos : pos + length]
             scan_secret_material(raw, f"{rel} constant pool")
-            pos = end
-        elif tag in {3, 4}:  # Integer, Float
+            utf8[index] = raw
+            pos += length
+        elif tag in {3, 4}:
+            require(4, "numeric constant")
             pos += 4
-        elif tag in {5, 6}:  # Long, Double consume two CP slots
+        elif tag in {5, 6}:
+            require(8, "wide numeric constant")
             pos += 8
             index += 1
-        elif tag in {7, 8, 16, 19, 20}:  # Class, String, MethodType, Module, Package
+            if index >= constant_pool_count:
+                raise GuardError(f"wide Java constant overruns constant pool: {rel}")
+            tags[index] = 0
+        elif tag in {7, 8, 16, 19, 20}:
+            require(2, "single-reference constant")
+            target = struct.unpack(">H", data[pos : pos + 2])[0]
+            refs.append((target, index, (1,), f"constant tag {tag}"))
             pos += 2
-        elif tag in {9, 10, 11, 12, 17, 18}:  # refs, NameAndType, Dynamic, InvokeDynamic
+        elif tag in {9, 10, 11}:
+            require(4, "member-reference constant")
+            class_index, name_type_index = struct.unpack(">HH", data[pos : pos + 4])
+            refs.append((class_index, index, (7,), f"member class tag {tag}"))
+            refs.append((name_type_index, index, (12,), f"member name/type tag {tag}"))
             pos += 4
-        elif tag == 15:  # MethodHandle
+        elif tag == 12:
+            require(4, "name-and-type constant")
+            name_index, descriptor_index = struct.unpack(">HH", data[pos : pos + 4])
+            refs.append((name_index, index, (1,), "name-and-type name"))
+            refs.append((descriptor_index, index, (1,), "name-and-type descriptor"))
+            pos += 4
+        elif tag in {17, 18}:
+            require(4, "dynamic constant")
+            _bootstrap_index, name_type_index = struct.unpack(">HH", data[pos : pos + 4])
+            refs.append((name_type_index, index, (12,), f"dynamic name/type tag {tag}"))
+            pos += 4
+        elif tag == 15:
+            require(3, "method-handle constant")
+            reference_kind = data[pos]
+            reference_index = struct.unpack(">H", data[pos + 1 : pos + 3])[0]
+            if not 1 <= reference_kind <= 9:
+                raise GuardError(f"invalid Java method-handle kind in {rel}: {reference_kind}")
+            if reference_kind <= 4:
+                allowed = (9,)
+            elif reference_kind == 9:
+                allowed = (11,)
+            elif reference_kind == 8:
+                allowed = (10,)
+            else:
+                allowed = (10, 11)
+            refs.append((reference_index, index, allowed, "method-handle reference"))
             pos += 3
         else:
             raise GuardError(f"unknown Java constant pool tag {tag} in {rel}")
-        if pos > len(data):
-            raise GuardError(f"truncated Java class constant pool entry: {rel}")
         index += 1
 
-    if pos + 6 > len(data):
-        raise GuardError(f"truncated Java class body: {rel}")
+    for target, _owner, allowed, label in refs:
+        cp_ref(target, allowed, label)
+
+    def read_u2(label: str) -> int:
+        nonlocal pos
+        require(2, label)
+        value = struct.unpack(">H", data[pos : pos + 2])[0]
+        pos += 2
+        return value
+
+    def read_u4(label: str) -> int:
+        nonlocal pos
+        require(4, label)
+        value = struct.unpack(">I", data[pos : pos + 4])[0]
+        pos += 4
+        return value
+
+    def skip_attributes(count: int, owner: str) -> None:
+        nonlocal pos
+        for _ in range(count):
+            name_index = read_u2(f"{owner} attribute name")
+            cp_ref(name_index, (1,), f"{owner} attribute name")
+            length = read_u4(f"{owner} attribute length")
+            if length > MAX_ARCHIVE_ENTRY_SIZE:
+                raise GuardError(f"oversized Java attribute in {rel}: {owner} size={length}")
+            require(length, f"{owner} attribute payload")
+            pos += length
+
+    def skip_members(count: int, owner: str) -> None:
+        for _ in range(count):
+            _access = read_u2(f"{owner} access flags")
+            name_index = read_u2(f"{owner} name")
+            descriptor_index = read_u2(f"{owner} descriptor")
+            cp_ref(name_index, (1,), f"{owner} name")
+            cp_ref(descriptor_index, (1,), f"{owner} descriptor")
+            skip_attributes(read_u2(f"{owner} attribute count"), owner)
+
+    _access_flags = read_u2("class access flags")
+    this_class = read_u2("this_class")
+    super_class = read_u2("super_class")
+    cp_ref(this_class, (7,), "this_class")
+    if super_class != 0:
+        cp_ref(super_class, (7,), "super_class")
+
+    for _ in range(read_u2("interfaces count")):
+        cp_ref(read_u2("interface"), (7,), "interface")
+    skip_members(read_u2("fields count"), "field")
+    skip_members(read_u2("methods count"), "method")
+    skip_attributes(read_u2("class attribute count"), "class")
+
+    if pos != len(data):
+        raise GuardError(f"trailing data after Java class structure: {rel}")
+
+    class_name_index = None
+    for target, owner, allowed, _label in refs:
+        if owner == this_class and allowed == (1,):
+            class_name_index = target
+            break
+    if class_name_index is not None:
+        try:
+            internal_name = utf8[class_name_index].decode("ascii")
+        except (KeyError, UnicodeDecodeError) as exc:
+            raise GuardError(f"non-ASCII or missing Java class name in {rel}") from exc
+        if "/" in rel and not rel.endswith(internal_name + ".class"):
+            raise GuardError(
+                f"Java class path/name mismatch in {rel}: declares {internal_name}"
+            )
 
 
 def validate_prose(rel: str, text: str) -> None:
@@ -511,10 +819,35 @@ def validate_prose(rel: str, text: str) -> None:
     for pattern in META_PROSE_PATTERNS:
         if pattern.search(text):
             raise GuardError(f"drafting-process/meta reference found in public prose: {rel}")
-    if rel == "CHANGELOG.md":
-        for pattern in VAGUE_RELEASE_PHRASES:
-            if pattern.search(text):
-                raise GuardError(f"vague promotional phrasing found in changelog: {rel}")
+
+
+def validate_release_prose(rel: str, text: str) -> None:
+    validate_prose(rel, text)
+    for pattern in VAGUE_RELEASE_PHRASES:
+        if pattern.search(text):
+            raise GuardError(f"vague promotional phrasing found in release prose: {rel}")
+
+    if Path(rel).name == "CHANGELOG.md":
+        lines = [line.rstrip() for line in text.splitlines()]
+        nonempty = [line for line in lines if line.strip()]
+        if not nonempty or nonempty[0] != "# Changelog":
+            raise GuardError("CHANGELOG.md must begin with exactly '# Changelog'")
+        release_headings = [line for line in lines if line.startswith("## ")]
+        if not release_headings:
+            raise GuardError("CHANGELOG.md contains no release headings")
+        for heading in release_headings:
+            if not re.fullmatch(r"## [0-9]+\.[0-9]+\.[0-9]+-Beta", heading):
+                raise GuardError(
+                    "changelog release headings must contain only the version: "
+                    f"{heading!r}"
+                )
+        properties_path = ROOT / "gradle.properties"
+        if properties_path.is_file():
+            current = parse_properties(properties_path).get("mod_version")
+            if release_headings[0] != f"## {current}":
+                raise GuardError(
+                    f"first changelog release heading must match current version {current!r}"
+                )
 
 
 def validate_current_tree() -> dict[str, object]:
@@ -541,7 +874,10 @@ def validate_current_tree() -> dict[str, object]:
             if kind == "java_source":
                 validate_java(rel, text)
             if kind in {"public_prose", "public_issue_template"}:
-                validate_prose(rel, text)
+                if Path(rel).name == "CHANGELOG.md":
+                    validate_release_prose(rel, text)
+                else:
+                    validate_prose(rel, text)
     return manifest
 
 
@@ -579,7 +915,7 @@ def verify_history_shape() -> None:
 
 def scan_reachable_history() -> None:
     names = set()
-    for line in git_text("log", "--all", "--format=", "--name-only").splitlines():
+    for line in git_text("log", "HEAD", "--format=", "--name-only").splitlines():
         rel = line.strip()
         if rel:
             names.add(rel)
@@ -593,7 +929,7 @@ def scan_reachable_history() -> None:
     shas = list(
         dict.fromkeys(
             line.split(" ", 1)[0]
-            for line in git_text("rev-list", "--objects", "--all").splitlines()
+            for line in git_text("rev-list", "--objects", "HEAD").splitlines()
             if line
         )
     )
@@ -687,6 +1023,13 @@ def verify_jar(path: Path) -> None:
         if jar.comment:
             raise GuardError("runtime JAR contains an archive comment")
         infos = [info for info in jar.infolist() if not info.is_dir()]
+        if len(infos) > MAX_ARCHIVE_ENTRIES:
+            raise GuardError(f"runtime JAR contains too many entries: {len(infos)}")
+        total_uncompressed = sum(info.file_size for info in infos)
+        if total_uncompressed > MAX_ARCHIVE_TOTAL_SIZE:
+            raise GuardError(
+                f"runtime JAR expands beyond public limit: {total_uncompressed} bytes"
+            )
         names = [info.filename for info in infos]
         if len(names) != len(set(names)):
             raise GuardError("runtime JAR contains duplicate entry names")
@@ -708,6 +1051,9 @@ def verify_jar(path: Path) -> None:
                 or any(part in {"", ".", ".."} for part in name.split("/"))
             ):
                 raise GuardError(f"unsafe runtime JAR entry path: {name!r}")
+            unix_mode = (info.external_attr >> 16) & 0xFFFF
+            if unix_mode and stat.S_ISLNK(unix_mode):
+                raise GuardError(f"symlink entry is forbidden in runtime JAR: {name}")
             if info.flag_bits & 0x1:
                 raise GuardError(f"encrypted runtime JAR entry is forbidden: {name}")
             if info.compress_type not in {zipfile.ZIP_STORED, zipfile.ZIP_DEFLATED}:
