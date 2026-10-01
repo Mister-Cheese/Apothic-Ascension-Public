@@ -1,0 +1,14 @@
+Apothic Ascension — Public Source Repository
+
+This repository is the release-facing source and issue tracker for Apothic Ascension.
+
+Source published as part of the MPL transition is made available under the Mozilla Public
+License 2.0, except third-party material identified by its own license notice.
+
+The private development repository, internal Git history, CI/CD, qualification harnesses,
+research notes, audit evidence, and release-engineering tooling are not part of this
+publication repository.
+
+Existing releases distributed before the MPL transition retain the license grants that
+accompanied those copies. Publication of later source under MPL-2.0 does not revoke those
+earlier grants.
