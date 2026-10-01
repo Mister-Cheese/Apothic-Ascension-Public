@@ -45,13 +45,6 @@
       "sha256": "9e700f53bae536e1550449468e052d583c378ff62ee58301897b43937c0f54b5"
     },
     {
-      "path": ".github/workflows/public-source-guard.yml",
-      "kind": "public_workflow",
-      "mode": "100644",
-      "size": 1342,
-      "sha256": "9636bcea2603a52264915687315a5f290e2368c0d5dc45567aff657673e0cd20"
-    },
-    {
       "path": ".gitignore",
       "kind": "public_build_metadata",
       "mode": "100644",
