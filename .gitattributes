@@ -1,0 +1,16 @@
+*.java text eol=lf
+*.gradle text eol=lf
+*.properties text eol=lf
+*.json text eol=lf
+*.mcmeta text eol=lf
+*.toml text eol=lf
+*.md text eol=lf
+*.py text eol=lf
+*.txt text eol=lf
+*.yml text eol=lf
+*.yaml text eol=lf
+
+*.png -text
+*.jar -text
+*.zip -text
+*.class -text
