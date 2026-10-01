@@ -1,0 +1,49 @@
+name: Compatibility issue
+description: Report an interaction problem with another mod
+title: "[Compat] "
+labels: ["compatibility"]
+body:
+  - type: input
+    id: aa-version
+    attributes:
+      label: Apothic Ascension version
+    validations:
+      required: true
+  - type: input
+    id: minecraft-version
+    attributes:
+      label: Minecraft version
+    validations:
+      required: true
+  - type: input
+    id: neoforge-version
+    attributes:
+      label: NeoForge version
+    validations:
+      required: true
+  - type: input
+    id: other-mod
+    attributes:
+      label: Other mod and exact version
+      placeholder: Mod Name 1.2.3
+    validations:
+      required: true
+  - type: textarea
+    id: interaction
+    attributes:
+      label: Compatibility problem
+      description: Describe the conflicting behavior and the item, mechanic, or system involved.
+    validations:
+      required: true
+  - type: textarea
+    id: reproduction
+    attributes:
+      label: Reproduction steps
+      description: Include enough information to reproduce the interaction.
+    validations:
+      required: true
+  - type: textarea
+    id: logs
+    attributes:
+      label: Relevant logs
+      description: Attach relevant logs after removing secrets and private server information.
