@@ -193,7 +193,8 @@ def canonical_manifest_bytes(rel: str, data: bytes) -> bytes:
     kind = classify_path(rel)
     if kind == "png_resource":
         return data
-    return data.replace(b"\r\n", b"\n")
+    normalized = data.replace(b"\r\n", b"\n")
+    return normalized.rstrip(b"\n") + b"\n"
 
 
 def parse_properties(path: Path) -> dict[str, str]:

@@ -13,15 +13,15 @@
       "path": ".github/ISSUE_TEMPLATE/bug.yml",
       "kind": "public_issue_template",
       "mode": "100644",
-      "size": 1055,
-      "sha256": "adf03177a6ed3f379d85e80ae51aa7d0def4eda9de4a8c5c229f5e0074073d1b"
+      "size": 1056,
+      "sha256": "08e604d0b3429c604396ad0c4733c8fafa2ded93e8bee1581e489b25a3f4033e"
     },
     {
       "path": ".github/ISSUE_TEMPLATE/compatibility.yml",
       "kind": "public_issue_template",
       "mode": "100644",
-      "size": 1100,
-      "sha256": "8da0bb9ff942d176177e12eb88b8e0c0514c29fca2a670c671e8923078ccd689"
+      "size": 1101,
+      "sha256": "f674d509505b217b73522f4564a143c666e81707281b6db6b2780d889b2721eb"
     },
     {
       "path": ".github/ISSUE_TEMPLATE/config.yml",
@@ -34,15 +34,15 @@
       "path": ".github/ISSUE_TEMPLATE/feature.yml",
       "kind": "public_issue_template",
       "mode": "100644",
-      "size": 691,
-      "sha256": "d0bc20e6a1e3e160680529581900ec24f406cae748f34314e34fd161578240b2"
+      "size": 692,
+      "sha256": "3708a6145b96fafc59a6186528aab5dc066aac899ad21aef15ee9daf4e4bff93"
     },
     {
       "path": ".github/public_source_guard.py",
       "kind": "public_guard",
       "mode": "100644",
-      "size": 29909,
-      "sha256": "a7b705676094b5a3fe6bd89c959ad1471c47232a3a2ed49d7d2637f592544798"
+      "size": 29959,
+      "sha256": "9e700f53bae536e1550449468e052d583c378ff62ee58301897b43937c0f54b5"
     },
     {
       "path": ".github/workflows/public-source-guard.yml",
@@ -1553,8 +1553,8 @@
       "path": "src/main/resources/assets/apothic_ascension/textures/item/cinematic/portal_membrane_abyssal.png.mcmeta",
       "kind": "text_resource",
       "mode": "100644",
-      "size": 43,
-      "sha256": "7dc16041541801a5bbfd3e98fc2e939ca860cc063a19393da16841eca4212b37"
+      "size": 44,
+      "sha256": "e9b8025fde1b09b0a4d2a38427b04f98f28a593045be6d177eb2b29164c872b0"
     },
     {
       "path": "src/main/resources/assets/apothic_ascension/textures/item/cinematic/portal_membrane_ancient.png",
@@ -1567,8 +1567,8 @@
       "path": "src/main/resources/assets/apothic_ascension/textures/item/cinematic/portal_membrane_ancient.png.mcmeta",
       "kind": "text_resource",
       "mode": "100644",
-      "size": 43,
-      "sha256": "7dc16041541801a5bbfd3e98fc2e939ca860cc063a19393da16841eca4212b37"
+      "size": 44,
+      "sha256": "e9b8025fde1b09b0a4d2a38427b04f98f28a593045be6d177eb2b29164c872b0"
     },
     {
       "path": "src/main/resources/assets/apothic_ascension/textures/item/cinematic/portal_membrane_apotheotic.png",
@@ -1581,8 +1581,8 @@
       "path": "src/main/resources/assets/apothic_ascension/textures/item/cinematic/portal_membrane_apotheotic.png.mcmeta",
       "kind": "text_resource",
       "mode": "100644",
-      "size": 43,
-      "sha256": "7dc16041541801a5bbfd3e98fc2e939ca860cc063a19393da16841eca4212b37"
+      "size": 44,
+      "sha256": "e9b8025fde1b09b0a4d2a38427b04f98f28a593045be6d177eb2b29164c872b0"
     },
     {
       "path": "src/main/resources/assets/apothic_ascension/textures/item/cinematic/portal_membrane_cataclysmic.png",
@@ -1595,8 +1595,8 @@
       "path": "src/main/resources/assets/apothic_ascension/textures/item/cinematic/portal_membrane_cataclysmic.png.mcmeta",
       "kind": "text_resource",
       "mode": "100644",
-      "size": 43,
-      "sha256": "7dc16041541801a5bbfd3e98fc2e939ca860cc063a19393da16841eca4212b37"
+      "size": 44,
+      "sha256": "e9b8025fde1b09b0a4d2a38427b04f98f28a593045be6d177eb2b29164c872b0"
     },
     {
       "path": "src/main/resources/assets/apothic_ascension/textures/item/cinematic/portal_membrane_divine.png",
@@ -1609,8 +1609,8 @@
       "path": "src/main/resources/assets/apothic_ascension/textures/item/cinematic/portal_membrane_divine.png.mcmeta",
       "kind": "text_resource",
       "mode": "100644",
-      "size": 43,
-      "sha256": "7dc16041541801a5bbfd3e98fc2e939ca860cc063a19393da16841eca4212b37"
+      "size": 44,
+      "sha256": "e9b8025fde1b09b0a4d2a38427b04f98f28a593045be6d177eb2b29164c872b0"
     },
     {
       "path": "src/main/resources/assets/apothic_ascension/textures/item/cinematic/portal_membrane_empyrean.png",
@@ -1623,8 +1623,8 @@
       "path": "src/main/resources/assets/apothic_ascension/textures/item/cinematic/portal_membrane_empyrean.png.mcmeta",
       "kind": "text_resource",
       "mode": "100644",
-      "size": 43,
-      "sha256": "7dc16041541801a5bbfd3e98fc2e939ca860cc063a19393da16841eca4212b37"
+      "size": 44,
+      "sha256": "e9b8025fde1b09b0a4d2a38427b04f98f28a593045be6d177eb2b29164c872b0"
     },
     {
       "path": "src/main/resources/assets/apothic_ascension/textures/item/cinematic/portal_membrane_esoteric.png",
@@ -1637,8 +1637,8 @@
       "path": "src/main/resources/assets/apothic_ascension/textures/item/cinematic/portal_membrane_esoteric.png.mcmeta",
       "kind": "text_resource",
       "mode": "100644",
-      "size": 43,
-      "sha256": "7dc16041541801a5bbfd3e98fc2e939ca860cc063a19393da16841eca4212b37"
+      "size": 44,
+      "sha256": "e9b8025fde1b09b0a4d2a38427b04f98f28a593045be6d177eb2b29164c872b0"
     },
     {
       "path": "src/main/resources/assets/apothic_ascension/textures/item/cinematic/portal_membrane_forgotten.png",
@@ -1651,8 +1651,8 @@
       "path": "src/main/resources/assets/apothic_ascension/textures/item/cinematic/portal_membrane_forgotten.png.mcmeta",
       "kind": "text_resource",
       "mode": "100644",
-      "size": 43,
-      "sha256": "7dc16041541801a5bbfd3e98fc2e939ca860cc063a19393da16841eca4212b37"
+      "size": 44,
+      "sha256": "e9b8025fde1b09b0a4d2a38427b04f98f28a593045be6d177eb2b29164c872b0"
     },
     {
       "path": "src/main/resources/assets/apothic_ascension/textures/item/cinematic/portal_membrane_legendary.png",
@@ -1665,8 +1665,8 @@
       "path": "src/main/resources/assets/apothic_ascension/textures/item/cinematic/portal_membrane_legendary.png.mcmeta",
       "kind": "text_resource",
       "mode": "100644",
-      "size": 43,
-      "sha256": "7dc16041541801a5bbfd3e98fc2e939ca860cc063a19393da16841eca4212b37"
+      "size": 44,
+      "sha256": "e9b8025fde1b09b0a4d2a38427b04f98f28a593045be6d177eb2b29164c872b0"
     },
     {
       "path": "src/main/resources/assets/apothic_ascension/textures/item/cinematic/portal_membrane_paracausal.png",
@@ -1679,8 +1679,8 @@
       "path": "src/main/resources/assets/apothic_ascension/textures/item/cinematic/portal_membrane_paracausal.png.mcmeta",
       "kind": "text_resource",
       "mode": "100644",
-      "size": 43,
-      "sha256": "7dc16041541801a5bbfd3e98fc2e939ca860cc063a19393da16841eca4212b37"
+      "size": 44,
+      "sha256": "e9b8025fde1b09b0a4d2a38427b04f98f28a593045be6d177eb2b29164c872b0"
     },
     {
       "path": "src/main/resources/assets/apothic_ascension/textures/item/cinematic/portal_membrane_primal.png",
@@ -1693,8 +1693,8 @@
       "path": "src/main/resources/assets/apothic_ascension/textures/item/cinematic/portal_membrane_primal.png.mcmeta",
       "kind": "text_resource",
       "mode": "100644",
-      "size": 43,
-      "sha256": "7dc16041541801a5bbfd3e98fc2e939ca860cc063a19393da16841eca4212b37"
+      "size": 44,
+      "sha256": "e9b8025fde1b09b0a4d2a38427b04f98f28a593045be6d177eb2b29164c872b0"
     },
     {
       "path": "src/main/resources/assets/apothic_ascension/textures/item/cinematic/portal_membrane_stellar.png",
@@ -1707,8 +1707,8 @@
       "path": "src/main/resources/assets/apothic_ascension/textures/item/cinematic/portal_membrane_stellar.png.mcmeta",
       "kind": "text_resource",
       "mode": "100644",
-      "size": 43,
-      "sha256": "7dc16041541801a5bbfd3e98fc2e939ca860cc063a19393da16841eca4212b37"
+      "size": 44,
+      "sha256": "e9b8025fde1b09b0a4d2a38427b04f98f28a593045be6d177eb2b29164c872b0"
     },
     {
       "path": "src/main/resources/assets/apothic_ascension/textures/item/cinematic/portal_membrane_transcendent.png",
@@ -1721,8 +1721,8 @@
       "path": "src/main/resources/assets/apothic_ascension/textures/item/cinematic/portal_membrane_transcendent.png.mcmeta",
       "kind": "text_resource",
       "mode": "100644",
-      "size": 43,
-      "sha256": "7dc16041541801a5bbfd3e98fc2e939ca860cc063a19393da16841eca4212b37"
+      "size": 44,
+      "sha256": "e9b8025fde1b09b0a4d2a38427b04f98f28a593045be6d177eb2b29164c872b0"
     },
     {
       "path": "src/main/resources/assets/apothic_ascension/textures/item/cinematic/pylon_ring.png",
@@ -2015,8 +2015,8 @@
       "path": "src/main/resources/data/apotheosis/affixes/armor/attribute/unbound.json",
       "kind": "text_resource",
       "mode": "100644",
-      "size": 946,
-      "sha256": "004a597e087437847c3eb5c40e1794ad0b61fad11b9e772355b06a665bfc8c9e"
+      "size": 947,
+      "sha256": "9c673a7d0591dc5a540ff8f3d042d6b8d3e43b0ba3a2e90bb4ff583d9e1712bf"
     },
     {
       "path": "src/main/resources/data/apotheosis/affixes/armor/attribute/windswept.json",
@@ -2029,8 +2029,8 @@
       "path": "src/main/resources/data/apotheosis/affixes/armor/attribute/winged.json",
       "kind": "text_resource",
       "mode": "100644",
-      "size": 904,
-      "sha256": "5c4f49de8532ba9ab83b138ef35cdf6bad091cfd43fecc025b150e28275a12b9"
+      "size": 905,
+      "sha256": "e360c0cd1d837797fcd76359cab190e111c5235f7126a021b62a9789ef98c195"
     },
     {
       "path": "src/main/resources/data/apotheosis/affixes/armor/dmg_reduction/blast_forged.json",
@@ -2092,8 +2092,8 @@
       "path": "src/main/resources/data/apotheosis/affixes/armor/mob_effect/bursting.json",
       "kind": "text_resource",
       "mode": "100644",
-      "size": 3174,
-      "sha256": "7b09116b2a0aecaa49b08699bdc5ba8294f96609fdb61217ec57cd6cb7b95621"
+      "size": 3175,
+      "sha256": "66e18f56432de25d23c9f5aacd9946b43640f8105e59142e9f195cc849fc85c8"
     },
     {
       "path": "src/main/resources/data/apotheosis/affixes/armor/mob_effect/nimble.json",
@@ -2106,8 +2106,8 @@
       "path": "src/main/resources/data/apotheosis/affixes/armor/mob_effect/revitalizing.json",
       "kind": "text_resource",
       "mode": "100644",
-      "size": 3111,
-      "sha256": "f21dcbe2b82a1e998dbf5bd1cf72eee4a056c665644f0bc8b5a3113105b17a4a"
+      "size": 3112,
+      "sha256": "56ad55a37a6392a12c3431e4f5ce9a6474ca4e0efb3b58db7c1071e71cb96ea0"
     },
     {
       "path": "src/main/resources/data/apotheosis/affixes/breaker/ability/enlightened.json",
@@ -2120,22 +2120,22 @@
       "path": "src/main/resources/data/apotheosis/affixes/breaker/ability/sandforming.json",
       "kind": "text_resource",
       "mode": "100644",
-      "size": 335,
-      "sha256": "cc4f41c3af1ead5cf9cd267c3021c8127a0c765fdf4397c979f6f2fb0717c284"
+      "size": 336,
+      "sha256": "4274f197f89dc2e02f015c606b487f819b4e370728f2435578bb3ed4335b8f3b"
     },
     {
       "path": "src/main/resources/data/apotheosis/affixes/breaker/ability/stoneforming.json",
       "kind": "text_resource",
       "mode": "100644",
-      "size": 335,
-      "sha256": "44c9e4de440172f22b1020c78d99a006b333058723402fdfd7db86bf6ae1b93f"
+      "size": 336,
+      "sha256": "a124153faf3130115813700624585b5be796036ab91cec2abef0bee0ab7e2ef9"
     },
     {
       "path": "src/main/resources/data/apotheosis/affixes/breaker/ability/supermassive.json",
       "kind": "text_resource",
       "mode": "100644",
-      "size": 2126,
-      "sha256": "55e3f32ae8ca8f6f900709fb39904e836d269e3a67c48f8df66537411ec793fe"
+      "size": 2127,
+      "sha256": "f3a2e50bbba49c51727a6750198684c6193c8cbb039835940164f3ec9cf8e912"
     },
     {
       "path": "src/main/resources/data/apotheosis/affixes/breaker/attribute/destructive.json",
@@ -2169,15 +2169,15 @@
       "path": "src/main/resources/data/apotheosis/affixes/breaker/effect/omnetic.json",
       "kind": "text_resource",
       "mode": "100644",
-      "size": 8647,
-      "sha256": "f33d5ff6a4a8b49f1c7cfb47fe748948100ba7d535b72e9c5278ed36c1a60956"
+      "size": 8648,
+      "sha256": "ca742925dcaac26c438b52b8dc0d6c504f53ca0a6907437563c2316c5f87827f"
     },
     {
       "path": "src/main/resources/data/apotheosis/affixes/breaker/effect/radial.json",
       "kind": "text_resource",
       "mode": "100644",
-      "size": 5270,
-      "sha256": "bf83398590e4c1569226d019de71dd508f3d0c5b9a53e1e5b841114e2db2b22a"
+      "size": 5271,
+      "sha256": "2bbb882d5c743b4c1d00b691a48e52859ee8a51f176fd0b3a5ff7fa263f98ed3"
     },
     {
       "path": "src/main/resources/data/apotheosis/affixes/breaker/enchantment/prosperous.json",
@@ -2211,8 +2211,8 @@
       "path": "src/main/resources/data/apotheosis/affixes/generic/telepathic.json",
       "kind": "text_resource",
       "mode": "100644",
-      "size": 722,
-      "sha256": "8f17fac542b95f05a38a7a6ef68ae2ffe99fca51ef7c4294b1a6695095ca3da7"
+      "size": 723,
+      "sha256": "3cbccbe9e420667eacb5dd94393e2c4fbf4099617d77e51bedf7aee9ed9d8e8a"
     },
     {
       "path": "src/main/resources/data/apotheosis/affixes/melee/attribute/berserking.json",
@@ -2407,8 +2407,8 @@
       "path": "src/main/resources/data/apotheosis/affixes/ranged/magical.json",
       "kind": "text_resource",
       "mode": "100644",
-      "size": 691,
-      "sha256": "292d171a3d4a519680e70a5d0876c81543b7059a6e7e6caa56f6f26b706307f8"
+      "size": 692,
+      "sha256": "d3dc1f919a900e7eb76c26512290d6f0711222f178c141fec18ae831560fe194"
     },
     {
       "path": "src/main/resources/data/apotheosis/affixes/ranged/mob_effect/acidic.json",
@@ -2477,15 +2477,15 @@
       "path": "src/main/resources/data/apotheosis/affixes/shears/effect/gardening.json",
       "kind": "text_resource",
       "mode": "100644",
-      "size": 334,
-      "sha256": "2c0f5331016c7a1cee5256a11cdcf7e0a6b78bcab9e3316eccd66c19fa80335a"
+      "size": 335,
+      "sha256": "e666c4199da156164135e77ae475910a9210e2a864264e07052a8be40278260e"
     },
     {
       "path": "src/main/resources/data/apotheosis/affixes/shears/effect/leafforming.json",
       "kind": "text_resource",
       "mode": "100644",
-      "size": 334,
-      "sha256": "df4392789bfc1fd8ef32a445da8da913978ba752f09e74a3ddb5de7c80633d16"
+      "size": 335,
+      "sha256": "27bc9881b10a2202c7709f99e337cc096b3d0f06417ed696db789c4f8ae0a1e3"
     },
     {
       "path": "src/main/resources/data/apotheosis/affixes/shield/attribute/ironforged.json",
@@ -2561,8 +2561,8 @@
       "path": "src/main/resources/data/apotheosis/affixes/shield/retreating.json",
       "kind": "text_resource",
       "mode": "100644",
-      "size": 694,
-      "sha256": "7c09450eb37efc47783f7db4fb6e0216872aaedef9c94dc5013be88297830347"
+      "size": 695,
+      "sha256": "b019da216eb58686c2db86c4c541c0b1c8e684fbb0a9eb3b6d6353811d7ded05"
     },
     {
       "path": "src/main/resources/data/apotheosis/affixes/weapon/attribute/shredding.json",
@@ -4150,260 +4150,260 @@
       "path": "src/main/resources/data/apothic_ascension/recipe/material_upgrade/abyssal.json",
       "kind": "text_resource",
       "mode": "100644",
-      "size": 690,
-      "sha256": "85b0c3c6dd9a50ff7a98b9b292ad21fe53799cbc74403e8a6836c4ce4d2f189d"
+      "size": 691,
+      "sha256": "cd0f3f7d324880a5a2d0b6595164f3923b2a5e11e214e1fb9959c7fec50011d8"
     },
     {
       "path": "src/main/resources/data/apothic_ascension/recipe/material_upgrade/ancient.json",
       "kind": "text_resource",
       "mode": "100644",
-      "size": 682,
-      "sha256": "836c68099638ac62df5952b203db3dd4ce0622d9ea28c6bdf2239367e092783e"
+      "size": 683,
+      "sha256": "b549ab619655858fd3dccf07da35e7c25cb9a3a234a80d12fa0470d738bb5639"
     },
     {
       "path": "src/main/resources/data/apothic_ascension/recipe/material_upgrade/cataclysmic.json",
       "kind": "text_resource",
       "mode": "100644",
-      "size": 682,
-      "sha256": "df9ed3aa0fab91d970e18eb3a8f7ab71b94a6e936e6572cc8275561ee900d2a8"
+      "size": 683,
+      "sha256": "2a6f91240310bf95f204bd402783d2e241480addfb684a2dd04a654c7133ac6b"
     },
     {
       "path": "src/main/resources/data/apothic_ascension/recipe/material_upgrade/divine.json",
       "kind": "text_resource",
       "mode": "100644",
-      "size": 673,
-      "sha256": "0e06dc223faf66b0085d99c4bdcf01594ac542ce99f2290382fe2af15f3198be"
+      "size": 674,
+      "sha256": "f86551104816f41ac22b67751596cf0298b02b2123c29cc7f56e085e2acf380e"
     },
     {
       "path": "src/main/resources/data/apothic_ascension/recipe/material_upgrade/empyrean.json",
       "kind": "text_resource",
       "mode": "100644",
-      "size": 675,
-      "sha256": "1a1870a3b9afb62245216ade649d588ff94725df9447cd4727a135bf2e01010e"
+      "size": 676,
+      "sha256": "f76d0fe848c7431170fee4e34ca42770f5ecd5e3fb83474363df157c97390144"
     },
     {
       "path": "src/main/resources/data/apothic_ascension/recipe/material_upgrade/esoteric.json",
       "kind": "text_resource",
       "mode": "100644",
-      "size": 671,
-      "sha256": "101c9536a515b07d2a73d49830d57bcf2813917faa5166c791cfce5f2009de50"
+      "size": 672,
+      "sha256": "48fe5dddb71804b40b350a489662e961f5fa40d5b672f009579813485a4c6eb7"
     },
     {
       "path": "src/main/resources/data/apothic_ascension/recipe/material_upgrade/forgotten.json",
       "kind": "text_resource",
       "mode": "100644",
-      "size": 676,
-      "sha256": "f182a3cd48123252cc4ac0d5fe88cdc03970ddc621b029fc9e15710c7a51a260"
+      "size": 677,
+      "sha256": "1d1a5cabba9729fe65489a2a535fafb7f55ccf43f0d5a1e47edfd988b61ed17f"
     },
     {
       "path": "src/main/resources/data/apothic_ascension/recipe/material_upgrade/legendary.json",
       "kind": "text_resource",
       "mode": "100644",
-      "size": 644,
-      "sha256": "12604521eeb3d965bada99b6d77cd84edf27ebd6c7501fe9b1024eed585e42c2"
+      "size": 645,
+      "sha256": "dd5db03a63831300f638cc4f0cddb5680e69cc64c424653bfe3b863483090d90"
     },
     {
       "path": "src/main/resources/data/apothic_ascension/recipe/material_upgrade/paracausal.json",
       "kind": "text_resource",
       "mode": "100644",
-      "size": 681,
-      "sha256": "f58b05aaa1e5f0ae0b05e58e7f60b8e20c2849f0c17cab0c73e33263faab09c8"
+      "size": 682,
+      "sha256": "b9e0c570fd0bfbcec39978caeca4f805e9240acf7ab0fba3ac86c98765b19c8a"
     },
     {
       "path": "src/main/resources/data/apothic_ascension/recipe/material_upgrade/primal.json",
       "kind": "text_resource",
       "mode": "100644",
-      "size": 681,
-      "sha256": "5739084b30ddbbf948797c431a974aaf77aea95351bf7b1401a7cf40746c72f5"
+      "size": 682,
+      "sha256": "1cceb3ad38e8b00ee5030531aa642adc5e203ff357469ed8b1686327ecd6c4d5"
     },
     {
       "path": "src/main/resources/data/apothic_ascension/recipe/material_upgrade/stellar.json",
       "kind": "text_resource",
       "mode": "100644",
-      "size": 670,
-      "sha256": "e738e800bfb190f9690bedb0f0029b0d019f6de7bcfa6138d040236cecdd531c"
+      "size": 671,
+      "sha256": "2b1f5a82faa5b20a395f63984b602e1eda088299998e1d7462b5277933a1894c"
     },
     {
       "path": "src/main/resources/data/apothic_ascension/recipe/reforging/abyssal.json",
       "kind": "text_resource",
       "mode": "100644",
-      "size": 183,
-      "sha256": "c38247f62e90daec7e710d8a4b24bc3c321a959d7a98b4f7dc1c40efbc5ddd8d"
+      "size": 184,
+      "sha256": "e2b1fd2df13986b61c66d252419689dc5f88fb43fd875951dde461459314640e"
     },
     {
       "path": "src/main/resources/data/apothic_ascension/recipe/reforging/ancient.json",
       "kind": "text_resource",
       "mode": "100644",
-      "size": 180,
-      "sha256": "453da837749ef210c2b890170403a4d62d4de45131807a82ba43fcea2b044c22"
+      "size": 181,
+      "sha256": "f85d108280087383ca2ba9efa7365d2489585780f10addc438c64959fb432cf5"
     },
     {
       "path": "src/main/resources/data/apothic_ascension/recipe/reforging/apotheotic.json",
       "kind": "text_resource",
       "mode": "100644",
-      "size": 186,
-      "sha256": "28ec4deb7890b7221bb9381bca83b11f5a9e4e06e1e5c89affcb8c42877779e3"
+      "size": 187,
+      "sha256": "69d1ae6373a992db8f4e380685ed5d10f4dcd1444fa4fa70c84f68a7865095d0"
     },
     {
       "path": "src/main/resources/data/apothic_ascension/recipe/reforging/cataclysmic.json",
       "kind": "text_resource",
       "mode": "100644",
-      "size": 187,
-      "sha256": "d47f626893758dd4728eda08a8d2be095035574dcea708b2016630f847b34799"
+      "size": 188,
+      "sha256": "c243a0c8aaaddcc8d2a4a99e7d38c85d71f760ef629b30afe2b11d4d76d54761"
     },
     {
       "path": "src/main/resources/data/apothic_ascension/recipe/reforging/divine.json",
       "kind": "text_resource",
       "mode": "100644",
-      "size": 182,
-      "sha256": "1d7f8870cb24522e6e8eeb1d5083b1fa4fb6b5675fd24c531defbafb4584a995"
+      "size": 183,
+      "sha256": "67f9ce4265aa184f92a83a8f78e69eadca62a58396ac0cfd88214767b08fc456"
     },
     {
       "path": "src/main/resources/data/apothic_ascension/recipe/reforging/empyrean.json",
       "kind": "text_resource",
       "mode": "100644",
-      "size": 184,
-      "sha256": "9d9a25128db0077828e8ed2011b7c42e1a71a45c2773a91325e1226432c426f5"
+      "size": 185,
+      "sha256": "ab0d048013e82fb3b8e777b0949908d67e46412d6da4e6d75c31b15dcaa0fdb9"
     },
     {
       "path": "src/main/resources/data/apothic_ascension/recipe/reforging/esoteric.json",
       "kind": "text_resource",
       "mode": "100644",
-      "size": 184,
-      "sha256": "9e19e71d578b7e46df16b505c359aa2085bda720a4adaa69c43ac2fd531ad71c"
+      "size": 185,
+      "sha256": "dedcdfa16c142b151066d517011ba43ec2c9c7f75171a8fd511b773e04bd81ba"
     },
     {
       "path": "src/main/resources/data/apothic_ascension/recipe/reforging/forgotten.json",
       "kind": "text_resource",
       "mode": "100644",
-      "size": 185,
-      "sha256": "5c3a1d4225dd17ed459b098eee2730eb5bfb90e479560dec6bcad5e204c08d21"
+      "size": 186,
+      "sha256": "cc3180c2a7494e0b690ee10a2840c63e96821b2a1a07444b25dd3b30beb10730"
     },
     {
       "path": "src/main/resources/data/apothic_ascension/recipe/reforging/legendary.json",
       "kind": "text_resource",
       "mode": "100644",
-      "size": 182,
-      "sha256": "27a603b5d69b18978b179e56a3515279ca79a8967b49e3215a3802dcb7747815"
+      "size": 183,
+      "sha256": "36801444252abd2e737640bf35a01a63c817ebe8b3aae0f6ed82e6630e7ac1de"
     },
     {
       "path": "src/main/resources/data/apothic_ascension/recipe/reforging/paracausal.json",
       "kind": "text_resource",
       "mode": "100644",
-      "size": 186,
-      "sha256": "4fe7ea56804c22994f4b264180eb1fe2e8fe134704e1bef43c2f667be6611d6a"
+      "size": 187,
+      "sha256": "cfa59cb73336eb416ef5d2f3e0ec682ebb92e1b56520647cbff0b26133701b25"
     },
     {
       "path": "src/main/resources/data/apothic_ascension/recipe/reforging/primal.json",
       "kind": "text_resource",
       "mode": "100644",
-      "size": 182,
-      "sha256": "197bec1983cf939cbcd1a7437a231c758df2111985530ebba125528247432be6"
+      "size": 183,
+      "sha256": "be6c86fc2a68148e62f8d673ac58854774339e6121b026722480fc8d5e6d28a5"
     },
     {
       "path": "src/main/resources/data/apothic_ascension/recipe/reforging/stellar.json",
       "kind": "text_resource",
       "mode": "100644",
-      "size": 183,
-      "sha256": "2d90eb7da57f659af54bb9f81611ea57c64acbb4ce4d7866c5ff53a4f4f66c9e"
+      "size": 184,
+      "sha256": "1645c0a05e96de574131453bb1b5816072fc758ec1ccb89d42fbc21e0a35e3c4"
     },
     {
       "path": "src/main/resources/data/apothic_ascension/recipe/reforging/transcendent.json",
       "kind": "text_resource",
       "mode": "100644",
-      "size": 188,
-      "sha256": "2d12ba5db5b6df04fa2bd80be18bbc9e6f26be0edb4bdee01f37be5eadaef425"
+      "size": 189,
+      "sha256": "5f6d1f4ce23ce61f4b8a5c48867a82475fab5536e024d31cdb10a4e91b24c036"
     },
     {
       "path": "src/main/resources/data/apothic_ascension/recipe/salvaging/affix_item/abyssal.json",
       "kind": "text_resource",
       "mode": "100644",
-      "size": 300,
-      "sha256": "f9c5ef65bbf041c699a31ace4976d1ecda31e87b4a95b1a07f95e5076f6b51e5"
+      "size": 301,
+      "sha256": "1edc7deb6bb5a58b418ec487be565c5e3ef4cbc23d8431d8845257f19e3c363e"
     },
     {
       "path": "src/main/resources/data/apothic_ascension/recipe/salvaging/affix_item/ancient.json",
       "kind": "text_resource",
       "mode": "100644",
-      "size": 300,
-      "sha256": "1732214b80cfbe67e6809e20d8468ba2d1196caf7a3764e49573a67481fbbfbb"
+      "size": 301,
+      "sha256": "76fe13e328474a94e8f950a707f4d2a39ec0ed7188af0bd1fe6964a7a2eb048e"
     },
     {
       "path": "src/main/resources/data/apothic_ascension/recipe/salvaging/affix_item/apotheotic.json",
       "kind": "text_resource",
       "mode": "100644",
-      "size": 306,
-      "sha256": "7db653829e45bc9686bc70eee32dc5511e0974db706e5b6086bb9d4bd6d4fdf1"
+      "size": 307,
+      "sha256": "f3f80a62d6f9b37559bcd9fa964d5efb2933eb9b4e868224fe34b79c9694cded"
     },
     {
       "path": "src/main/resources/data/apothic_ascension/recipe/salvaging/affix_item/cataclysmic.json",
       "kind": "text_resource",
       "mode": "100644",
-      "size": 308,
-      "sha256": "2bd7e47fc57ae0329ae88d7d114299cdcd7f7b732444da836fef231e3898e63c"
+      "size": 309,
+      "sha256": "e31a274fcafa5cb90f2d113f62907117f759f9793f7fbbbac703f9d1619f4dee"
     },
     {
       "path": "src/main/resources/data/apothic_ascension/recipe/salvaging/affix_item/divine.json",
       "kind": "text_resource",
       "mode": "100644",
-      "size": 298,
-      "sha256": "f26ccfaf330bd8af7d39bc99a7d9ecedada0dfbd6f74ce2f8aff1930d24df8bb"
+      "size": 299,
+      "sha256": "1577fa389e6edaf56cbaa754a62d7ddc29fff6ef8528c6c6f8460c5153e626f8"
     },
     {
       "path": "src/main/resources/data/apothic_ascension/recipe/salvaging/affix_item/empyrean.json",
       "kind": "text_resource",
       "mode": "100644",
-      "size": 302,
-      "sha256": "b1ba7d5941dee1327372933d8b1abded9fe6b1dffccb7f5ee0b5e2e86be9ef9f"
+      "size": 303,
+      "sha256": "d625efc6ac0c3960475debdbb61fa51a9998f28eb17ab97909ee8a9ca841b7fe"
     },
     {
       "path": "src/main/resources/data/apothic_ascension/recipe/salvaging/affix_item/esoteric.json",
       "kind": "text_resource",
       "mode": "100644",
-      "size": 302,
-      "sha256": "a32742784314fad7e36e14900a3f01283431a4a7b468d167d41a2d034f84c065"
+      "size": 303,
+      "sha256": "8603f71639ea143deb98584937f9b4c82c62ca0591340040df39db0f9b90ba36"
     },
     {
       "path": "src/main/resources/data/apothic_ascension/recipe/salvaging/affix_item/forgotten.json",
       "kind": "text_resource",
       "mode": "100644",
-      "size": 304,
-      "sha256": "c3ce5554007573cd5d25f08716af2c5d93a923d7ac64e0bcd0168583446cff72"
+      "size": 305,
+      "sha256": "249a2c7a88e72800a3c8a0bdfaa944db75d56230b2edefb7f4cb79153eb2ee1a"
     },
     {
       "path": "src/main/resources/data/apothic_ascension/recipe/salvaging/affix_item/legendary.json",
       "kind": "text_resource",
       "mode": "100644",
-      "size": 304,
-      "sha256": "255d14d4491ad43a360b897320b6eb7ef99f1800cc773eebcd3db7d172cc6f70"
+      "size": 305,
+      "sha256": "4d358cb3106f0dad4926110a7e4468adad3812f6a48f9a3e92f2452c0e7bb2e0"
     },
     {
       "path": "src/main/resources/data/apothic_ascension/recipe/salvaging/affix_item/paracausal.json",
       "kind": "text_resource",
       "mode": "100644",
-      "size": 306,
-      "sha256": "52d23071c085eeda22d7480038bb569257214becf46f322afe1215a51eeabbf8"
+      "size": 307,
+      "sha256": "614356b253de3e22188a2dd3a191b0c6247085e5d889392699736014705ff872"
     },
     {
       "path": "src/main/resources/data/apothic_ascension/recipe/salvaging/affix_item/primal.json",
       "kind": "text_resource",
       "mode": "100644",
-      "size": 298,
-      "sha256": "a023f6d423a887014a4d63a8e3823168aabac4f4fb9a805d6fe9de06b6762d09"
+      "size": 299,
+      "sha256": "f8af344eb62d2028891fd39c33cc68f541fbdd37ad96a73a73d1c03f30e59cca"
     },
     {
       "path": "src/main/resources/data/apothic_ascension/recipe/salvaging/affix_item/stellar.json",
       "kind": "text_resource",
       "mode": "100644",
-      "size": 300,
-      "sha256": "ac73e887fb122f41bddee5504100b0f9718e7581136dc4037fc72958934b366d"
+      "size": 301,
+      "sha256": "f5ef08947b44f0ee409b623985dcbefcc08ec95407bdc8f3727588e7d53ac22a"
     },
     {
       "path": "src/main/resources/data/apothic_ascension/recipe/salvaging/affix_item/transcendent.json",
       "kind": "text_resource",
       "mode": "100644",
-      "size": 310,
-      "sha256": "5c9656d0073e39d53cb50e70fdde0eef1037568bab11d3b2c1bcee2c3ec87347"
+      "size": 311,
+      "sha256": "4bfa10239ce2a876391bebe3f0a45daf1f565edcbc3ba407b0b7b693e4815b8c"
     },
     {
       "path": "src/main/resources/data/apothic_ascension/tags/item/compat/allthemodium_breaker.json",
