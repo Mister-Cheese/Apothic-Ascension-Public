@@ -1,7 +1,6 @@
 name: Compatibility issue
 description: Report an interaction problem with another mod
 title: "[Compat] "
-labels: ["compatibility"]
 body:
   - type: input
     id: aa-version
