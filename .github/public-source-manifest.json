@@ -10,6 +10,13 @@
       "sha256": "d7bf5fa08449993e9eacbfc73cd9b5a979a235a230ae55f5cef30c244fdc8fae"
     },
     {
+      "path": ".github/FUNDING.yml",
+      "kind": "public_metadata",
+      "mode": "100644",
+      "size": 935,
+      "sha256": "5be9227513b1b0f69fff5abb91217b6bc7e97b67195ff932f5bb5d9382107dab"
+    },
+    {
       "path": ".github/ISSUE_TEMPLATE/bug.yml",
       "kind": "public_issue_template",
       "mode": "100644",
@@ -41,8 +48,8 @@
       "path": ".github/public_source_guard.py",
       "kind": "public_guard",
       "mode": "100644",
-      "size": 29959,
-      "sha256": "9e700f53bae536e1550449468e052d583c378ff62ee58301897b43937c0f54b5"
+      "size": 45173,
+      "sha256": "c94c9bb74151b7441d7b072d01fefe689ac8559f2c41551f5830fc7a3743643e"
     },
     {
       "path": ".gitignore",
