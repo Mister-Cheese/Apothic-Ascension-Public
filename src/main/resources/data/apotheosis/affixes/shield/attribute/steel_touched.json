@@ -1,0 +1,89 @@
+{
+  "type": "apotheosis:attribute",
+  "attribute": "minecraft:generic.armor_toughness",
+  "categories": [
+    "apotheosis:shield"
+  ],
+  "definition": {
+    "affix_type": "stat",
+    "exclusive_set": [],
+    "weights": {
+      "quality": 0.1,
+      "weight": 25
+    }
+  },
+  "operation": "add_multiplied_base",
+  "values": {
+    "apotheosis:rare": {
+      "min": 0.15,
+      "max": 0.2
+    },
+    "apotheosis:epic": {
+      "min": 0.15,
+      "max": 0.2
+    },
+    "apotheosis:mythic": {
+      "min": 0.2,
+      "max": 0.3
+    },
+    "apothic_ascension:legendary": {
+      "min": 0.244,
+      "max": 0.366,
+      "step": 0.0101666665
+    },
+    "apothic_ascension:ancient": {
+      "min": 0.288,
+      "max": 0.432,
+      "step": 0.0102857156
+    },
+    "apothic_ascension:forgotten": {
+      "min": 0.34400000000000003,
+      "max": 0.516,
+      "step": 0.0101176444
+    },
+    "apothic_ascension:primal": {
+      "min": 0.41600000000000004,
+      "max": 0.624,
+      "step": 0.0099047618
+    },
+    "apothic_ascension:stellar": {
+      "min": 0.516,
+      "max": 0.774,
+      "step": 0.00992307719
+    },
+    "apothic_ascension:divine": {
+      "min": 0.66,
+      "max": 0.9899999999999999
+    },
+    "apothic_ascension:esoteric": {
+      "min": 0.87,
+      "max": 1.305,
+      "step": 0.0101162782
+    },
+    "apothic_ascension:cataclysmic": {
+      "min": 1.1800000000000002,
+      "max": 1.77
+    },
+    "apothic_ascension:abyssal": {
+      "min": 1.6500000000000001,
+      "max": 2.475,
+      "step": 0.0100609744
+    },
+    "apothic_ascension:empyrean": {
+      "min": 2.3800000000000003,
+      "max": 3.57
+    },
+    "apothic_ascension:paracausal": {
+      "min": 3.5600000000000005,
+      "max": 5.34
+    },
+    "apothic_ascension:transcendent": {
+      "min": 5.5,
+      "max": 8.25
+    },
+    "apothic_ascension:apotheotic": {
+      "min": 8.4,
+      "max": 12.6
+    }
+  }
+}

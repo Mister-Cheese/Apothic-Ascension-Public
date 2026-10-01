@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "GDG",
+    "DED",
+    "GDG"
+  ],
+  "key": {
+    "G": {
+      "item": "apotheosis:gem_dust"
+    },
+    "D": {
+      "item": "minecraft:diamond"
+    },
+    "E": {
+      "item": "minecraft:ender_eye"
+    }
+  },
+  "result": {
+    "id": "apothic_ascension:gem_ascension_matrix",
+    "count": 1
+  }
+}

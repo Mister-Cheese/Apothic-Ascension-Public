@@ -1,0 +1,28 @@
+{
+  "type": "apotheosis:magical",
+  "definition": {
+    "affix_type": "ability",
+    "exclusive_set": [],
+    "weights": {
+      "quality": 0.1,
+      "weight": 25
+    }
+  },
+  "rarities": [
+    "apotheosis:epic",
+    "apotheosis:mythic",
+    "apothic_ascension:legendary",
+    "apothic_ascension:ancient",
+    "apothic_ascension:forgotten",
+    "apothic_ascension:primal",
+    "apothic_ascension:stellar",
+    "apothic_ascension:divine",
+    "apothic_ascension:esoteric",
+    "apothic_ascension:cataclysmic",
+    "apothic_ascension:abyssal",
+    "apothic_ascension:empyrean",
+    "apothic_ascension:paracausal",
+    "apothic_ascension:transcendent",
+    "apothic_ascension:apotheotic"
+  ]
+}

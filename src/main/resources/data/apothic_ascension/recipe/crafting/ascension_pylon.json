@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    " E ",
+    " O ",
+    " O "
+  ],
+  "key": {
+    "E": {
+      "item": "apothic_ascension:empyrean_material"
+    },
+    "O": {
+      "item": "minecraft:crying_obsidian"
+    }
+  },
+  "result": {
+    "id": "apothic_ascension:ascension_pylon",
+    "count": 1
+  }
+}

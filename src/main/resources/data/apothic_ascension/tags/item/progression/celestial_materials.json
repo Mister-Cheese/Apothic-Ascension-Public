@@ -1,0 +1,9 @@
+{
+  "replace": false,
+  "values": [
+    "apothic_ascension:primal_material",
+    "apothic_ascension:stellar_material",
+    "apothic_ascension:divine_material",
+    "apothic_ascension:esoteric_material"
+  ]
+}

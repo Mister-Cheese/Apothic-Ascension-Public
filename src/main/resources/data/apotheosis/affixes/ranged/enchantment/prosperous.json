@@ -1,0 +1,91 @@
+{
+  "type": "apotheosis:enchantment",
+  "categories": [
+    "apotheosis:bow"
+  ],
+  "definition": {
+    "affix_type": "ability",
+    "exclusive_set": [],
+    "weights": {
+      "quality": 0.1,
+      "weight": 25
+    }
+  },
+  "enchantment": "minecraft:looting",
+  "values": {
+    "apotheosis:epic": {
+      "min": 6.0,
+      "max": 8.0,
+      "step": 0.25
+    },
+    "apotheosis:mythic": {
+      "min": 8.0,
+      "max": 10.0,
+      "step": 0.25
+    },
+    "apothic_ascension:legendary": {
+      "min": 8.615385,
+      "max": 11.153846,
+      "step": 0.00999393966
+    },
+    "apothic_ascension:ancient": {
+      "min": 9.230769,
+      "max": 12.307692,
+      "step": 0.00999000762
+    },
+    "apothic_ascension:forgotten": {
+      "min": 9.846154,
+      "max": 13.461538,
+      "step": 0.00998724904
+    },
+    "apothic_ascension:primal": {
+      "min": 10.461538,
+      "max": 14.615385,
+      "step": 0.0100092692
+    },
+    "apothic_ascension:stellar": {
+      "min": 11.076923,
+      "max": 15.769231,
+      "step": 0.01000492
+    },
+    "apothic_ascension:divine": {
+      "min": 11.692308,
+      "max": 16.923077,
+      "step": 0.0100014685
+    },
+    "apothic_ascension:esoteric": {
+      "min": 12.307692,
+      "max": 18.076923,
+      "step": 0.00999866892
+    },
+    "apothic_ascension:cataclysmic": {
+      "min": 12.923077,
+      "max": 19.230769,
+      "step": 0.00999634154
+    },
+    "apothic_ascension:abyssal": {
+      "min": 13.538462,
+      "max": 20.384615,
+      "step": 0.0099943839
+    },
+    "apothic_ascension:empyrean": {
+      "min": 14.153846,
+      "max": 21.538462,
+      "step": 0.0100062545
+    },
+    "apothic_ascension:paracausal": {
+      "min": 14.769231,
+      "max": 22.692308,
+      "step": 0.0100038862
+    },
+    "apothic_ascension:transcendent": {
+      "min": 15.384615,
+      "max": 23.846154,
+      "step": 0.0100018186
+    },
+    "apothic_ascension:apotheotic": {
+      "min": 16.0,
+      "max": 25.0
+    }
+  }
+}

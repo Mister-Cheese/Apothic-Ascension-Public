@@ -1,0 +1,198 @@
+{
+  "type": "apotheosis:mob_effect",
+  "definition": {
+    "affix_type": "basic_effect",
+    "exclusive_set": [],
+    "weights": {
+      "quality": 0.1,
+      "weight": 25
+    }
+  },
+  "mob_effect": "minecraft:wither",
+  "target": "block_attacker",
+  "types": [
+    "apotheosis:shield"
+  ],
+  "values": {
+    "apotheosis:epic": {
+      "duration": {
+        "min": 40.0,
+        "max": 100.0,
+        "step": 20.0
+      },
+      "amplifier": {
+        "min": 0.0,
+        "max": 1.0,
+        "step": 0.5
+      }
+    },
+    "apotheosis:mythic": {
+      "duration": {
+        "min": 60.0,
+        "max": 160.0,
+        "step": 20.0
+      },
+      "amplifier": {
+        "min": 0.0,
+        "max": 2.0,
+        "step": 0.25
+      }
+    },
+    "apothic_ascension:legendary": {
+      "duration": {
+        "min": 66.27216610312357,
+        "max": 176.72577627499618,
+        "step": 18.4089336
+      },
+      "amplifier": {
+        "min": 0.0,
+        "max": 2.0,
+        "step": 0.25
+      }
+    },
+    "apothic_ascension:ancient": {
+      "duration": {
+        "min": 72.0,
+        "max": 192.0,
+        "step": 20.0
+      },
+      "amplifier": {
+        "min": 0.0,
+        "max": 2.0,
+        "step": 0.25
+      }
+    },
+    "apothic_ascension:forgotten": {
+      "duration": {
+        "min": 78.689262291624,
+        "max": 209.838043,
+        "step": 18.7355385
+      },
+      "amplifier": {
+        "min": 0.0,
+        "max": 2.0,
+        "step": 0.25
+      }
+    },
+    "apothic_ascension:primal": {
+      "duration": {
+        "min": 86.53323061113575,
+        "max": 230.75528162969533,
+        "step": 20.6031494
+      },
+      "amplifier": {
+        "min": 0.0,
+        "max": 2.0,
+        "step": 0.25
+      }
+    },
+    "apothic_ascension:stellar": {
+      "duration": {
+        "min": 96.37427042525405,
+        "max": 256.99805446734416,
+        "step": 20.0779724
+      },
+      "amplifier": {
+        "min": 0.0,
+        "max": 2.0,
+        "step": 0.25
+      }
+    },
+    "apothic_ascension:divine": {
+      "duration": {
+        "min": 108.9954127475097,
+        "max": 290.6544339933592,
+        "step": 20.1843338
+      },
+      "amplifier": {
+        "min": 1.0,
+        "max": 3.0,
+        "step": 0.25
+      }
+    },
+    "apothic_ascension:esoteric": {
+      "duration": {
+        "min": 125.13992168768526,
+        "max": 333.70645783382736,
+        "step": 20.8566532
+      },
+      "amplifier": {
+        "min": 1.0,
+        "max": 3.0,
+        "step": 0.25
+      }
+    },
+    "apothic_ascension:cataclysmic": {
+      "duration": {
+        "min": 145.73949361789343,
+        "max": 388.6386496477158,
+        "step": 20.2415962
+      },
+      "amplifier": {
+        "min": 1.0,
+        "max": 3.0,
+        "step": 0.25
+      }
+    },
+    "apothic_ascension:abyssal": {
+      "duration": {
+        "min": 172.33687939614086,
+        "max": 459.5650117230423,
+        "step": 20.5162945
+      },
+      "amplifier": {
+        "min": 1.0,
+        "max": 3.0,
+        "step": 0.25
+      }
+    },
+    "apothic_ascension:empyrean": {
+      "duration": {
+        "min": 206.97825972792407,
+        "max": 551.9420259411309,
+        "step": 20.2919846
+      },
+      "amplifier": {
+        "min": 2.0,
+        "max": 4.0,
+        "step": 0.25
+      }
+    },
+    "apothic_ascension:paracausal": {
+      "duration": {
+        "min": 253.1402773167478,
+        "max": 675.0407395113275,
+        "step": 20.090498
+      },
+      "amplifier": {
+        "min": 2.0,
+        "max": 4.0,
+        "step": 0.25
+      }
+    },
+    "apothic_ascension:transcendent": {
+      "duration": {
+        "min": 314.6426544510455,
+        "max": 839.047119,
+        "step": 20.1694012
+      },
+      "amplifier": {
+        "min": 3.0,
+        "max": 5.0,
+        "step": 0.25
+      }
+    },
+    "apothic_ascension:apotheotic": {
+      "duration": {
+        "min": 388.84444190447164,
+        "max": 1036.9185117452575,
+        "step": 20.2523117
+      },
+      "amplifier": {
+        "min": 3.0,
+        "max": 5.0,
+        "step": 0.25
+      }
+    }
+  }
+}

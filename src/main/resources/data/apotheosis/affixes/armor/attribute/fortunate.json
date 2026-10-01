@@ -1,0 +1,110 @@
+{
+  "type": "apotheosis:attribute",
+  "attribute": "minecraft:generic.luck",
+  "categories": [
+    "apotheosis:helmet",
+    "apotheosis:chestplate",
+    "apotheosis:leggings",
+    "apotheosis:boots"
+  ],
+  "definition": {
+    "affix_type": "stat",
+    "exclusive_set": [],
+    "weights": {
+      "quality": 0.1,
+      "weight": 25
+    }
+  },
+  "operation": "add_value",
+  "values": {
+    "apotheosis:common": {
+      "min": 0.5,
+      "max": 1.5,
+      "step": 0.25
+    },
+    "apotheosis:uncommon": {
+      "min": 0.5,
+      "max": 1.5,
+      "step": 0.25
+    },
+    "apotheosis:rare": {
+      "min": 1.5,
+      "max": 3.0,
+      "step": 0.25
+    },
+    "apotheosis:epic": {
+      "min": 1.5,
+      "max": 3.5,
+      "step": 0.25
+    },
+    "apotheosis:mythic": {
+      "min": 3.0,
+      "max": 5.0,
+      "step": 0.25
+    },
+    "apothic_ascension:legendary": {
+      "min": 3.618604,
+      "max": 7.350694,
+      "step": 0.0100056035
+    },
+    "apothic_ascension:ancient": {
+      "min": 4.204566,
+      "max": 9.577352,
+      "step": 0.0100051872
+    },
+    "apothic_ascension:forgotten": {
+      "min": 4.756877,
+      "max": 11.676131,
+      "step": 0.00999892224
+    },
+    "apothic_ascension:primal": {
+      "min": 5.274391,
+      "max": 13.642684,
+      "step": 0.00999796018
+    },
+    "apothic_ascension:stellar": {
+      "min": 5.755798,
+      "max": 15.472032,
+      "step": 0.00999612547
+    },
+    "apothic_ascension:divine": {
+      "min": 6.199574,
+      "max": 17.158382,
+      "step": 0.00999891292
+    },
+    "apothic_ascension:esoteric": {
+      "min": 6.603911,
+      "max": 18.694863,
+      "step": 0.0100007877
+    },
+    "apothic_ascension:cataclysmic": {
+      "min": 6.966611,
+      "max": 20.07312,
+      "step": 0.00999733713
+    },
+    "apothic_ascension:abyssal": {
+      "min": 7.284907,
+      "max": 21.282647,
+      "step": 0.00999838579
+    },
+    "apothic_ascension:empyrean": {
+      "min": 7.55515,
+      "max": 22.30957,
+      "step": 0.0100029968
+    },
+    "apothic_ascension:paracausal": {
+      "min": 7.772143,
+      "max": 23.134142,
+      "step": 0.0100013018
+    },
+    "apothic_ascension:transcendent": {
+      "min": 7.927396,
+      "max": 23.724103,
+      "step": 0.00999791641
+    },
+    "apothic_ascension:apotheotic": {
+      "min": 8.0,
+      "max": 24.0
+    }
+  }
+}

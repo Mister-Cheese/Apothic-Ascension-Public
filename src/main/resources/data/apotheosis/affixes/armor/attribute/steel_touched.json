@@ -1,0 +1,96 @@
+{
+  "type": "apotheosis:attribute",
+  "attribute": "minecraft:generic.armor_toughness",
+  "categories": [
+    "apotheosis:helmet",
+    "apotheosis:chestplate",
+    "apotheosis:leggings",
+    "apotheosis:boots"
+  ],
+  "definition": {
+    "affix_type": "stat",
+    "exclusive_set": [],
+    "weights": {
+      "quality": 0.1,
+      "weight": 25
+    }
+  },
+  "operation": "add_value",
+  "values": {
+    "apotheosis:rare": 1.0,
+    "apotheosis:epic": {
+      "min": 1.5,
+      "max": 3.0,
+      "step": 0.25
+    },
+    "apotheosis:mythic": {
+      "min": 2.0,
+      "max": 6.0,
+      "step": 0.25
+    },
+    "apothic_ascension:legendary": {
+      "min": 2.742325,
+      "max": 8.226974,
+      "step": 0.0100084832
+    },
+    "apothic_ascension:ancient": {
+      "min": 3.44548,
+      "max": 10.336439,
+      "step": 0.0100013912
+    },
+    "apothic_ascension:forgotten": {
+      "min": 4.108252,
+      "max": 12.324756,
+      "step": 0.00999574549
+    },
+    "apothic_ascension:primal": {
+      "min": 4.729269,
+      "max": 14.187806,
+      "step": 0.00999845378
+    },
+    "apothic_ascension:stellar": {
+      "min": 5.306958,
+      "max": 15.920873,
+      "step": 0.0100036897
+    },
+    "apothic_ascension:divine": {
+      "min": 5.839489,
+      "max": 17.518467,
+      "step": 0.00999912526
+    },
+    "apothic_ascension:esoteric": {
+      "min": 6.324693,
+      "max": 18.97408,
+      "step": 0.00999951456
+    },
+    "apothic_ascension:cataclysmic": {
+      "min": 6.759933,
+      "max": 20.279798,
+      "step": 0.00999990012
+    },
+    "apothic_ascension:abyssal": {
+      "min": 7.141889,
+      "max": 21.425666,
+      "step": 0.0100026447
+    },
+    "apothic_ascension:empyrean": {
+      "min": 7.46618,
+      "max": 22.39854,
+      "step": 0.0100015812
+    },
+    "apothic_ascension:paracausal": {
+      "min": 7.726571,
+      "max": 23.179714,
+      "step": 0.0100020347
+    },
+    "apothic_ascension:transcendent": {
+      "min": 7.912875,
+      "max": 23.738624,
+      "step": 0.00999731477
+    },
+    "apothic_ascension:apotheotic": {
+      "min": 8.0,
+      "max": 24.0
+    }
+  }
+}

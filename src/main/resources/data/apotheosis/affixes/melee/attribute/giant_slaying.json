@@ -1,0 +1,92 @@
+{
+  "type": "apotheosis:attribute",
+  "attribute": "apothic_attributes:current_hp_damage",
+  "categories": [
+    "apotheosis:melee_weapon"
+  ],
+  "definition": {
+    "affix_type": "stat",
+    "exclusive_set": [],
+    "weights": {
+      "pinnacle": {
+        "quality": 0.75,
+        "weight": 15
+      }
+    }
+  },
+  "operation": "add_value",
+  "values": {
+    "apotheosis:epic": {
+      "min": 0.1,
+      "max": 0.2
+    },
+    "apotheosis:mythic": {
+      "min": 0.1,
+      "max": 0.25
+    },
+    "apothic_ascension:legendary": {
+      "min": 0.109898,
+      "max": 0.262372,
+      "step": 0.0101649323
+    },
+    "apothic_ascension:ancient": {
+      "min": 0.119273,
+      "max": 0.274091,
+      "step": 0.0103211999
+    },
+    "apothic_ascension:forgotten": {
+      "min": 0.12811,
+      "max": 0.285138,
+      "step": 0.00981425028
+    },
+    "apothic_ascension:primal": {
+      "min": 0.13639,
+      "max": 0.295488,
+      "step": 0.00994362496
+    },
+    "apothic_ascension:stellar": {
+      "min": 0.144093,
+      "max": 0.305116,
+      "step": 0.0100639369
+    },
+    "apothic_ascension:divine": {
+      "min": 0.151193,
+      "max": 0.313991,
+      "step": 0.0101748761
+    },
+    "apothic_ascension:esoteric": {
+      "min": 0.157663,
+      "max": 0.322078,
+      "step": 0.0102759367
+    },
+    "apothic_ascension:cataclysmic": {
+      "min": 0.163466,
+      "max": 0.329332,
+      "step": 0.00975682307
+    },
+    "apothic_ascension:abyssal": {
+      "min": 0.168559,
+      "max": 0.335698,
+      "step": 0.00983170606
+    },
+    "apothic_ascension:empyrean": {
+      "min": 0.172882,
+      "max": 0.341103,
+      "step": 0.00989535172
+    },
+    "apothic_ascension:paracausal": {
+      "min": 0.176354,
+      "max": 0.345443,
+      "step": 0.00994641241
+    },
+    "apothic_ascension:transcendent": {
+      "min": 0.178838,
+      "max": 0.348548,
+      "step": 0.00998294074
+    },
+    "apothic_ascension:apotheotic": {
+      "min": 0.18,
+      "max": 0.35
+    }
+  }
+}

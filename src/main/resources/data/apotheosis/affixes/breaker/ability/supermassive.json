@@ -1,0 +1,132 @@
+{
+  "type": "apotheosis:radial",
+  "categories": [
+    "apotheosis:breaker"
+  ],
+  "definition": {
+    "affix_type": "ability",
+    "exclusive_set": [
+      "apotheosis:breaker/effect/radial"
+    ],
+    "weights": {
+      "pinnacle": {
+        "quality": 0.75,
+        "weight": 20
+      }
+    }
+  },
+  "values": {
+    "apotheosis:mythic": [
+      {
+        "x": 7,
+        "xOff": 0,
+        "y": 7,
+        "yOff": 0
+      }
+    ],
+    "apothic_ascension:legendary": [
+      {
+        "x": 9,
+        "xOff": 0,
+        "y": 9,
+        "yOff": 0
+      }
+    ],
+    "apothic_ascension:ancient": [
+      {
+        "x": 9,
+        "xOff": 0,
+        "y": 9,
+        "yOff": 0
+      }
+    ],
+    "apothic_ascension:forgotten": [
+      {
+        "x": 9,
+        "xOff": 0,
+        "y": 9,
+        "yOff": 0
+      }
+    ],
+    "apothic_ascension:primal": [
+      {
+        "x": 9,
+        "xOff": 0,
+        "y": 9,
+        "yOff": 0
+      }
+    ],
+    "apothic_ascension:stellar": [
+      {
+        "x": 11,
+        "xOff": 0,
+        "y": 11,
+        "yOff": 0
+      }
+    ],
+    "apothic_ascension:divine": [
+      {
+        "x": 11,
+        "xOff": 0,
+        "y": 11,
+        "yOff": 0
+      }
+    ],
+    "apothic_ascension:esoteric": [
+      {
+        "x": 11,
+        "xOff": 0,
+        "y": 11,
+        "yOff": 0
+      }
+    ],
+    "apothic_ascension:cataclysmic": [
+      {
+        "x": 13,
+        "xOff": 0,
+        "y": 13,
+        "yOff": 0
+      }
+    ],
+    "apothic_ascension:abyssal": [
+      {
+        "x": 15,
+        "xOff": 0,
+        "y": 15,
+        "yOff": 0
+      }
+    ],
+    "apothic_ascension:empyrean": [
+      {
+        "x": 17,
+        "xOff": 0,
+        "y": 17,
+        "yOff": 0
+      }
+    ],
+    "apothic_ascension:paracausal": [
+      {
+        "x": 19,
+        "xOff": 0,
+        "y": 19,
+        "yOff": 0
+      }
+    ],
+    "apothic_ascension:transcendent": [
+      {
+        "x": 23,
+        "xOff": 0,
+        "y": 23,
+        "yOff": 0
+      }
+    ],
+    "apothic_ascension:apotheotic": [
+      {
+        "x": 27,
+        "xOff": 0,
+        "y": 27,
+        "yOff": 0
+      }
+    ]
+  }
+}

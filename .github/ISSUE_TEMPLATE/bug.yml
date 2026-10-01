@@ -1,31 +1,19 @@
 name: Bug report
 description: Report a reproducible Apothic Ascension defect
-title: "[Bug] "
+title: "[Bug]: "
 body:
   - type: input
     id: aa-version
     attributes:
       label: Apothic Ascension version
-      placeholder: e.g. 1.14.0-Beta
+      placeholder: 1.14.0-Beta
     validations:
       required: true
   - type: input
-    id: minecraft-version
+    id: environment
     attributes:
-      label: Minecraft version
-      placeholder: e.g. 1.21.1
-    validations:
-      required: true
-  - type: input
-    id: neoforge-version
-    attributes:
-      label: NeoForge version
-    validations:
-      required: true
-  - type: input
-    id: apotheosis-version
-    attributes:
-      label: Apotheosis version
+      label: Minecraft / NeoForge / Apotheosis versions
+      placeholder: Minecraft 1.21.1, NeoForge 21.1.x, Apotheosis 8.x
     validations:
       required: true
   - type: textarea
@@ -39,18 +27,11 @@ body:
     id: reproduction
     attributes:
       label: Reproduction steps
-      description: Give the shortest reliable sequence that reproduces the problem.
+      description: Give the shortest reliable reproduction you have.
     validations:
       required: true
   - type: textarea
     id: logs
     attributes:
       label: Relevant logs or crash report
-      description: Attach or paste only the relevant log/crash material. Remove credentials or private server information first.
-  - type: checkboxes
-    id: checks
-    attributes:
-      label: Checks
-      options:
-        - label: I verified that this report does not contain passwords, tokens, private addresses, or other secrets.
-          required: true
+      description: Paste a short relevant excerpt or attach the full latest.log/crash report.

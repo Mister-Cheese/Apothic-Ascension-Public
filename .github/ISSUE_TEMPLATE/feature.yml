@@ -1,6 +1,6 @@
 name: Feature request
 description: Suggest a player-facing feature or compatibility target
-title: "[Feature] "
+title: "[Feature]: "
 body:
   - type: textarea
     id: problem

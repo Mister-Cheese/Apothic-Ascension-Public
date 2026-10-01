@@ -1,0 +1,27 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "TCT",
+    "NSN",
+    "TCT"
+  ],
+  "key": {
+    "T": {
+      "item": "apothic_ascension:transcendent_material"
+    },
+    "C": {
+      "item": "apothic_ascension:ascension_core"
+    },
+    "N": {
+      "item": "minecraft:netherite_block"
+    },
+    "S": {
+      "item": "minecraft:smithing_table"
+    }
+  },
+  "result": {
+    "id": "apothic_ascension:apex_ascension_bench",
+    "count": 1
+  }
+}

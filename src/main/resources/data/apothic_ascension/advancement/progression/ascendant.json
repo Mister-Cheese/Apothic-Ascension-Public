@@ -1,0 +1,35 @@
+{
+  "parent": "apotheosis:progression/pinnacle",
+  "criteria": {
+    "material": {
+      "conditions": {
+        "items": [
+          {
+            "items": "apothic_ascension:legendary_material"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "display": {
+    "background": "apotheosis:textures/advancements/bg/apoth.png",
+    "description": {
+      "translate": "advancements.apothic_ascension.progression.ascendant.desc"
+    },
+    "frame": "goal",
+    "icon": {
+      "count": 1,
+      "id": "apothic_ascension:legendary_material"
+    },
+    "title": {
+      "translate": "advancements.apothic_ascension.progression.ascendant.title"
+    }
+  },
+  "requirements": [
+    [
+      "material"
+    ]
+  ],
+  "sends_telemetry_event": false
+}

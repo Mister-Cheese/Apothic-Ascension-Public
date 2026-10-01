@@ -1,0 +1,33 @@
+{
+  "type": "apotheosis:attribute",
+  "attribute": "apothic_attributes:elytra_flight",
+  "categories": [
+    "apotheosis:chestplate"
+  ],
+  "definition": {
+    "affix_type": "stat",
+    "exclusive_set": [],
+    "weights": {
+      "quality": 0.1,
+      "weight": 25
+    }
+  },
+  "operation": "add_value",
+  "values": {
+    "apotheosis:epic": 1.0,
+    "apotheosis:mythic": 1.0,
+    "apothic_ascension:legendary": 1.22,
+    "apothic_ascension:ancient": 1.44,
+    "apothic_ascension:forgotten": 1.72,
+    "apothic_ascension:primal": 2.08,
+    "apothic_ascension:stellar": 2.58,
+    "apothic_ascension:divine": 3.3,
+    "apothic_ascension:esoteric": 4.35,
+    "apothic_ascension:cataclysmic": 5.9,
+    "apothic_ascension:abyssal": 8.25,
+    "apothic_ascension:empyrean": 11.9,
+    "apothic_ascension:paracausal": 17.8,
+    "apothic_ascension:transcendent": 27.5,
+    "apothic_ascension:apotheotic": 42.0
+  }
+}

@@ -1,0 +1,99 @@
+{
+  "type": "apotheosis:attribute",
+  "attribute": "minecraft:generic.step_height",
+  "categories": [
+    "apotheosis:boots"
+  ],
+  "definition": {
+    "affix_type": "stat",
+    "exclusive_set": [],
+    "weights": {
+      "quality": 0.1,
+      "weight": 25
+    }
+  },
+  "operation": "add_value",
+  "values": {
+    "apotheosis:common": 0.5,
+    "apotheosis:uncommon": 0.5,
+    "apotheosis:rare": {
+      "min": 0.5,
+      "max": 1.5,
+      "step": 0.25
+    },
+    "apotheosis:epic": {
+      "min": 0.5,
+      "max": 1.5,
+      "step": 0.25
+    },
+    "apotheosis:mythic": {
+      "min": 1.0,
+      "max": 2.0,
+      "step": 0.25
+    },
+    "apothic_ascension:legendary": {
+      "min": 1.092791,
+      "max": 2.123721,
+      "step": 0.010009028
+    },
+    "apothic_ascension:ancient": {
+      "min": 1.180685,
+      "max": 2.240913,
+      "step": 0.0100021493
+    },
+    "apothic_ascension:forgotten": {
+      "min": 1.263531,
+      "max": 2.351375,
+      "step": 0.00998022128
+    },
+    "apothic_ascension:primal": {
+      "min": 1.341159,
+      "max": 2.454878,
+      "step": 0.010033505
+    },
+    "apothic_ascension:stellar": {
+      "min": 1.41337,
+      "max": 2.55116,
+      "step": 0.00998061523
+    },
+    "apothic_ascension:divine": {
+      "min": 1.479936,
+      "max": 2.639915,
+      "step": 0.0099998191
+    },
+    "apothic_ascension:esoteric": {
+      "min": 1.540587,
+      "max": 2.720782,
+      "step": 0.0100016529
+    },
+    "apothic_ascension:cataclysmic": {
+      "min": 1.594992,
+      "max": 2.793322,
+      "step": 0.00998608395
+    },
+    "apothic_ascension:abyssal": {
+      "min": 1.642736,
+      "max": 2.856981,
+      "step": 0.0100350836
+    },
+    "apothic_ascension:empyrean": {
+      "min": 1.683273,
+      "max": 2.91103,
+      "step": 0.00998176541
+    },
+    "apothic_ascension:paracausal": {
+      "min": 1.715821,
+      "max": 2.954429,
+      "step": 0.00998877361
+    },
+    "apothic_ascension:transcendent": {
+      "min": 1.739109,
+      "max": 2.985479,
+      "step": 0.00997096021
+    },
+    "apothic_ascension:apotheotic": {
+      "min": 1.75,
+      "max": 3.0
+    }
+  }
+}

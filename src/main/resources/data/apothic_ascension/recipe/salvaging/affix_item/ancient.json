@@ -1,0 +1,17 @@
+{
+  "type": "apotheosis:salvaging",
+  "input": {
+    "type": "apotheosis:affix",
+    "rarity": "apothic_ascension:ancient"
+  },
+  "outputs": [
+    {
+      "max_count": 3,
+      "min_count": 1,
+      "stack": {
+        "count": 1,
+        "id": "apothic_ascension:ancient_material"
+      }
+    }
+  ]
+}

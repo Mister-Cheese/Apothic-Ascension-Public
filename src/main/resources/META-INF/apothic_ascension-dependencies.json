@@ -1,0 +1,152 @@
+{
+  "schema": 3,
+  "mod_id": "apothic_ascension",
+  "version": "1.14.1-Beta",
+  "minecraft": "1.21.1",
+  "loader": {
+    "id": "neoforge",
+    "tested": "21.1.249",
+    "range": "[21.1.235,21.2)"
+  },
+  "java": 21,
+  "relations": {
+    "required": [
+      {
+        "mod_id": "apotheosis",
+        "version_range": "[8.5.4,8.8.1)",
+        "reason": "Core rarity, affix, gem, reforging and world-tier APIs/data.",
+        "curseforge_project_id": 313970
+      },
+      {
+        "mod_id": "attributefix",
+        "version_range": "[21.1.3,22)",
+        "reason": "Ascension relies on raised attribute ranges for extreme intrinsic armor/toughness scaling.",
+        "curseforge_project_id": 280510
+      },
+      {
+        "mod_id": "placebo",
+        "version_range": "[9.9.1,10)",
+        "reason": "Direct API dependency for Apotheosis dynamic holders and reload-backed registries.",
+        "curseforge_project_id": 283644
+      },
+      {
+        "mod_id": "apothic_attributes",
+        "version_range": "[2.9.1,3)",
+        "reason": "Direct API dependency for typed attribute holders and stack attribute events.",
+        "curseforge_project_id": 898963
+      }
+    ],
+    "optional": [
+      {
+        "mod_id": "jei",
+        "version_range": "[19.27.0.343,20)",
+        "side": "client",
+        "reason": "Optional client integration for extended gem ingredients/subtype identity.",
+        "curseforge_project_id": 238222
+      },
+      {
+        "mod_id": "irons_spellbooks",
+        "version_range": "[1.21.1-3.16.1,1.21.1-4)",
+        "side": "both",
+        "reason": "Optional data compatibility for spell power, resistance, mana, cast-time, cooldown, and summon attributes.",
+        "curseforge_project_id": 855414
+      },
+      {
+        "mod_id": "ars_nouveau",
+        "version_range": "[5.12,6)",
+        "side": "both",
+        "reason": "Optional data compatibility for Ars spell damage, warding, mana regeneration, and max-mana attributes.",
+        "curseforge_project_id": 401955
+      },
+      {
+        "mod_id": "spartan_weaponry_unofficial",
+        "version_range": "[1.2.3,2)",
+        "side": "both",
+        "reason": "Optional data-map compatibility maps supported Spartan weapon tags into Apotheosis melee/ranged loot categories; no Spartan Java classes are linked.",
+        "curseforge_project_id": 1450963
+      },
+      {
+        "mod_id": "allthemodium",
+        "version_range": "[3.0.1,3.1.1)",
+        "side": "both",
+        "reason": "Optional data-only category compatibility for Allthemodium tools and weapons; foreign item references remain required:false."
+      },
+      {
+        "mod_id": "simplyswords",
+        "version_range": "[1.70.2-1.21.1,1.71)",
+        "side": "both",
+        "reason": "Beta 14 equipment-state qualification; AA preserves native Simply Swords identity/state without direct Java linkage.",
+        "modrinth_project_id": "bK3Ubu9p"
+      },
+      {
+        "mod_id": "silentgear",
+        "version_range": "[4.1.5,4.2)",
+        "side": "both",
+        "reason": "Beta 14 equipment-state qualification; AA preserves native Silent Gear material/module state without direct Java linkage.",
+        "modrinth_project_id": "73mSSnCf"
+      }
+    ],
+    "incompatible": [
+      {
+        "mod_id": "nadir",
+        "version_range": "[0,)",
+        "reason": "Ascension 1.x replaces Nadir's post-Mythic rarity/progression layer.",
+        "curseforge_project_id": 1424172
+      },
+      {
+        "mod_id": "apothic_gem_tiers",
+        "version_range": "[0,)",
+        "reason": "Legacy 0.x prototype; shares gem behavior with 1.x and must not be co-installed."
+      }
+    ],
+    "transitive_via_apotheosis": [
+      {
+        "mod_id": "apothic_spawners",
+        "curseforge_project_id": 986583
+      },
+      {
+        "mod_id": "apothic_enchanting",
+        "curseforge_project_id": 1063926
+      }
+    ]
+  },
+  "specialist_providers": [
+    {
+      "mod_id": "irons_apothic",
+      "version_range": "[2.2.1,2.2.2)",
+      "relationship": "detected_provider_not_dependency",
+      "role": "Dominant Iron's affix/gem semantic provider when in-band; AA Iron fallback data is presence-suppressed to avoid duplicate content.",
+      "qualification_status": "source_and_runtime_profile_qualified_2.2.1"
+    },
+    {
+      "mod_id": "ars_n_spells",
+      "version_range": "[3.3.0,3.3.1)",
+      "relationship": "detected_provider_not_dependency",
+      "role": "Dominant shared Ars/Iron magic-resource semantic provider when in-band.",
+      "published_candidate_version": "3.3.2",
+      "qualification_status": "source_and_runtime_profile_qualified_3.3.0_current_patch_audit_pending"
+    },
+    {
+      "mod_id": "apothic_category_compat",
+      "version_range": "[2.1.0,2.1.1)",
+      "relationship": "detected_provider_not_dependency",
+      "role": "Category specialist; current audited data has no overlap with AA Spartan/Allthemodium fallbacks.",
+      "qualification_status": "source_no_overlap_and_runtime_coexistence_qualified_2.1.0"
+    },
+    {
+      "mod_id": "extra_apoth_compat",
+      "version_range": "[1.0.3,1.0.4)",
+      "relationship": "detected_provider_not_dependency",
+      "role": "EMI/Apotheosis presentation specialist; AA has no Beta 13 EMI ownership to suppress.",
+      "published_candidate_version": "1.0.4",
+      "qualification_status": "source_no_overlap_and_runtime_coexistence_qualified_1.0.3_current_patch_audit_pending"
+    },
+    {
+      "mod_id": "fallen_gems_affixes",
+      "version_range": "[1.0.0,1.0.1)",
+      "relationship": "detected_provider_not_dependency",
+      "role": "Coexistence-observed affix/gem addon; automatic extension remains disabled.",
+      "qualification_status": "aa_coexistence_runtime_qualified_1.0.0_upstream_content_noise_observed"
+    }
+  ]
+}

@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": ["LGL", "GSG", "LGL"],
+  "key": {
+    "L": {"item": "apothic_ascension:legendary_material"},
+    "G": {"item": "minecraft:gilded_blackstone"},
+    "S": {"item": "minecraft:smithing_table"}
+  },
+  "result": {"id": "apothic_ascension:ascension_forge", "count": 1}
+}

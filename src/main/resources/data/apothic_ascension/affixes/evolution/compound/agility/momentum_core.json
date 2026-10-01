@@ -1,0 +1,255 @@
+{
+  "type": "apotheosis:multi_attr",
+  "modifiers": [
+    {
+      "attribute": "minecraft:generic.movement_speed",
+      "operation": "add_multiplied_total",
+      "values": {
+        "apothic_ascension:primal": {
+          "min": 0.015,
+          "max": 0.03,
+          "step": 0.00749999983
+        },
+        "apothic_ascension:stellar": {
+          "min": 0.0177,
+          "max": 0.0354,
+          "step": 0.00884999987
+        },
+        "apothic_ascension:divine": {
+          "min": 0.020886,
+          "max": 0.041772,
+          "step": 0.0104430001
+        },
+        "apothic_ascension:esoteric": {
+          "min": 0.024645,
+          "max": 0.049291,
+          "step": 0.0123229995
+        },
+        "apothic_ascension:cataclysmic": {
+          "min": 0.029082,
+          "max": 0.058163,
+          "step": 0.00969366636
+        },
+        "apothic_ascension:abyssal": {
+          "min": 0.034316,
+          "max": 0.068633,
+          "step": 0.0114389993
+        },
+        "apothic_ascension:empyrean": {
+          "min": 0.040493,
+          "max": 0.080987,
+          "step": 0.0101234997
+        },
+        "apothic_ascension:paracausal": {
+          "min": 0.047782,
+          "max": 0.095564,
+          "step": 0.00955639966
+        },
+        "apothic_ascension:transcendent": {
+          "min": 0.056383,
+          "max": 0.112766,
+          "step": 0.00939716678
+        },
+        "apothic_ascension:apotheotic": {
+          "min": 0.066532,
+          "max": 0.133064,
+          "step": 0.00950457156
+        }
+      }
+    },
+    {
+      "attribute": "minecraft:generic.attack_speed",
+      "operation": "add_multiplied_total",
+      "values": {
+        "apothic_ascension:primal": {
+          "min": 0.02,
+          "max": 0.04
+        },
+        "apothic_ascension:stellar": {
+          "min": 0.0236,
+          "max": 0.0472,
+          "step": 0.0118000004
+        },
+        "apothic_ascension:divine": {
+          "min": 0.027848,
+          "max": 0.055696,
+          "step": 0.00928266626
+        },
+        "apothic_ascension:esoteric": {
+          "min": 0.032861,
+          "max": 0.065721,
+          "step": 0.0109533323
+        },
+        "apothic_ascension:cataclysmic": {
+          "min": 0.038776,
+          "max": 0.077551,
+          "step": 0.00969375018
+        },
+        "apothic_ascension:abyssal": {
+          "min": 0.045755,
+          "max": 0.09151,
+          "step": 0.0091509996
+        },
+        "apothic_ascension:empyrean": {
+          "min": 0.053991,
+          "max": 0.107982,
+          "step": 0.0107982
+        },
+        "apothic_ascension:paracausal": {
+          "min": 0.063709,
+          "max": 0.127419,
+          "step": 0.0106183328
+        },
+        "apothic_ascension:transcendent": {
+          "min": 0.075177,
+          "max": 0.150354,
+          "step": 0.00939712487
+        },
+        "apothic_ascension:apotheotic": {
+          "min": 0.088709,
+          "max": 0.177418,
+          "step": 0.00985655561
+        }
+      }
+    },
+    {
+      "attribute": "minecraft:player.entity_interaction_range",
+      "operation": "add_value",
+      "values": {
+        "apothic_ascension:primal": {
+          "min": 0.2,
+          "max": 0.4
+        },
+        "apothic_ascension:stellar": {
+          "min": 0.236,
+          "max": 0.472,
+          "step": 0.00983333308
+        },
+        "apothic_ascension:divine": {
+          "min": 0.27848,
+          "max": 0.55696,
+          "step": 0.00994571391
+        },
+        "apothic_ascension:esoteric": {
+          "min": 0.328606,
+          "max": 0.657213,
+          "step": 0.00995778665
+        },
+        "apothic_ascension:cataclysmic": {
+          "min": 0.387756,
+          "max": 0.775511,
+          "step": 0.00994243659
+        },
+        "apothic_ascension:abyssal": {
+          "min": 0.457552,
+          "max": 0.915103,
+          "step": 0.00994676165
+        },
+        "apothic_ascension:empyrean": {
+          "min": 0.539911,
+          "max": 1.079822,
+          "step": 0.00999835134
+        },
+        "apothic_ascension:paracausal": {
+          "min": 0.637095,
+          "max": 1.27419,
+          "step": 0.00995460898
+        },
+        "apothic_ascension:transcendent": {
+          "min": 0.751772,
+          "max": 1.503544,
+          "step": 0.0100236265
+        },
+        "apothic_ascension:apotheotic": {
+          "min": 0.887091,
+          "max": 1.774182,
+          "step": 0.00996731408
+        }
+      }
+    }
+  ],
+  "desc": "affix.apothic_ascension:evolution/compound/agility/momentum_core.desc",
+  "categories": [
+    "apotheosis:melee_weapon",
+    "apotheosis:trident",
+    "apotheosis:bow",
+    "apotheosis:breaker",
+    "apotheosis:shears",
+    "apotheosis:shield",
+    "apotheosis:helmet",
+    "apotheosis:chestplate",
+    "apotheosis:leggings",
+    "apotheosis:boots"
+  ],
+  "definition": {
+    "affix_type": "stat",
+    "exclusive_set": [
+      "apothic_ascension:evolution/compound/attack/war_engine",
+      "apothic_ascension:evolution/compound/defense/citadel_core",
+      "apothic_ascension:evolution/compound/sustain/vital_engine",
+      "apothic_ascension:evolution/compound/utility/prospector_core",
+      "apothic_ascension:evolution/keystone/attack/glass_cannon",
+      "apothic_ascension:evolution/keystone/defense/immovable_citadel",
+      "apothic_ascension:evolution/keystone/sustain/blood_pact",
+      "apothic_ascension:evolution/keystone/utility/singularity_tool",
+      "apothic_ascension:evolution/proc/attack/fury_cascade",
+      "apothic_ascension:evolution/proc/attack/ruin_cascade",
+      "apothic_ascension:evolution/proc/defense/absorption_engine",
+      "apothic_ascension:evolution/proc/defense/reactive_fortress",
+      "apothic_ascension:evolution/proc/sustain/blood_recovery",
+      "apothic_ascension:evolution/proc/sustain/regeneration_engine",
+      "apothic_ascension:evolution/proc/utility/adaptation_engine",
+      "apothic_ascension:evolution/proc/utility/knowledge_engine",
+      "apothic_ascension:focus/attack/arrow_sunder",
+      "apothic_ascension:focus/attack/blood_frenzy",
+      "apothic_ascension:focus/attack/devastating",
+      "apothic_ascension:focus/attack/executioner",
+      "apothic_ascension:focus/attack/overpowering",
+      "apothic_ascension:focus/attack/penetrating",
+      "apothic_ascension:focus/attack/precision",
+      "apothic_ascension:focus/attack/rending",
+      "apothic_ascension:focus/attack/retaliatory_fury",
+      "apothic_ascension:focus/attack/stormchain",
+      "apothic_ascension:focus/attack/sunderstorm",
+      "apothic_ascension:focus/attack/warpath",
+      "apothic_ascension:focus/defense/absorptive",
+      "apothic_ascension:focus/defense/anchored",
+      "apothic_ascension:focus/defense/catalytic_wall",
+      "apothic_ascension:focus/defense/fortified",
+      "apothic_ascension:focus/defense/iron_wall",
+      "apothic_ascension:focus/defense/last_bastion",
+      "apothic_ascension:focus/defense/psychic_wall",
+      "apothic_ascension:focus/defense/restorative",
+      "apothic_ascension:focus/defense/unyielding",
+      "apothic_ascension:focus/defense/vital",
+      "apothic_ascension:focus/defense/vital_surge",
+      "apothic_ascension:focus/sustain/blood_mend",
+      "apothic_ascension:focus/sustain/bloodbound",
+      "apothic_ascension:focus/sustain/bloodguard",
+      "apothic_ascension:focus/sustain/emergency_mend",
+      "apothic_ascension:focus/sustain/enduring",
+      "apothic_ascension:focus/sustain/overflowing",
+      "apothic_ascension:focus/sustain/regenerative",
+      "apothic_ascension:focus/sustain/regrowth",
+      "apothic_ascension:focus/sustain/resilient_loop",
+      "apothic_ascension:focus/sustain/steadfast",
+      "apothic_ascension:focus/sustain/vitality_loop",
+      "apothic_ascension:focus/utility/aquatic",
+      "apothic_ascension:focus/utility/enlightened",
+      "apothic_ascension:focus/utility/field_analysis",
+      "apothic_ascension:focus/utility/grand_radial",
+      "apothic_ascension:focus/utility/industrial",
+      "apothic_ascension:focus/utility/insight",
+      "apothic_ascension:focus/utility/longreach",
+      "apothic_ascension:focus/utility/masterwork_omnetic",
+      "apothic_ascension:focus/utility/oxygenated",
+      "apothic_ascension:focus/utility/prosperous",
+      "apothic_ascension:focus/utility/scholar",
+      "apothic_ascension:focus/utility/telepathic"
+    ],
+    "weights": {
+      "quality": 0.92,
+      "weight": 42
+    }
+  }
+}

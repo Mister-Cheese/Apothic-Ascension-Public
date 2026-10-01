@@ -1,0 +1,35 @@
+{
+  "parent": "apothic_ascension:progression/esoteric",
+  "criteria": {
+    "material": {
+      "conditions": {
+        "items": [
+          {
+            "items": "apothic_ascension:empyrean_material"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "display": {
+    "background": "apotheosis:textures/advancements/bg/apoth.png",
+    "description": {
+      "translate": "advancements.apothic_ascension.progression.transcendent.desc"
+    },
+    "frame": "challenge",
+    "icon": {
+      "count": 1,
+      "id": "apothic_ascension:empyrean_material"
+    },
+    "title": {
+      "translate": "advancements.apothic_ascension.progression.transcendent.title"
+    }
+  },
+  "requirements": [
+    [
+      "material"
+    ]
+  ],
+  "sends_telemetry_event": false
+}

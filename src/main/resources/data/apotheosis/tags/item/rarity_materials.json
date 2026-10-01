@@ -1,0 +1,18 @@
+{
+  "replace": false,
+  "values": [
+    "apothic_ascension:legendary_material",
+    "apothic_ascension:ancient_material",
+    "apothic_ascension:forgotten_material",
+    "apothic_ascension:primal_material",
+    "apothic_ascension:stellar_material",
+    "apothic_ascension:divine_material",
+    "apothic_ascension:esoteric_material",
+    "apothic_ascension:cataclysmic_material",
+    "apothic_ascension:abyssal_material",
+    "apothic_ascension:empyrean_material",
+    "apothic_ascension:paracausal_material",
+    "apothic_ascension:transcendent_material",
+    "apothic_ascension:apotheotic_material"
+  ]
+}

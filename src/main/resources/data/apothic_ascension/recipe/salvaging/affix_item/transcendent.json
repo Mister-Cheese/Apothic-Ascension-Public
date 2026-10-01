@@ -1,0 +1,17 @@
+{
+  "type": "apotheosis:salvaging",
+  "input": {
+    "type": "apotheosis:affix",
+    "rarity": "apothic_ascension:transcendent"
+  },
+  "outputs": [
+    {
+      "max_count": 6,
+      "min_count": 1,
+      "stack": {
+        "count": 1,
+        "id": "apothic_ascension:transcendent_material"
+      }
+    }
+  ]
+}

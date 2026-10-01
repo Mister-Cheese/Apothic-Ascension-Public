@@ -1,0 +1,137 @@
+{
+  "type": "apotheosis:festive",
+  "categories": [
+    "apotheosis:melee_weapon",
+    "apotheosis:trident"
+  ],
+  "definition": {
+    "affix_type": "basic_effect",
+    "exclusive_set": [],
+    "weights": {
+      "quality": 0.1,
+      "weight": 25
+    }
+  },
+  "values": {
+    "apotheosis:epic": {
+      "chance": {
+        "min": 0.02,
+        "max": 0.05,
+        "step": 0.005
+      },
+      "rolls": 20
+    },
+    "apotheosis:mythic": {
+      "chance": {
+        "min": 0.03,
+        "max": 0.06,
+        "step": 0.005
+      },
+      "rolls": 20
+    },
+    "apothic_ascension:legendary": {
+      "chance": {
+        "min": 0.035303625361185476,
+        "max": 0.0704112327563865,
+        "step": 0.00501537276
+      },
+      "rolls": 22
+    },
+    "apothic_ascension:ancient": {
+      "chance": {
+        "min": 0.03882325557808741,
+        "max": 0.0772879129530255,
+        "step": 0.00480808225
+      },
+      "rolls": 23
+    },
+    "apothic_ascension:forgotten": {
+      "chance": {
+        "min": 0.0432047409964148,
+        "max": 0.08581227059046614,
+        "step": 0.00473417016
+      },
+      "rolls": 24
+    },
+    "apothic_ascension:primal": {
+      "chance": {
+        "min": 0.049015668464207796,
+        "max": 0.09705570486618242,
+        "step": 0.00480400352
+      },
+      "rolls": 26
+    },
+    "apothic_ascension:stellar": {
+      "chance": {
+        "min": 0.05622972407037352,
+        "max": 0.11091573978408586,
+        "step": 0.00497145625
+      },
+      "rolls": 28
+    },
+    "apothic_ascension:divine": {
+      "chance": {
+        "min": 0.06481439041215609,
+        "max": 0.12726724116548782,
+        "step": 0.00520440424
+      },
+      "rolls": 30
+    },
+    "apothic_ascension:esoteric": {
+      "chance": {
+        "min": 0.07613926598249332,
+        "max": 0.14860240441741657,
+        "step": 0.0051759393
+      },
+      "rolls": 32
+    },
+    "apothic_ascension:cataclysmic": {
+      "chance": {
+        "min": 0.09148738305588244,
+        "max": 0.17708924408483195,
+        "step": 0.00503540365
+      },
+      "rolls": 35
+    },
+    "apothic_ascension:abyssal": {
+      "chance": {
+        "min": 0.11335789693163323,
+        "max": 0.21683184185292104,
+        "step": 0.00492733112
+      },
+      "rolls": 40
+    },
+    "apothic_ascension:empyrean": {
+      "chance": {
+        "min": 0.1438776306180487,
+        "max": 0.27062301830069857,
+        "step": 0.00506981602
+      },
+      "rolls": 45
+    },
+    "apothic_ascension:paracausal": {
+      "chance": {
+        "min": 0.18831713160425279,
+        "max": 0.34547566643979566,
+        "step": 0.00506963022
+      },
+      "rolls": 52
+    },
+    "apothic_ascension:transcendent": {
+      "chance": {
+        "min": 0.2535363759469522,
+        "max": 0.4478877355152082,
+        "step": 0.0049833688
+      },
+      "rolls": 62
+    },
+    "apothic_ascension:apotheotic": {
+      "chance": {
+        "min": 0.33714518922026504,
+        "max": 0.566263447114265,
+        "step": 0.00498083187
+      },
+      "rolls": 73
+    }
+  }
+}

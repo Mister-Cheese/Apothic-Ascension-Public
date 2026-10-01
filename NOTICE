@@ -1,14 +1,18 @@
-Apothic Ascension — Public Source Repository
+Apothic Ascension - Source Code Availability
 
-This repository is the release-facing source and issue tracker for Apothic Ascension.
+The source code in this repository is made available under the Mozilla Public License 2.0.
+See LICENSE for the full license text.
 
-Source published as part of the MPL transition is made available under the Mozilla Public
-License 2.0, except third-party material identified by its own license notice.
+Public source and issue tracker:
+https://github.com/Mister-Cheese/Apothic-Ascension-Public
 
-The private development repository, internal Git history, CI/CD, qualification harnesses,
-research notes, audit evidence, and release-engineering tooling are not part of this
-publication repository.
+Some distributed resource material is derived from or preserves material from Apotheosis.
+The upstream MIT notice is retained at `src/main/resources/META-INF/licenses/apotheosis.txt`
+and remains controlling for that material.
 
-Existing releases distributed before the MPL transition retain the license grants that
-accompanied those copies. Publication of later source under MPL-2.0 does not revoke those
-earlier grants.
+This repository is a release-aligned source export. Internal development history, CI/CD,
+release engineering, research notes, qualification harnesses, and audit material are not
+part of this public source repository.
+
+Previously distributed copies remain available under the license terms that accompanied
+those copies. Publication under MPL-2.0 does not revoke earlier license grants.

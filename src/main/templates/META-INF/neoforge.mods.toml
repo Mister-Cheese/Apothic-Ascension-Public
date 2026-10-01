@@ -1,0 +1,138 @@
+# SPDX-License-Identifier: MPL-2.0
+
+modLoader="javafml"
+loaderVersion="${loader_version_range}"
+license="${mod_license}"
+issueTrackerURL="https://github.com/Mister-Cheese/Apothic-Ascension-Public/issues"
+
+[[mods]]
+modId="apothic_ascension"
+version="${mod_version}"
+displayName="${mod_name}"
+authors="mister cheese"
+displayURL="https://github.com/Mister-Cheese/Apothic-Ascension-Public"
+logoFile="apothic_ascension.png"
+description='''
+Apothic Ascension is an Apotheosis progression overhaul.
+A data-driven Apotheosis progression expansion for Minecraft 1.21.1.
+Adds post-Mythic item rarities, extended gem grades, staged progression, compatibility data,
+and bounded boss-pressure mechanics while preserving Apotheosis as the authoritative loot engine.
+Source code: https://github.com/Mister-Cheese/Apothic-Ascension-Public
+'''
+
+[[mixins]]
+config="apothic_ascension.mixins.json"
+
+[[dependencies.apothic_ascension]]
+modId="minecraft"
+type="required"
+versionRange="${minecraft_version_range}"
+ordering="NONE"
+side="BOTH"
+
+[[dependencies.apothic_ascension]]
+modId="neoforge"
+type="required"
+versionRange="${neo_version_range}"
+ordering="NONE"
+side="BOTH"
+
+[[dependencies.apothic_ascension]]
+modId="apotheosis"
+type="required"
+versionRange="${apotheosis_version_range}"
+ordering="AFTER"
+side="BOTH"
+
+[[dependencies.apothic_ascension]]
+modId="placebo"
+type="required"
+versionRange="${placebo_version_range}"
+ordering="AFTER"
+side="BOTH"
+
+[[dependencies.apothic_ascension]]
+modId="apothic_attributes"
+type="required"
+versionRange="${apothic_attributes_version_range}"
+ordering="AFTER"
+side="BOTH"
+
+[[dependencies.apothic_ascension]]
+modId="attributefix"
+type="required"
+versionRange="[21.1.3,22)"
+ordering="AFTER"
+side="BOTH"
+
+[[dependencies.apothic_ascension]]
+modId="nadir"
+type="incompatible"
+reason="Apothic Ascension 1.x replaces Nadir's rarity and progression layer."
+versionRange="[0,)"
+ordering="NONE"
+side="BOTH"
+
+[[dependencies.apothic_ascension]]
+modId="apothic_gem_tiers"
+type="incompatible"
+reason="Apothic Ascension 1.x is a clean-break replacement for the 0.x Apothic Gem Tiers prototype."
+versionRange="[0,)"
+ordering="NONE"
+side="BOTH"
+
+[[dependencies.apothic_ascension]]
+modId="jei"
+type="optional"
+versionRange="${jei_version_range}"
+ordering="AFTER"
+side="CLIENT"
+
+[[dependencies.apothic_ascension]]
+modId="ars_nouveau"
+type="optional"
+reason="Optional compatibility affixes use Ars Nouveau attributes when Ars is installed."
+versionRange="${ars_nouveau_version_range}"
+ordering="AFTER"
+side="BOTH"
+
+[[dependencies.apothic_ascension]]
+modId="irons_spellbooks"
+type="optional"
+reason="Optional compatibility affixes use Iron's Spells 'n Spellbooks attributes when installed."
+versionRange="${irons_spellbooks_version_range}"
+ordering="AFTER"
+side="BOTH"
+
+[[dependencies.apothic_ascension]]
+modId="spartan_weaponry_unofficial"
+type="optional"
+reason="Optional tag compatibility maps supported Spartan Weaponry Unofficial weapons into Apotheosis categories."
+versionRange="${spartan_weaponry_unofficial_version_range}"
+ordering="AFTER"
+side="BOTH"
+
+
+[[dependencies.apothic_ascension]]
+modId="allthemodium"
+type="optional"
+reason="Optional data-only category compatibility maps Allthemodium tools and weapons into Apotheosis loot categories."
+versionRange="${allthemodium_version_range}"
+ordering="AFTER"
+side="BOTH"
+
+[[dependencies.apothic_ascension]]
+modId="simplyswords"
+type="optional"
+reason="Beta 14 equipment-state compatibility preserves Simply Swords item identity and foreign components during AA reforging."
+versionRange="${simplyswords_version_range}"
+ordering="AFTER"
+side="BOTH"
+
+[[dependencies.apothic_ascension]]
+modId="silentgear"
+type="optional"
+reason="Beta 14 equipment-state compatibility preserves Silent Gear material/module state and foreign components during AA reforging."
+versionRange="${silentgear_version_range}"
+ordering="AFTER"
+side="BOTH"

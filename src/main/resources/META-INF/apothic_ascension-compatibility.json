@@ -1,0 +1,218 @@
+{
+  "schema": 2,
+  "build": "1.14.1-Beta",
+  "policy_revision": "compat-provider-v3",
+  "provider_states": [
+    "native",
+    "aa_fallback",
+    "third_party_dominant",
+    "aa_extension_only",
+    "disabled",
+    "degraded"
+  ],
+  "provider_audit_states": [
+    "absent",
+    "audited",
+    "degraded"
+  ],
+  "domains": [
+    "category",
+    "affix_content",
+    "affix_extension",
+    "gem_content",
+    "gem_extension",
+    "recipe_viewer",
+    "magic_resource",
+    "item_state"
+  ],
+  "specialist_providers": [
+    {
+      "mod_id": "irons_apothic",
+      "display_name": "Iron's Apothic",
+      "audited_version_range": "[2.2.1,2.2.2)",
+      "role": "irons_affix_and_gem_semantics",
+      "source_basis": "muon-rw/Apotheosis-Irons-Spells 2.2.1 source at 23cf616; custom affix codecs and data ownership audited",
+      "source_ref": "23cf6168d904aac5e7d14f715ce282dcdd27d6d7",
+      "qualification_status": "source_contract_audited_runtime_profile_pending"
+    },
+    {
+      "mod_id": "ars_n_spells",
+      "display_name": "Ars 'n Spells",
+      "audited_version_range": "[3.3.0,3.3.1)",
+      "role": "ars_irons_magic_resource_semantics",
+      "source_basis": "otectus/ars-n-spells NeoForge 1.21.1 source at 3.3.0",
+      "source_ref": "a9930223c96806e5d748ea69d02f9a32cab62de9",
+      "published_candidate_version": "3.3.2",
+      "qualification_status": "source_contract_3.3.0_audited_current_patch_runtime_and_artifact_audit_pending"
+    },
+    {
+      "mod_id": "apothic_category_compat",
+      "display_name": "Apothic Category Compat",
+      "audited_version_range": "[2.1.0,2.1.1)",
+      "role": "apotheosis_category_specialist",
+      "source_basis": "Nightwielder23/apothic-category-compat 2.1.0 source/data-map audit",
+      "source_ref": "6dbc445af5f94ff0c3f0de98c1419e8b3c8d07d8",
+      "qualification_status": "source_contract_audited_no_current_aa_overlap"
+    },
+    {
+      "mod_id": "extra_apoth_compat",
+      "display_name": "Extra Apoth Compat",
+      "audited_version_range": "[1.0.3,1.0.4)",
+      "role": "emi_apotheosis_presentation",
+      "source_basis": "TheWinABagel/Apoth-Compat source tree identifies 1.0.3",
+      "source_ref": "35524a7909e2e0aa171fe8539571ecfa4e38cdfb",
+      "published_candidate_version": "1.0.4",
+      "qualification_status": "source_contract_1.0.3_audited_current_patch_artifact_audit_pending_no_current_aa_emi_owner"
+    },
+    {
+      "mod_id": "fallen_gems_affixes",
+      "display_name": "Fallen Gems & Affixes",
+      "audited_version_range": "[1.0.0,1.0.1)",
+      "role": "affix_and_gem_addon_coexistence",
+      "source_basis": "KiraKayn/Fallen-Gems-Affixes 1.21.1 1.0.0 beta source identity",
+      "source_ref": "c1db110163f128aad601befe625b90f2c59c2979",
+      "qualification_status": "coexistence_source_audited_extension_disabled"
+    }
+  ],
+  "targets": [
+    {
+      "mod_id": "ars_nouveau",
+      "display_name": "Ars Nouveau",
+      "audited_version_range": "[5.12,6)",
+      "audit_basis": "Beta 11 conditioned attribute-affix surface and loader range",
+      "domains": {
+        "affix_content": {
+          "fallback_state": "aa_fallback",
+          "fallback_provider": "apothic_ascension",
+          "dominant_providers": [],
+          "ownership_note": "AA post-Mythic attribute affixes remain active; Ars 'n Spells presence alone does not prove these mixed Ars/vanilla affixes duplicate specialist content."
+        },
+        "magic_resource": {
+          "fallback_state": "native",
+          "fallback_provider": "ars_nouveau",
+          "dominant_providers": [
+            "ars_n_spells"
+          ],
+          "dominance_behavior": "yield_cross_system_mana_source_semantics"
+        }
+      }
+    },
+    {
+      "mod_id": "irons_spellbooks",
+      "display_name": "Iron's Spells 'n Spellbooks",
+      "audited_version_range": "[1.21.1-3.16.1,1.21.1-4)",
+      "audit_basis": "Beta 11 conditioned attribute-affix surface; Beta 13 audits specialist ownership separately from target support",
+      "domains": {
+        "affix_content": {
+          "fallback_state": "aa_fallback",
+          "fallback_provider": "apothic_ascension",
+          "dominant_providers": [
+            "irons_apothic"
+          ],
+          "dominance_behavior": "suppress_aa_fallback_content"
+        },
+        "magic_resource": {
+          "fallback_state": "native",
+          "fallback_provider": "irons_spellbooks",
+          "dominant_providers": [
+            "ars_n_spells"
+          ],
+          "dominance_behavior": "yield_cross_system_mana_source_semantics"
+        }
+      }
+    },
+    {
+      "mod_id": "spartan_weaponry_unofficial",
+      "display_name": "Spartan Weaponry Unofficial",
+      "audited_version_range": "[1.2.3,2)",
+      "audit_basis": "Beta 11 optional tag/data-map integration and loader range",
+      "domains": {
+        "category": {
+          "fallback_state": "aa_fallback",
+          "fallback_provider": "apothic_ascension",
+          "dominant_providers": [],
+          "ownership_note": "Apothic Category Compat 2.1.0 does not cover AA's Spartan tag mappings; do not over-yield."
+        }
+      }
+    },
+    {
+      "mod_id": "allthemodium",
+      "display_name": "Allthemodium",
+      "audited_version_range": "[3.0.1,3.1.1)",
+      "audit_basis": "Beta 14 source/changelog audit through Allthemodium 3.1.0; AA references only retained sword/axe/mace/pickaxe/shovel/trident item IDs and all foreign item references remain required:false",
+      "domains": {
+        "category": {
+          "fallback_state": "aa_fallback",
+          "fallback_provider": "apothic_ascension",
+          "dominant_providers": [],
+          "ownership_note": "Apothic Category Compat 2.1.0 does not cover AA's Allthemodium mappings; do not over-yield."
+        }
+      }
+    },
+    {
+      "mod_id": "simplyswords",
+      "display_name": "Simply Swords",
+      "audited_version_range": "[1.70.2-1.21.1,1.71)",
+      "audit_basis": "Beta 14 exact 1.70.2-1.21.1 NeoForge artifact metadata plus generic foreign-component preservation boundary",
+      "domains": {
+        "item_state": {
+          "fallback_state": "native",
+          "fallback_provider": "simplyswords",
+          "dominant_providers": [],
+          "ownership_note": "Simply Swords owns weapon identity/state. AA may add only AA/Apotheosis components and rejects destructive reforge candidates."
+        }
+      }
+    },
+    {
+      "mod_id": "silentgear",
+      "display_name": "Silent Gear",
+      "audited_version_range": "[4.1.5,4.2)",
+      "audit_basis": "Beta 14 exact Silent Gear 4.1.5 NeoForge artifact metadata plus generic foreign-component preservation boundary",
+      "domains": {
+        "item_state": {
+          "fallback_state": "native",
+          "fallback_provider": "silentgear",
+          "dominant_providers": [],
+          "ownership_note": "Silent Gear owns material/module identity. AA may add only AA/Apotheosis components and rejects destructive reforge candidates."
+        }
+      }
+    },
+    {
+      "mod_id": "jei",
+      "display_name": "Just Enough Items",
+      "audited_version_range": "[19.27.0.343,20)",
+      "audit_basis": "Beta 11 optional client mixin target and loader range",
+      "domains": {
+        "recipe_viewer": {
+          "fallback_state": "aa_extension_only",
+          "fallback_provider": "apothic_ascension",
+          "dominant_providers": [],
+          "ownership_note": "Extra Apoth Compat is EMI-focused; it does not displace AA's JEI integration."
+        }
+      }
+    }
+  ],
+  "coexistence_contracts": {
+    "apothic_category_compat": "Detect and version-audit the specialist, but retain AA Spartan/Allthemodium category fallbacks because the audited 2.1.0 data map does not cover those entries.",
+    "extra_apoth_compat": "Detect and version-audit the EMI specialist. Beta 13 ships no native AA EMI owner, so there is nothing to suppress.",
+    "fallen_gems_affixes": "Detect/version-audit coexistence only. No generic rarity continuation is synthesized for its custom gems or affixes.",
+    "bridge_removal": "Resolver state is recomputed from loader state at startup and server datapack reload; target fallback ownership returns when a dominant specialist is absent on the next valid process/load cycle."
+  },
+  "affix_continuation": {
+    "strategy": "explicit_adapter_only",
+    "unknown_codec_state": "degraded",
+    "automatic_foreign_json_mutation": false,
+    "beta13_adapter_status": "no_foreign_codec_extension_claimed_yet"
+  },
+  "item_state_contract": {
+    "strategy": "preserve_foreign_components_fail_closed",
+    "aa_mutable_namespaces": [
+      "apothic_ascension",
+      "apotheosis"
+    ],
+    "item_identity_must_match": true,
+    "unknown_component_owner": "foreign_preserve",
+    "destructive_reforge_candidate": "reject",
+    "tetra_1_21_1_status": "deferred_no_official_1_21_1_artifact"
+  }
+}
