@@ -1,5 +1,5 @@
 {
-  "schema": 1,
+  "schema": 2,
   "release": "1.14.2-Beta",
   "files": [
     {
@@ -8,13 +8,6 @@
       "mode": "100644",
       "size": 264,
       "sha256": "d7bf5fa08449993e9eacbfc73cd9b5a979a235a230ae55f5cef30c244fdc8fae"
-    },
-    {
-      "path": ".github/FUNDING.yml",
-      "kind": "public_metadata",
-      "mode": "100644",
-      "size": 22,
-      "sha256": "6584d7c5eb65a1b686adacf6e0f1d1517f272fb279290e2da41a6da65f3d6f71"
     },
     {
       "path": ".github/ISSUE_TEMPLATE/bug.yml",
@@ -48,8 +41,8 @@
       "path": ".github/public_source_guard.py",
       "kind": "public_guard",
       "mode": "100644",
-      "size": 46832,
-      "sha256": "9fa9c4d03d28c38fddef25286f4631147fc7e2a4493d40d0f38ab7dff1dcca57"
+      "size": 48663,
+      "sha256": "8b904c949f082eaf94b24f1e10c6e67aed7599cacb20582a2ab00c2dd025cdf6"
     },
     {
       "path": ".gitignore",
@@ -4657,5 +4650,8 @@
       "size": 3880,
       "sha256": "c7fc73ac9310d859fb97f8c0585389a09989d1d2ff975e6d303322948cf6981e"
     }
+  ],
+  "mutable_metadata": [
+    ".github/FUNDING.yml"
   ]
 }
