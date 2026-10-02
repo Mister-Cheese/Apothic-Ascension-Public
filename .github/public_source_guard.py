@@ -20,6 +20,8 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
 MANIFEST_PATH = ".github/public-source-manifest.json"
+FUNDING_PATH = ".github/FUNDING.yml"
+MUTABLE_PUBLIC_METADATA = {FUNDING_PATH}
 MAX_FILE_SIZE = 16 * 1024 * 1024
 MAX_ARCHIVE_ENTRY_SIZE = 64 * 1024 * 1024
 MAX_ARCHIVE_TOTAL_SIZE = 128 * 1024 * 1024
@@ -48,7 +50,7 @@ ROOT_FILES = {
     "settings.gradle",
 }
 GITHUB_FILES = {
-    ".github/FUNDING.yml",
+    FUNDING_PATH,
     ".github/ISSUE_TEMPLATE/bug.yml",
     ".github/ISSUE_TEMPLATE/compatibility.yml",
     ".github/ISSUE_TEMPLATE/config.yml",
@@ -322,8 +324,11 @@ def load_manifest() -> dict[str, object]:
         manifest = json.loads(path.read_text(encoding="utf-8"))
     except (OSError, UnicodeDecodeError, json.JSONDecodeError) as exc:
         raise GuardError(f"invalid public source manifest: {exc}") from exc
-    if manifest.get("schema") != 1:
+    if manifest.get("schema") != 2:
         raise GuardError("unsupported public source manifest schema")
+    mutable = manifest.get("mutable_metadata")
+    if mutable != sorted(MUTABLE_PUBLIC_METADATA):
+        raise GuardError("manifest mutable_metadata does not match the public host-metadata policy")
     if not isinstance(manifest.get("release"), str) or not manifest["release"]:
         raise GuardError("manifest release is missing")
     files = manifest.get("files")
@@ -344,11 +349,13 @@ def verify_manifest() -> tuple[dict[str, str], dict[str, object]]:
             raise GuardError("manifest contains an invalid path")
         if rel == MANIFEST_PATH:
             raise GuardError("manifest must not inventory itself")
+        if rel in MUTABLE_PUBLIC_METADATA:
+            raise GuardError(f"mutable public host metadata must not be hashed into source manifest: {rel}")
         if rel in entries:
             raise GuardError(f"duplicate manifest path: {rel}")
         entries[rel] = item
 
-    control_paths = {MANIFEST_PATH}
+    control_paths = {MANIFEST_PATH, *MUTABLE_PUBLIC_METADATA}
     workflow = ".github/workflows/public-source-guard.yml"
     if os.environ.get("AA_ALLOW_DEFERRED_WORKFLOW", "").lower() not in {"1", "true", "yes"}:
         control_paths.add(workflow)
@@ -881,6 +888,27 @@ def validate_release_prose(rel: str, text: str) -> None:
                 )
 
 
+def validate_funding_metadata(rel: str, text: str) -> None:
+    lines = [
+        line.strip()
+        for line in text.splitlines()
+        if line.strip() and not line.lstrip().startswith("#")
+    ]
+    if len(lines) != 1 or not lines[0].startswith("github:"):
+        raise GuardError(f"{rel} must contain only a GitHub Sponsors entry")
+    value = lines[0].split(":", 1)[1].strip()
+    if value.startswith("[") and value.endswith("]"):
+        sponsors = [item.strip() for item in value[1:-1].split(",") if item.strip()]
+    else:
+        sponsors = [value]
+    if not sponsors or len(sponsors) > 4:
+        raise GuardError(f"invalid GitHub Sponsors count in {rel}")
+    username = re.compile(r"[A-Za-z0-9](?:[A-Za-z0-9-]{0,37}[A-Za-z0-9])?")
+    for sponsor in sponsors:
+        if not username.fullmatch(sponsor):
+            raise GuardError(f"invalid GitHub Sponsors username in {rel}: {sponsor!r}")
+
+
 def validate_current_tree() -> dict[str, object]:
     modes, manifest = verify_manifest()
     for rel in sorted(modes):
@@ -904,6 +932,8 @@ def validate_current_tree() -> dict[str, object]:
                 validate_json(rel, text)
             if rel.endswith(".toml"):
                 validate_toml(rel, text)
+            if rel == FUNDING_PATH:
+                validate_funding_metadata(rel, text)
             if kind == "java_source":
                 validate_java(rel, text)
             if kind in {"public_prose", "public_issue_template"}:
@@ -1160,6 +1190,18 @@ def main() -> int:
 if __name__ == "__main__":
     try:
         raise SystemExit(main())
-    except (GuardError, subprocess.CalledProcessError, zipfile.BadZipFile) as exc:
-        print(f"PUBLIC_SOURCE_GUARD_FAIL: {exc}", file=sys.stderr)
+    except (
+        GuardError,
+        binascii.Error,
+        OverflowError,
+        struct.error,
+        subprocess.CalledProcessError,
+        UnicodeError,
+        ValueError,
+        zipfile.BadZipFile,
+        zlib.error,
+    ) as exc:
+        # Malformed structured input is an expected rejection case. Keep parser failures controlled
+        # so unusual classfiles, textures, or archives never turn a guard decision into a traceback.
+        print(f"PUBLIC_SOURCE_GUARD_FAIL: {type(exc).__name__}: {exc}", file=sys.stderr)
         raise SystemExit(1)
